@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="../assets/css/extra.css">
 </head>
 
 <body id="page-top">
@@ -127,10 +128,10 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Artículos</h3>
+                    <h3 class="text-dark mb-4">Productos</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Productos</p>
+                            <p class="text-primary m-0 fw-bold">Juguetes</p>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -146,46 +147,58 @@
                                     <div class="text-md-end dataTables_filter" id="dataTable_filter"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label></div>
                                 </div>
                             </div>
-                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                                <table class="table my-0" id="dataTable">
+                            <div class="table-responsive table mt-2 text-center" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0 cell-text" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th class="align-middle">ID</th>
                                             <th>Nombre</th>
                                             <th>Marca</th>
                                             <th>Precio</th>
-                                            <th>Cantidad</th>
+                                            <th>Piezas</th>
                                             <th>Modelo</th>
                                             <th>Barras</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr class="align-middle">
                                             <td>1</td>
                                             <td>Cell 2</td>
                                             <td>LEGO</td>
                                             <td>$576</td>
-                                            <td>3</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col cell-quant d-flex align-items-center justify-content-center"><span style="font-size: 15px;">3</span></div>
+                                                    <div class="col cell-modify-quant">
+                                                        <div class="row">
+                                                            <div class="col"><button class="btn btn-primary more-button" type="button"><i class="far fa-caret-square-up fs-6"></i></button></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col"><button class="btn btn-primary less-button" type="button"><i class="far fa-caret-square-down fs-6"></i></button></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td>73129<br></td>
                                             <td>7501000278404</td>
                                         </tr>
-                                        <tr>
+                                        <tr class="align-middle">
                                             <td>2</td>
-                                            <td>Cell 2</td>
+                                            <td>Producto 2 de prueba para tablita</td>
                                             <td>Playmobil</td>
                                             <td>$277</td>
                                             <td>4</td>
                                             <td>78223</td>
-                                            <td>7501000278404<br></td>
+                                            <td>7501000278404</td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <td><strong>ID</strong></td>
+                                            <td class="align-middle"><strong>ID</strong></td>
                                             <td><strong>Nombre</strong></td>
                                             <td><strong>Marca</strong></td>
                                             <td><strong>Precio</strong></td>
-                                            <td><strong>Cantidad</strong></td>
+                                            <td><strong>Piezas</strong></td>
                                             <td><strong>Modelo</strong></td>
                                             <td><strong>Barras</strong></td>
                                         </tr>
