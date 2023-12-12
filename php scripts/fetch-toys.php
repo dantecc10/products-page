@@ -18,8 +18,6 @@ $campos = [
     "quant_toy",
 ];
 
-
-
 function fetch_fields($table, $fields)
 {
     include "connection.php";
@@ -29,7 +27,6 @@ function fetch_fields($table, $fields)
     $n = sizeof($fields);
     // Comprobar si las filas son mayores que 0
     $result = $connection->query($query);
-
     // Verificar si se encontró un usuario válido
     if ($result->num_rows > 0) {
         // Hacer fetch a los datos
@@ -40,6 +37,7 @@ function fetch_fields($table, $fields)
                 // Procesar cada columna de cada registro 
                 $data[$i][$j] = $row[$fields[$j]];
             }
+            i++;
         }
         return $data;
     } else {
