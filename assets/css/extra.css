@@ -72,3 +72,8 @@ td > img {
   margin: -6px;
 }
 
+.barcode-img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
