@@ -37,7 +37,7 @@ function fetch_fields($table, $fields)
                 // Procesar cada columna de cada registro 
                 $data[$i][$j] = $row[$fields[$j]];
             }
-            i++;
+            $i++;
         }
         return $data;
     } else {
