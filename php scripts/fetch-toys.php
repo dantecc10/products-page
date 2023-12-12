@@ -1,6 +1,25 @@
 <?php
 
-# $fetched_data = fetch_fields("juguetes", $arregloCampos); // Invocación (ejemplo)
+# $fetched_data = fetch_fields("juguetes", $arregloCampos); // Invocación (ejemplo) - Debug 
+$tabla = "juguetes";
+$campos = array();
+$campos = [
+    "id_toy",
+    "name_toy",
+    "description_toy",
+    "model_toy",
+    "bars_toy",
+    "line_toy",
+    "brand_toy",
+    "pieces_toy",
+    "quantity_toy",
+    "price_toy",
+    "imgs_toy",
+    "quant_toy",
+];
+
+
+
 function fetch_fields($table, $fields)
 {
     include "connection.php";
@@ -22,8 +41,11 @@ function fetch_fields($table, $fields)
                 $data[$i][$j] = $row[$fields[$j]];
             }
         }
+        return $data;
     } else {
         // No hay registros en la tabla, devolver null
         return null;
     }
 }
+
+echo (fetch_fields($tabla, $campos));
