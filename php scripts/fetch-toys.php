@@ -1,6 +1,4 @@
 <?php
-
-# $fetched_data = fetch_fields("juguetes", $arregloCampos); // Invocación (ejemplo) - Debug 
 $tabla = "juguetes";
 $campos = array();
 $campos = [
@@ -15,7 +13,7 @@ $campos = [
     "quantity_toy",
     "price_toy",
     "imgs_toy",
-    "quant_toy",
+    "quant_imgs_toy",
 ];
 
 function fetch_fields($table, $fields)
@@ -46,4 +44,4 @@ function fetch_fields($table, $fields)
     }
 }
 
-echo (fetch_fields($tabla, $campos))[0][4];
+echo (fetch_fields($tabla, $campos))[0][4]; # Línea de prueba (comentar)
