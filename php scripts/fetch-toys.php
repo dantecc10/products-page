@@ -46,4 +46,4 @@ function fetch_fields($table, $fields)
     }
 }
 
-echo (fetch_fields($tabla, $campos));
+echo (fetch_fields($tabla, $campos))[0][4];
