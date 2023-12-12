@@ -29,7 +29,7 @@
                                     <div class="text-center">
                                         <h4 class="text-dark mb-4">¡Bienvenido!</h4>
                                     </div>
-                                    <form class="user" action="php scripts/login.php">
+                                    <form class="user" method="post" action="php scripts/login.php">
                                         <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email" name="email"></div>
                                         <div class="mb-3"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Contraseña" name="password"></div>
                                         <div class="mb-3">
