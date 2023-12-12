@@ -8,6 +8,11 @@
     <meta name="author" content="Dante Castelán Carpinteyro">
     <meta property="og:type" content="website">
     <meta name="description" content="Web-app de administración de inventario y ventas">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -22,7 +27,7 @@
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-flex">
-                            <div class="flex-grow-1 bg-login-image" style="background-image: url(&quot;assets/img/christmas/santa-claus.jpeg&quot;);"></div>
+                                <div class="flex-grow-1 bg-login-image" style="background-image: url(&quot;assets/img/christmas/santa-claus.jpeg&quot;);"></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
