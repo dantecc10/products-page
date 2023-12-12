@@ -59,3 +59,16 @@
   padding: 0px !important;
 }
 
+td > img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 30% !important;
+  background-color: black;
+  display: block;
+}
+
+.img-container {
+  height: 100% !important;
+  margin: -6px;
+}
+
