@@ -136,7 +136,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6 text-nowrap">
-                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Show&nbsp;<select class="d-inline-block form-select form-select-sm">
+                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Mostrar&nbsp;<select class="d-inline-block form-select form-select-sm">
                                                 <option value="10" selected="">10</option>
                                                 <option value="25">25</option>
                                                 <option value="50">50</option>
@@ -144,7 +144,7 @@
                                             </select>&nbsp;</label></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="text-md-end dataTables_filter" id="dataTable_filter"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label></div>
+                                    <div class="text-md-end dataTables_filter" id="dataTable_filter"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Buscar"></label></div>
                                 </div>
                             </div>
                             <div class="table-responsive table mt-2 text-center" id="dataTable" role="grid" aria-describedby="dataTable_info">
@@ -163,18 +163,18 @@
                                     <tbody>
                                         <tr class="align-middle">
                                             <td>1</td>
-                                            <td>Cell 2</td>
+                                            <td>Nombre del producto 1</td>
                                             <td>LEGO</td>
                                             <td>$576</td>
                                             <td>
                                                 <div class="row">
-                                                    <div class="col cell-quant d-flex align-items-center justify-content-center"><span style="font-size: 15px;">3</span></div>
+                                                    <div class="col cell-quant d-flex align-items-center justify-content-center"><span id="quant1">3</span></div>
                                                     <div class="col cell-modify-quant">
                                                         <div class="row">
-                                                            <div class="col"><button class="btn btn-primary more-button" type="button"><i class="far fa-caret-square-up fs-6"></i></button></div>
+                                                            <div class="col"><button class="btn btn-primary more-button" type="button" onclick="javascript:moreQuantity(1);"><i class="far fa-caret-square-up fs-6"></i></button></div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col"><button class="btn btn-primary less-button" type="button"><i class="far fa-caret-square-down fs-6"></i></button></div>
+                                                            <div class="col"><button class="btn btn-primary less-button" type="button" onclick="javascript:lessQuantity(1);"><i class="far fa-caret-square-down fs-6"></i></button></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -187,7 +187,19 @@
                                             <td>Producto 2 de prueba para tablita</td>
                                             <td>Playmobil</td>
                                             <td>$277</td>
-                                            <td>4</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col cell-quant d-flex align-items-center justify-content-center"><span id="quant-2">3</span></div>
+                                                    <div class="col cell-modify-quant">
+                                                        <div class="row">
+                                                            <div class="col"><button class="btn btn-primary more-button" type="button" onclick="javascript:moreQuantity(2);"><i class="far fa-caret-square-up fs-6"></i></button></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col"><button class="btn btn-primary less-button" type="button" onclick="javascript:lessQuantity(2);"><i class="far fa-caret-square-down fs-6"></i></button></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td>78223</td>
                                             <td>7501000278404</td>
                                         </tr>
@@ -207,7 +219,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 align-self-center">
-                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Mostrando 1 del 10 al 27</p>
                                 </div>
                                 <div class="col-md-6">
                                     <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
