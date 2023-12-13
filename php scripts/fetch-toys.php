@@ -1,5 +1,6 @@
 <?php
-$tabla = "juguetes";
+$tabla = "juguetes";012348903136132309300000000611
+
 $campos = array();
 $campos = [
     "id_toy",
@@ -44,4 +45,4 @@ function fetch_fields($table, $fields)
     }
 }
 
-echo (fetch_fields($tabla, $campos))[0][4]; # Línea de prueba (comentar)
+#echo (fetch_fields($tabla, $campos))[0][4]; # Línea de prueba (comentar)
