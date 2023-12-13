@@ -38,15 +38,15 @@ if (!isset($_SESSION['id'])) {
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="articles.html"><i class="fas fa-table"></i><span>Artículos</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="detail.html"><i class="fas fa-search"></i><span>Detalle producto</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="sale.html"><i class="fas fa-cash-register"></i><span>Vender</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="transactions.html"><i class="fas fa-hand-holding-usd"></i><span>Transacciones</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="tasks.html"><i class="fas fa-tasks"></i><span>Tareas</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="operations.html"><i class="fas fa-hard-hat"></i><span>Operaciones</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="chat.html"><i class="fas fa-comments"></i><span>Chat</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Perfil</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="logout.html"><i class="fas fa-door-open"></i><span>Cerrar sesión</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="articles.php"><i class="fas fa-table"></i><span>Artículos</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detail.php"><i class="fas fa-search"></i><span>Detalle producto</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="sale.php"><i class="fas fa-cash-register"></i><span>Vender</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="transactions.php"><i class="fas fa-hand-holding-usd"></i><span>Transacciones</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="tasks.php"><i class="fas fa-tasks"></i><span>Tareas</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="operations.php"><i class="fas fa-hard-hat"></i><span>Operaciones</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="chat.php"><i class="fas fa-comments"></i><span>Chat</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.php"><i class="fas fa-user"></i><span>Perfil</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="logout.php"><i class="fas fa-door-open"></i><span>Cerrar sesión</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -54,7 +54,7 @@ if (!isset($_SESSION['id'])) {
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><a href="sale.html" style="width: 100%;"><button class="btn btn-primary" type="button" style="font-size: 85% !important;/*padding: 12% !important;*/width: 100%;"><i class="fas fa-cash-register"></i>&nbsp;Vender</button></a>
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><a href="sale.php" style="width: 100%;"><button class="btn btn-primary" type="button" style="font-size: 85% !important;/*padding: 12% !important;*/width: 100%;"><i class="fas fa-cash-register"></i>&nbsp;Vender</button></a>
                         <ul class="navbar-nav flex-nowrap ms-auto">
                             <li class="nav-item dropdown no-arrow mx-1">
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
