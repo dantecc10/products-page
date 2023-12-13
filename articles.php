@@ -149,7 +149,8 @@ if (!isset($_SESSION['id'])) {
                                     </form>
                                 </div>
                             </div>
-                            <?php/*
+                            <?php
+                            /*
                             // Imprimir tabla
                             include "php scripts/sql-fetcher.php";
                             include "php scripts/functions.php";
