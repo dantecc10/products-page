@@ -190,7 +190,7 @@ if (!isset($_SESSION['id'])) {
                                             <tbody id="table-toys" class="articles-table">');
                             // Inician filas
                             for ($i = 0; $i < $n; $i++) {
-
+                                $info = array();
                                 $info = $data[$i];
 
                                 if (is_array(split_urls($info[10]))) {
@@ -260,7 +260,8 @@ if (!isset($_SESSION['id'])) {
                     <div class="text-center my-auto copyright"><span>Copyright © Castelán Carpinteyro 2023</span></div>
                 </div>
             </footer>
-        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        </div>
+        <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/theme.js"></script>
