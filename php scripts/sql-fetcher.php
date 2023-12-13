@@ -1,6 +1,6 @@
 <?php
-$tabla = "juguetes";012348903136132309300000000611
-
+/*
+$tabla = "juguetes";
 $campos = array();
 $campos = [
     "id_toy",
@@ -16,6 +16,7 @@ $campos = [
     "imgs_toy",
     "quant_imgs_toy",
 ];
+*/
 
 function fetch_fields($table, $fields)
 {
