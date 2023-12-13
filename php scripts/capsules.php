@@ -27,7 +27,7 @@
 
             <?php
 
-            $capsule['A'][0] = ['<div class="table-responsive table mt-2 text-center" id="dataTable" role="grid" aria-describedby="dataTable_info">
+            $capsule['A'][0] = '<div class="table-responsive table mt-2 text-center" id="dataTable" role="grid" aria-describedby="dataTable_info">
                                     <table class="table my-0 cell-text" id="dataTable">
                                         <thead>
                                             <tr>
@@ -40,9 +40,9 @@
                                                 <th>Barras</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="table-toys" class="articles-table">'];
+                                        <tbody id="table-toys" class="articles-table">';
 
-            $capsule['A'][1] = ['        </tbody>
+            $capsule['A'][1] = '        </tbody>
                                          <tfoot>
                                              <tr>
                                                  <td class="align-middle"><strong>Detalle</strong></td>
@@ -55,5 +55,8 @@
                                              </tr>
                                          </tfoot>
                                      </table>
-                                 </div>'];
+                                 </div>';
+
+            
+            
             ?>
