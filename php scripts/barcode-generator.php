@@ -1,7 +1,8 @@
 <?php
-require 'vendor/autoload.php'; // Carga la biblioteca a través de Composer
+require '../vendor/autoload.php'; // Carga la biblioteca a través de Composer
 
 use Picqer\Barcode\BarcodeGeneratorPNG;
+
 $generator = new BarcodeGeneratorPNG();
 
 // Variables dinámicas

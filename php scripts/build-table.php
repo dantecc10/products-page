@@ -1,9 +1,9 @@
 <?php
 
 // Imprimir tabla
-include "php scripts/sql-fetcher.php";
-include "php scripts/functions.php";
-include "php scripts/barcode-generator.php";
+include "sql-fetcher.php";
+include "functions.php";
+include "barcode-generator.php";
 
 $tabla = "juguetes";
 $campos = array();
