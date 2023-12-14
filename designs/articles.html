@@ -27,7 +27,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-icon col col-3 d-flex justify-content-center"><img class="icon-circle" src="../assets/img/branding/logo.jpeg"></div>
+                    <div class="sidebar-brand-icon col col-3 d-flex justify-content-center"><img class="icon-circle" onchange="javascript:filtroInventario();" src="../assets/img/branding/logo.jpeg"></div>
                     <div class="sidebar-brand-text mx-3"><span>CC Comercial</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
@@ -120,7 +120,7 @@
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Dante</span><img class="border rounded-circle img-profile" src="../assets/img/avatars/avatar5.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Dante</span><img class="border rounded-circle img-profile" src="../assets/img/avatars/avatar1.jpeg"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Perfil</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Ajustes</a><a class="dropdown-item" href="#"><i class="fas fa-tasks fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Tareas</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Cerrar sesión</a>
                                     </div>
@@ -167,6 +167,30 @@
                                             </td>
                                             <td><a href="detalle.html"><span style="color: rgb(133, 135, 150);">70142</span><br></a></td>
                                             <td>
+                                                <div class="col d-flex align-middle justify-content-center">
+                                                    <div class="row" style="margin: 0px !important;">
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <div class="col"><a href="detalle.html"><span style="font-size: 100% !important;">4008789701428</span></a></div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col" style="padding: 3px !important;"><a href="detalle.html"><img class="barcode-img" src="../assets/img/test-barcode.png"></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><br>
+                                            </td>
+                                        </tr>
+                                        <tr id="article-row-2" class="align-middle articles-row">
+                                            <td class="article-icon"><a href="detalle.html"><img class="mini-image" src="https://media.playmobil.com/i/playmobil/71162_product_detail/Polic%C3%ADa%20con%20Perro?locale=es-MX,es,en,*&amp;$pdp_product_main_xs$&amp;fmt=auto&amp;strip=true&amp;qlt=80&amp;fmt.jpeg.chroma=1,1,1&amp;unsharp=0,1,1,7&amp;fmt.jpeg.interlaced=true"></a></td>
+                                            <td><a href="detalle.html"><span style="color: rgb(133, 135, 150);">Producto 2 de prueba para tablita</span><br></a></td>
+                                            <td><a href="detalle.html"><span style="color: rgb(133, 135, 150);">Playmobil</span><br></a></td>
+                                            <td><a href="detalle.html"><span style="color: rgb(133, 135, 150);">$279</span><br></a></td>
+                                            <td>
+                                                <div class="col"><span id="quant-2"><a href="detalle.html">3</a></span></div>
+                                            </td>
+                                            <td><a href="detalle.html"><span style="color: rgb(133, 135, 150);">70142</span><br></a></td>
+                                            <td>
                                                 <div class="col d-flex align-middle">
                                                     <div class="row" style="margin: 0px !important;">
                                                         <div class="col">
@@ -204,8 +228,7 @@
                     <div class="text-center my-auto copyright"><span>Copyright © Castelán Carpinteyro 2023</span></div>
                 </div>
             </footer>
-        </div>
-        <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/theme.js"></script>

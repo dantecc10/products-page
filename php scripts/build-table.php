@@ -59,7 +59,7 @@ for ($i = 0; $i < $n; $i++) {
                                         </td>
                                         <td><a href="detalle.php?product=' . $info[0] . '"><span>' . $info[3] . '</span><br></a></td>
                                         <td>
-                                            <div class="col d-flex align-middle">
+                                            <div class="col d-flex align-middle justify-content-center">
                                                 <div class="row" style="margin: 0px !important;">
                                                     <div class="col">
                                                         <div class="row">

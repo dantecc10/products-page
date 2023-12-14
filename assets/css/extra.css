@@ -98,3 +98,11 @@
   width: 100% !important;
 }
 
+.main-branding-background-color {
+  background-color: red !important;
+}
+
+.main-branding-text-color {
+  color: white !important;
+}
+
