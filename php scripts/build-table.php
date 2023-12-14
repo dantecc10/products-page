@@ -27,7 +27,7 @@ $campos = [
 ];
 $n = sizeof($campos);
 
-$data = fetch_fields($tabla, $campos);
+$data = fetch_fields($tabla, $campos, "");
 // Inician filas
 for ($i = 0; $i < $n; $i++) {
     $info = array();

@@ -18,24 +18,32 @@ $campos = [
 ];
 */
 
-function fetch_fields($table, $fields)
+function fetch_fields($table, $fields, $id)
 {
     include "connection.php";
-    $query = "SELECT * FROM `$table`";
+    if ($id == "" or $id = null) {
+        $query = "SELECT * FROM `$table`";
+    }
     $result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
     $data = array();
     $n = sizeof($fields);
+
     // Comprobar si las filas son mayores que 0
     $result = $connection->query($query);
     // Verificar si se encontró un usuario válido
     if ($result->num_rows > 0) {
-        // Hacer fetch a los datos
         $i = 0;
+        // Hacer fetch a los datos
         while ($row = $result->fetch_array()) {
             // Procesar cada registro obtenido
             for ($j = 0; $j < $n; $j++) {
-                // Procesar cada columna de cada registro 
-                $data[$i][$j] = $row[$fields[$j]];
+                if ($id == "" or $id = null) {
+                    // Procesar cada columna de cada registro 
+                    $data[$i][$j] = $row[$fields[$j]];
+                } else {
+                    // Procesar cada columna de cada registro 
+                    $data[$j] = $row[$fields[$j]];
+                }
             }
             $i++;
         }
