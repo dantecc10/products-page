@@ -33,7 +33,7 @@ if (!isset($_SESSION['id'])) {
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-icon col col-3 d-flex justify-content-center"><img class="icon-circle" src="assets/img/branding/logo.jpeg"></div>
+                    <div class="sidebar-brand-icon col col-3 d-flex justify-content-center"><img class="icon-circle" onchange="javascript:filtroInventario();" src="assets/img/branding/logo.jpeg"></div>
                     <div class="sidebar-brand-text mx-3"><span>CC Comercial</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
@@ -54,7 +54,7 @@ if (!isset($_SESSION['id'])) {
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><a href="sale.php" style="width: 100%;"><button class="btn btn-primary" type="button" style="font-size: 85% !important;/*padding: 12% !important;*/width: 100%;"><i class="fas fa-cash-register"></i>&nbsp;Vender</button></a>
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><a href="sale.html" style="width: 100%;"><button class="btn btn-primary main-branding-background-color" type="button" style="font-size: 85% !important;/*padding: 12% !important;*/width: 100%;"><i class="fas fa-cash-register"></i>&nbsp;Vender</button></a>
                         <ul class="navbar-nav flex-nowrap ms-auto">
                             <li class="nav-item dropdown no-arrow mx-1">
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
@@ -145,7 +145,7 @@ if (!isset($_SESSION['id'])) {
                             <div class="row">
                                 <div class="col">
                                     <form>
-                                        <div class="input-group"><input class="form-control" type="text" placeholder="Buscar"><button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button></div>
+                                        <div class="input-group"><input class="form-control" type="text" placeholder="Buscar"><button class="btn btn-primary main-branding-background-color" type="button"><i class="fas fa-search"></i></button></div>
                                     </form>
                                 </div>
                             </div>

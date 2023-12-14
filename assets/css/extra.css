@@ -99,10 +99,16 @@
 }
 
 .main-branding-background-color {
-  background-color: red !important;
+  background-color: #29a3a3 !important;
 }
 
 .main-branding-text-color {
-  color: white !important;
+  color: #29a3a3 !important;
+}
+
+.bg-gradient-primary {
+  background-color: #29a3a3;
+  background-image: linear-gradient(180deg, #29a3a3 10%, #086e88 100%);
+  background-size: cover;
 }
 
