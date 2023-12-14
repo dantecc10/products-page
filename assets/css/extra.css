@@ -113,7 +113,7 @@
 }
 
 .down-button, .up-button {
-  width: 70%;
+  width: 100% !important;
   border-color: #095252 !important;
 }
 
@@ -137,5 +137,10 @@
 
 .up-button:hover {
   background-color: #5ce1e1;
+}
+
+.gray-span {
+  background-color: var(--bs-gray-400);
+  border-radius: 12px;
 }
 
