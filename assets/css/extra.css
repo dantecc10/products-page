@@ -112,3 +112,30 @@
   background-size: cover;
 }
 
+.down-button, .up-button {
+  width: 70%;
+  border-color: #095252 !important;
+}
+
+.down-button {
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: white;
+  color: #29a3a3;
+}
+
+.down-button:hover {
+  background-color: rgba(41,163,163,0.17);
+  color: #29a3a3;
+}
+
+.up-button {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: #29a3a3;
+}
+
+.up-button:hover {
+  background-color: #5ce1e1;
+}
+
