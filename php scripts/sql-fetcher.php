@@ -23,6 +23,9 @@ function fetch_fields($table, $fields, $id)
     include "connection.php";
     if ($id == "" or $id = null) {
         $query = "SELECT * FROM `$table`";
+    } else {
+        $query_field = ($fields[0] . $id);
+        $query = "SELECT * FROM `$table` WHERE `$query_field`";
     }
     $result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
     $data = array();
