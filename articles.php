@@ -270,7 +270,7 @@ if (!isset($_SESSION['id'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/table-builder.js"></script>
-    <div onload="javascript:build_table('toys');" style="display: none"></div>
+    <div onload="javascript:build_table('juguetes');" style="display: none"></div>
 </body>
 
 </html>

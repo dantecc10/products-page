@@ -1,11 +1,15 @@
 <?php
-
 // Imprimir tabla
 include "sql-fetcher.php";
 include "functions.php";
 include "barcode-generator.php";
 
-$tabla = "juguetes";
+if (isset($_GET['table'])) {
+    $tabla = $_GET['table'];
+} else {
+    $tabla = "juguetes";
+}
+
 $campos = array();
 $campos = [
     "id_toy",
