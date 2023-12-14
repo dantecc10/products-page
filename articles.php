@@ -162,7 +162,9 @@ if (!isset($_SESSION['id'])) {
                                             <th>Barras</th>
                                         </tr>
                                     </thead>
-                                    <?php
+                                    <tbody id="table-toys" class="articles-table">
+                                        <?php
+                                        /*
                                     // Imprimir tabla
                                     include "php scripts/sql-fetcher.php";
                                     include "php scripts/functions.php";
@@ -187,8 +189,7 @@ if (!isset($_SESSION['id'])) {
                                     $n = sizeof($campos);
 
                                     $data = fetch_fields($tabla, $campos);
-                                    echo (' 
-                                                <tbody id="table-toys" class="articles-table">');
+
                                     // Inician filas
                                     for ($i = 0; $i < $n; $i++) {
                                         $info = array();
@@ -236,9 +237,11 @@ if (!isset($_SESSION['id'])) {
                                         </tr>');
                                     }
                                     // Terminan filas
-                                    echo ('          </tbody>');
+
                                     // Fin de impresión de tabla
-                                    ?>
+                                    */
+                                        ?>
+                                    </tbody>
                                     <tfoot>
                                         <tr>
                                             <td class="align-middle"><strong>Detalle</strong></td>
@@ -266,6 +269,8 @@ if (!isset($_SESSION['id'])) {
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/table-builder.js"></script>
+    <div onload="javascript:build_table('toys');" style="display: none"></div>
 </body>
 
 </html>
