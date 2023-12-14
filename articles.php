@@ -271,9 +271,9 @@ if (!isset($_SESSION['id'])) {
     <script src="assets/js/theme.js"></script>
     <!--<script src="assets/js/table-builder.js"></script>-->
     <script>
-        function build_table(table) {
+        function build_table() {
             // Obtener los valores de los campos de entrada
-            let table = "toys";
+            let table = "juguetes";
 
             let objective = document.getElementById("table-toys");
 
@@ -290,12 +290,12 @@ if (!isset($_SESSION['id'])) {
                     }
                 }
             };
-            xhr.open("GET", "../../php scripts/build-table.php", true);
+            xhr.open("GET", "php scripts/build-table.php", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.send("table=" + table);
         }
     </script>
-    <div onload="javascript:build_table('juguetes');" style="display: none"></div>
+    <div onload="javascript:build_table();" style="display: none"></div>
 </body>
 
 </html>
