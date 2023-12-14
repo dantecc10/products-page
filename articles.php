@@ -294,8 +294,9 @@ if (!isset($_SESSION['id'])) {
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.send("table=" + table);
         }
+        build_table();
     </script>
-    <div onload="javascript:build_table();" style="display: none"></div>
+    <!--<div onload="javascript:build_table();" style="display: none"></div>-->
 </body>
 
 </html>
