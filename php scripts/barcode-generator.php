@@ -15,6 +15,11 @@ function bar_code_img($generator, $dynamicBarCode)
     $img = ('<img src="data:image/png;base64,' . base64_encode($barcode) . '" alt="Código de barras: ' . $dynamicBarCode . '" class="barcode-img">');
     return $img; # Devuelve imagen con clase para adaptar con CSS
 }
+
+if (isset($_GET['bars'])) {
+    $barcode = $generator->getBarcode($dynamicBarCode, $generator::TYPE_CODE_128);
+    echo ("data:image/png;base64," . base64_encode($barcode));
+}
 /* Ejemplo de invocación:
 $number = "7501000278404";
 echo bar_code_img($generator, $number); // Imprime HTML <img>

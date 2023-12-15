@@ -1,17 +1,21 @@
 <?php
+
 if (isset($_GET['product'])) {
-    $info = 
+    $id = $_GET['product'];
+    $data = fetch_fields($tabla, $campos, "$id");
+    include "php scripts/functions.php";
 } else {
     header("Location: articles.php");
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Detalle de producto - Brand</title>
+    <title><?php echo ($data[1] . " "); ?>- Detalle de Producto - CC Comercial</title>
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="https://comercial.castelancarpinteyro.com/assets/img/branding/logo.jpeg">
     <meta name="author" content="Dante Castelán Carpinteyro">
@@ -166,31 +170,31 @@ if (isset($_GET['product'])) {
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-4 h-75">
                             <div class="row">
                                 <div class="col">
-                                    <p class="text-primary m-0 fw-bold main-branding-text-color text-center py-2 fs-3" style="line-height: 1.12;">Rescate Marítimo, Operación Medio Ambiente con Bote de Buceo</p>
+                                    <p class="text-primary m-0 fw-bold main-branding-text-color text-center py-2 fs-3" style="line-height: 1.12;"><?php echo ($data[1]); ?></p>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col d-flex justify-content-center align-middle"><img class="px-md-4" style="width: 100% !important;/*height: 75% !important;*//*padding-top: 12.5%;*//*padding-bottom: 12.5%;*/" src="assets/img/test-barcode.png"></div>
+                                <div class="col d-flex barcode-inner justify-content-center align-middle"></div>
                             </div>
                             <div class="row">
-                                <div class="col d-flex justify-content-end col-7 px-1"><span class="fs-1" style="color: #29a3a3;">$365</span></div>
+                                <div class="col d-flex justify-content-end col-7 px-1"><span class="fs-1" style="color: #29a3a3;">$<?php echo ($data[9]); ?></span></div>
                                 <div class="col d-flex justify-content-start col-5 px-1"><span class="fs-5 d-flex align-items-center" style="color: #29a3a3;font-size: 100% !important;">MXN</span></div>
                             </div>
                             <div class="row">
                                 <div class="col d-flex justify-content-center py-1">
-                                    <div class="input-group" style="width: 85%;"><span class="d-xxl-flex input-group-text fs-6" style="padding-left: 0px;padding-right: 0px;display: inline-block !important;text-align: center;width: 65% !important;" value="1">Cantidad</span><input class="form-control" type="number" value="3" style="text-align: center;width: 35% !important;padding-left: 0px;"></div>
+                                    <div class="input-group" style="width: 85%;"><span class="d-xxl-flex input-group-text fs-6" style="padding-left: 0px;padding-right: 0px;display: inline-block !important;text-align: center;width: 65% !important;" value="1" max="<?php echo ($data[8]); ?>">Cantidad</span><input class="form-control" type="number" value="3" style="text-align: center;width: 35% !important;padding-left: 0px;"></div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col d-flex justify-content-center fs-4"><span class="py-2" style="text-align: center;line-height: 1.3;">3 unidades disponibles</span></div>
+                                <div class="col d-flex justify-content-center fs-4"><span class="py-2" style="text-align: center;line-height: 1.3;"><?php echo ($data[8]); ?> unidades disponibles</span></div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <div class="row">
-                                        <div class="col d-flex justify-content-center"><button class="btn btn-primary up-button" type="button" onclick="javascript:directSale(1);"><i class="fas fa-cash-register"></i>&nbsp;Vender</button></div>
+                                        <div class="col d-flex justify-content-center"><button class="btn btn-primary up-button" type="button" onclick="javascript:directSale(<?php echo ($data[0]); ?>);"><i class="fas fa-cash-register"></i>&nbsp;Vender</button></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col d-flex justify-content-center"><button class="btn btn-primary down-button" type="button" onclick=""><i class="fas fa-file-invoice-dollar"></i>&nbsp;Añadir a venta</button></div>
+                                        <div class="col d-flex justify-content-center"><button class="btn btn-primary down-button" type="button" onclick="javascript:add_to_sale(<?php echo ($data[0]); ?>);"><i class="fas fa-file-invoice-dollar"></i>&nbsp;Añadir a venta</button></div>
                                     </div>
                                 </div>
                             </div>
@@ -203,19 +207,19 @@ if (isset($_GET['product'])) {
                             </div>
                             <div class="row py-1">
                                 <div class="col d-flex justify-content-center gray-span col-md-5"><span>Marca</span></div>
-                                <div class="col d-flex justify-content-center col-md-7"><span>Playmobil</span></div>
+                                <div class="col d-flex justify-content-center col-md-7"><span><?php echo ($data[6]); ?></span></div>
                             </div>
                             <div class="row py-1">
                                 <div class="col d-flex justify-content-center gray-span col-md-5"><span>Modelo</span></div>
-                                <div class="col d-flex justify-content-center col-md-7"><span>70142</span></div>
+                                <div class="col d-flex justify-content-center col-md-7"><span><?php echo ($data[3]); ?></span></div>
                             </div>
                             <div class="row py-1">
                                 <div class="col d-flex justify-content-center gray-span col-md-5"><span class="d-flex align-items-center">Línea</span></div>
-                                <div class="col d-flex justify-content-center col-md-7"><span style="text-align: center;">CITY Action</span></div>
+                                <div class="col d-flex justify-content-center col-md-7"><span style="text-align: center;"><?php echo ($data[4]); ?></span></div>
                             </div>
                             <div class="row py-1">
                                 <div class="col d-flex justify-content-center gray-span col-md-5"><span class="d-flex align-items-center" style="text-align: center;">Piezas</span></div>
-                                <div class="col d-flex justify-content-center col-md-7"><span style="text-align: center;">58</span></div>
+                                <div class="col d-flex justify-content-center col-md-7"><span style="text-align: center;"><?php echo ($data[7]); ?></span></div>
                             </div>
                         </div>
                         <div class="col col-md-8 mx-md-0">
@@ -224,7 +228,19 @@ if (isset($_GET['product'])) {
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <p class="fs-6" style="text-align: justify;">Consta de dos figuras PLAYMOBIL, un robot de buceo con brazos de agarre móviles, una escafandra de alta mal, dos toneladas, una pala y muchos otros extras.</p>
+                                    <?php
+                                    if ($data[2] != "" and $data[2] != null) {
+                                        $paragraphs = splitter($data[2], "
+    
+                                        ");
+                                        $n = sizeof($paragraphs);
+                                        for ($i = 0; $i < $n; $i++) {
+                                            echo ('<p class="fs-6 p-description" style="text-align: justify;">' . $paragraphs[$i] . "</p>");
+                                        }
+                                    } else {
+                                        echo ('<p class="fs-6 p-description" style="text-align: justify;">' . "No se cargó una descripción." . "</p>");
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -240,6 +256,31 @@ if (isset($_GET['product'])) {
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+        function encapsulated_bars_generator(bars, capsule1, capsule2) {
+            let objective = document.getElementById("barcode-inner");
+
+            // Crear objeto XMLHttpRequest
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Procesar la respuesta del servidor
+                    if (this.responseText != null) {
+                        // La construcción de la tabla no es nula y procede
+                        objective.innerHTML = (capsule1 + this.responseText + capsule2);
+                    } else {
+                        // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
+                        objective.innerHTML = ("Error fatal en generación de código de barras.");
+                    }
+                }
+            };
+            xhr.open("GET", "php scripts/barcode-generator.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("bars=" + bars);
+        }
+
+        encapsulated_bars_generator('<?php echo ($data[5]) ?>', '<img class="px-md-4" alt="Código de barras: <?php echo ($data[5]); ?>" style="width: 100% !important;/*height: 75% !important;*//*padding-top: 12.5%;*//*padding-bottom: 12.5%;*/" src="', '">');
+    </script>
 </body>
 
 </html>
