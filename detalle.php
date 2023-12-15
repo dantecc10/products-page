@@ -248,8 +248,8 @@ if (isset($_GET['product'])) {
                                     <?php
                                     if ($data[2] != "" and $data[2] != null) {
                                         $paragraphs = splitter($data[2], "
-    
-                                        ");
+
+");
                                         $n = sizeof($paragraphs);
                                         for ($i = 0; $i < $n; $i++) {
                                             echo ('<p class="fs-6 p-description" style="text-align: justify;">' . $paragraphs[$i] . "</p>");
