@@ -199,7 +199,7 @@ if (isset($_GET['product'])) {
                             </div>
                             <div class="row">
                                 <div class="col d-flex justify-content-center py-1">
-                                    <div class="input-group" style="width: 85%;"><span class="d-xxl-flex input-group-text fs-6" style="padding-left: 0px;padding-right: 0px;display: inline-block !important;text-align: center;width: 65% !important;" value="1" max="<?php echo ($data[8]); ?>">Cantidad</span><input class="form-control" type="number" value="3" style="text-align: center;width: 35% !important;padding-left: 0px;"></div>
+                                    <div class="input-group" style="width: 85%;"><span class="d-xxl-flex input-group-text fs-6" style="padding-left: 0px;padding-right: 0px;display: inline-block !important;text-align: center;width: 65% !important;" value="1" max="<?php echo ($data[8]); ?>">Cantidad</span><input class="form-control" type="number" value="1" style="text-align: center;width: 35% !important;padding-left: 0px;"></div>
                                 </div>
                             </div>
                             <div class="row">
@@ -255,7 +255,7 @@ if (isset($_GET['product'])) {
                                             echo ('<p class="fs-6 p-description" style="text-align: justify;">' . $paragraphs[$i] . "</p>");
                                         }
                                     } else {
-                                        echo ('<p class="fs-6 p-description" style="text-align: justify;">' . "No se cargó una descripción." . "</p>");
+                                        echo ('<p class="fs-6 p-description" style="text-align: center;">' . "No se cargó una descripción." . "</p>");
                                     }
                                     ?>
                                 </div>
