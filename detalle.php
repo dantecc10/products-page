@@ -2,9 +2,9 @@
 
 if (isset($_GET['product'])) {
     $id = $_GET['product'];
-    $data = fetch_fields($tabla, $campos, "$id");
     include "php scripts/functions.php";
     include "php scripts/sql-fetcher.php";
+    $data = fetch_fields($tabla, $campos, "$id");
 } else {
     header("Location: articles.php");
 }
