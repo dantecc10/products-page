@@ -172,7 +172,9 @@ if (isset($_GET['product'])) {
                             if ($data[11] == 1) {
                                 echo (build_detail_carousel(split_urls($data[10])));
                             } else {
-                                echo (build_detail_carousel(split_urls($data[10])));
+                                echo ('<div class="row">
+                                <div class="col"><img src="' . $data[10] . '" style="max-width: inherit;"></div>
+                            </div>');
                             }
                             ?>
 
