@@ -21,7 +21,7 @@ $campos = [
 function fetch_fields($table, $fields, $id)
 {
     include "connection.php";
-    if ($id == "" or $id = null) {
+    if ($id == "" or $id == null) {
         $query = "SELECT * FROM `$table`";
     } else {
         $query_field = ($fields[0] . $id);
@@ -40,7 +40,7 @@ function fetch_fields($table, $fields, $id)
         while ($row = $result->fetch_array()) {
             // Procesar cada registro obtenido
             for ($j = 0; $j < $n; $j++) {
-                if ($id == "" or $id = null) {
+                if ($id == "" or $id == null) {
                     // Procesar cada columna de cada registro 
                     $data[$i][$j] = $row[$fields[$j]];
                 } else {
