@@ -171,7 +171,7 @@ if (isset($_GET['product'])) {
                             <?php
                             if ($data[11] == 1) {
                                 //echo "Hubo una imagen";
-                                echo ('<div class="row"><div class="col"><img src="' . $data[10] . '" style="max-width: inherit;"></div></div>');
+                                echo ('<div class="row"><div class="col d-flex justify-content-center"><img src="' . $data[10] . '" style="max-width: inherit;"></div></div>');
                             } else {
                                 //echo "Hubo más de una imagen";
                                 echo (build_detail_carousel(split_urls($data[10])));
