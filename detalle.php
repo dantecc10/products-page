@@ -191,7 +191,7 @@ if (isset($_GET['product'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col d-flex barcode-inner justify-content-center align-middle"></div>
+                                <div id="barcode-inner" class="col d-flex justify-content-center align-middle"></div>
                             </div>
                             <div class="row">
                                 <div class="col d-flex justify-content-end col-7 px-1"><span class="fs-1" style="color: #29a3a3;">$<?php echo ($data[9]); ?></span></div>
