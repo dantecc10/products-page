@@ -17,6 +17,7 @@ function bar_code_img($generator, $dynamicBarCode)
 }
 
 if (isset($_GET['bars'])) {
+    $dynamicBarCode = $_GET['bars'];
     $barcode = $generator->getBarcode($dynamicBarCode, $generator::TYPE_CODE_128);
     echo ("data:image/png;base64," . base64_encode($barcode));
 }
