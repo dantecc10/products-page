@@ -298,6 +298,31 @@ if (isset($_GET['product'])) {
             xhr.send("bars=" + bars);
         }
 
+        document.addEventListener("DOMContentLoaded", function() {
+            function insertBarcode(number) {
+                let objective = document.getElementById("barcode-inner");
+
+                // Crear objeto XMLHttpRequest
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        // Procesar la respuesta del servidor
+                        if (this.responseText !== null) {
+                            objective.innerHTML = this.responseText;
+                        } else {
+                            objective.innerHTML = "Error en la generación del código de barras.";
+                        }
+                    }
+                };
+
+                // Hacer la solicitud GET al archivo PHP con el número como parámetro
+                xhr.open("GET", "php scripts/barcode-generator.php?bar=" + number, true);
+                xhr.send();
+            }
+            // Aquí ejecutas la función
+            insertBarcode("7501000278404");
+        });
+
         encapsulated_bars_generator('<?php echo ($data[5]) ?>', '<img class="px-md-4" alt="Código de barras: <?php echo ($data[5]); ?>" style="width: 100% !important;/*height: 75% !important;*//*padding-top: 12.5%;*//*padding-bottom: 12.5%;*/" src="', '">');
     </script>
 </body>
