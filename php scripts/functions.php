@@ -75,7 +75,7 @@ function build_detail_carousel($imgs)
         $element .= ('<img class="w-100 d-block" src="' . ($imgs[$i]) . '" alt="Imagen ' . ($i + 1) . '" />');
         $index .= $i;
 
-        $element .= '"</div>';
+        $element .= '</div>';
         $index .= '"></li>';
 
         $carousel_elements .= $element;
