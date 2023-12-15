@@ -284,7 +284,7 @@ if (isset($_GET['product'])) {
                     // Procesar la respuesta del servidor
                     if (this.responseText != null) {
                         // La construcción de la tabla no es nula y procede
-                        objective.innerHTML = (capsule1 + this.responseText + capsule2);
+                        objective.innerHTML = (capsule1 + (this.responseText) + capsule2);
                     } else {
                         // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
                         objective.innerHTML = ("Error fatal en generación de código de barras.");
