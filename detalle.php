@@ -316,7 +316,7 @@ if (isset($_GET['product'])) {
                 };
 
                 // Hacer la solicitud GET al archivo PHP con el número como parámetro
-                xhr.open("GET", "php scripts/barcode-generator.php?bar=" + number, true);
+                xhr.open("GET", "php scripts/barcode-generator.3php?bar=" + number, true);
                 xhr.send();
             }
             // Aquí ejecutas la función
