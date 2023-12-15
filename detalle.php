@@ -282,6 +282,7 @@ if (isset($_GET['product'])) {
             xhr.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     // Procesar la respuesta del servidor
+                    objective.innerHTML = (this.responseText);
                     if (this.responseText != null) {
                         // La construcción de la tabla no es nula y procede
                         //objective.innerHTML = (capsule1 + (this.responseText) + capsule2);
