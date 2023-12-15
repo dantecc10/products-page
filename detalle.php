@@ -171,6 +171,8 @@ if (isset($_GET['product'])) {
                             <?php
                             if ($data[11] == 1) {
                                 echo (build_detail_carousel(split_urls($data[10])));
+                            } else {
+                                echo (build_detail_carousel(split_urls($data[10])));
                             }
                             ?>
 
