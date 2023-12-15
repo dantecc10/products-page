@@ -68,7 +68,7 @@ function build_detail_carousel($imgs)
 
         if ($i == 0) {
             // Añadir clases active al primer elemento e índice
-            $element = str_replace('">', 'active">', $element);
+            $element = str_replace('">', ' active">', $element);
             $index = str_replace('<li ', '<li class="active" ', $index);
         }
 
