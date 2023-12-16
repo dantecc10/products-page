@@ -39,7 +39,7 @@ for ($i = 0; $i < $n; $i++) {
         $info[10] = split_urls($info[10]);
     }
 
-    $barras = bar_code_img($generator, $info[5]);
+    $barras = "";// bar_code_img($generator, $info[5]);
 
     echo ('<tr id="article-row-' . $info[0] . '" class="align-middle articles-row">
                                         <td class="article-icon">
