@@ -75,4 +75,4 @@ $tabla = "juguetes";
         "imgs_toy",
         "quant_imgs_toy",
     ];
-echo (fetch_fields($tabla, $campos, null))[20][1]; # Línea de prueba (comentar)
+echo (fetch_fields($tabla, $campos, null))[23][1]; # Línea de prueba (comentar)
