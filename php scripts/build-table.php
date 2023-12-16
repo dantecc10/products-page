@@ -25,9 +25,9 @@ $campos = [
     "imgs_toy",
     "quant_imgs_toy",
 ];
-$n = sizeof($campos);
 
 $data = fetch_fields($tabla, $campos, "");
+$n = sizeof($data);
 // Inician filas
 for ($i = 0; $i < $n; $i++) {
     $info = array();
