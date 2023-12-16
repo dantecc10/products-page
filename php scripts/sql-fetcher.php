@@ -57,4 +57,4 @@ function fetch_fields($table, $fields, $id)
     }
 }
 
-#echo (fetch_fields($tabla, $campos))[0][4]; # Línea de prueba (comentar)
+echo (fetch_fields($tabla, $campos, null))[20][1]; # Línea de prueba (comentar)
