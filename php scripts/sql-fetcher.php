@@ -58,7 +58,7 @@ function fetch_fields($table, $fields, $id)
 }
 
 //Debug zone
-
+/*
 $tabla = "juguetes";
     $campos = array();
     $campos = [
@@ -76,3 +76,4 @@ $tabla = "juguetes";
         "quant_imgs_toy",
     ];
 echo (fetch_fields($tabla, $campos, null))[23][1]; # Línea de prueba (comentar)
+*/
