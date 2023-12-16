@@ -136,7 +136,7 @@ if (!isset($_SESSION['id'])) {
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Productos</h3>
+                    <h1 class="text-dark mb-4 text-center main-branding-text-color fw-bold">Productos</h1>
                     <div class="card shadow">
                         <div class="card-header py-3">
                             <p class="text-primary m-0 fw-bold main-branding-text-color">Juguetes</p>
