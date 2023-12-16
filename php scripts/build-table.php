@@ -2,7 +2,7 @@
 // Imprimir tabla
 include "sql-fetcher.php";
 include "functions.php";
-include "barcode-generator.php";
+//include "barcode-generator.php";
 
 if (isset($_GET['table'])) {
     $tabla = $_GET['table'];
