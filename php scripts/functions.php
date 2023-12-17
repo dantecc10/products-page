@@ -95,9 +95,9 @@ function avatar_img()
 {
     session_start();
     if (isset($_SESSION['id'])) {
-        $avatar_img = ('<div class="dropdown-list-image me-3"><img class="rounded-circle" src="' . $_SESSION['img'] . '">');
+        $avatar_img = ('<img class="rounded-circle" src="' . $_SESSION['img'] . '">');
     } else {
-        $avatar_img = '<div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg">';
+        $avatar_img = '<img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg">';
     }
     return $avatar_img;
 }
