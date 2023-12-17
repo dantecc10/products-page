@@ -91,12 +91,18 @@ function build_detail_carousel($imgs)
         build_detail_carousel($split_urls($data[$10])) // $data[10] es imgs de SQL
     */
 }
-function avatar_img()
+function avatar_img($src)
 {
-    if (isset($_SESSION['id'])) {
-        $avatar_img = ('<img class="border rounded-circle img-profile" src="' . $_SESSION['img'] . '">');
+    if ($src == "" || $src == null) {
+        if (isset($_SESSION['id'])) {
+            $final_src = $_SESSION['img'];
+        }else{
+            $final_src = "assets/img/avatars/avatar5.jpeg";
+        }
     } else {
-        $avatar_img = '<img class="border rounded-circle img-profile" src="assets/img/avatars/avatar5.jpeg">';
+        $final_src = $src;
     }
+
+    $avatar_img = ('<img class="border rounded-circle img-profile" src="' . $final_src . '">');
     return $avatar_img;
 }
