@@ -91,3 +91,13 @@ function build_detail_carousel($imgs)
         build_detail_carousel($split_urls($data[$10])) // $data[10] es imgs de SQL
     */
 }
+function avatar_img()
+{
+    session_start();
+    if (isset($_SESSION['id'])) {
+        $avatar_img = ('<div class="dropdown-list-image me-3"><img class="rounded-circle" src="' . $_SESSION['img'] . '">');
+    } else {
+        $avatar_img = '<div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg">';
+    }
+    return $avatar_img;
+}

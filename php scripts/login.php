@@ -18,7 +18,7 @@ if ($resultado->num_rows > 0) {
         $_SESSION['name'] = $info->name_user;
         $_SESSION['lastNames'] = $info->last_names_user;
         $_SESSION['user'] = $info->username_user;
-        $_SESSION['img'] = ("assets/img/avatar-icons/" . $info->img_user);
+        $_SESSION['img'] = ($info->img_user);
         $_SESSION['email'] = $info->email_user;
     }
     $connection->close();
