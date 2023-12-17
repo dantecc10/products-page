@@ -94,9 +94,9 @@ function build_detail_carousel($imgs)
 function avatar_img()
 {
     if (isset($_SESSION['id'])) {
-        $avatar_img = ('<img class="rounded-circle" src="' . $_SESSION['img'] . '">');
+        $avatar_img = ('<img class="border rounded-circle img-profile" src="' . $_SESSION['img'] . '">');
     } else {
-        $avatar_img = '<img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg">';
+        $avatar_img = '<img class="border rounded-circle img-profile" src="assets/img/avatars/avatar5.jpeg">';
     }
     return $avatar_img;
 }
