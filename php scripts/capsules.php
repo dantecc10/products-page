@@ -1,7 +1,7 @@
 <?php
 $capsule[0] = ['<tr id="article-row-', '" class="align-middle articles-row"><td class="article-icon">'];
-$capsule['a'] = ['<a href="detalle.php?product=', '">'];
-$capsule[1] = ['<a href="detalle.php?product=', '">'];
+$capsule['a'] = ['<a href="details.php?product=', '">'];
+$capsule[1] = ['<a href="details.php?product=', '">'];
 $capsule[2] = ['<img class="mini-image" src="', '"></a></td>'];
 $capsule[3] = [(''), ''];
 $capsule[] = ['', ''];

@@ -43,30 +43,30 @@ for ($i = 0; $i < $n; $i++) {
 
     echo ('<tr id="article-row-' . $info[0] . '" class="align-middle articles-row">
                                         <td class="article-icon">
-                                            <a href="detalle.php?product=' . $info[0] . '">
+                                            <a href="details.php?product=' . $info[0] . '">
                                                 <img class="mini-image" src="' . $info[10] . '">
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="detalle.php?product=' . $info[0] . '">
+                                            <a href="details.php?product=' . $info[0] . '">
                                                 <span>' . $info[1] . '</span><br>
                                             </a>
                                         </td>
-                                        <td><a href="detalle.php?product=' . $info[0] . '"><span>' . $info[6] . '</span><br></a></td>
-                                        <td><a href="detalle.php?product=' . $info[0] . '"><span>$' . $info[9] . '</span><br></a></td>
+                                        <td><a href="details.php?product=' . $info[0] . '"><span>' . $info[6] . '</span><br></a></td>
+                                        <td><a href="details.php?product=' . $info[0] . '"><span>$' . $info[9] . '</span><br></a></td>
                                         <td>
-                                            <div class="col"><span id="quant-1"><a href="detalle.php?product=' . $info[0] . '">' . $info[8] . '</a></span></div>
+                                            <div class="col"><span id="quant-1"><a href="details.php?product=' . $info[0] . '">' . $info[8] . '</a></span></div>
                                         </td>
-                                        <td><a href="detalle.php?product=' . $info[0] . '"><span>' . $info[3] . '</span><br></a></td>
+                                        <td><a href="details.php?product=' . $info[0] . '"><span>' . $info[3] . '</span><br></a></td>
                                         <td>
                                             <div class="col d-flex align-middle justify-content-center">
                                                 <div class="row" style="margin: 0px !important;">
                                                     <div class="col">
                                                         <div class="row">
-                                                            <div class="col"><a href="detalle.php?product=' . $info[0] . '"><span style="font-size: 100% !important;">' . $info[5] . '</span></a></div>
+                                                            <div class="col"><a href="details.php?product=' . $info[0] . '"><span style="font-size: 100% !important;">' . $info[5] . '</span></a></div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col" style="padding: 3px !important;"><a href="detalle.php?product=' . $info[0] . '">' . $barras . '</a></div>
+                                                            <div class="col" style="padding: 3px !important;"><a href="details.php?product=' . $info[0] . '">' . $barras . '</a></div>
                                                         </div>
                                                     </div>
                                                 </div>
