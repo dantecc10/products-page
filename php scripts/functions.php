@@ -93,7 +93,6 @@ function build_detail_carousel($imgs)
 }
 function avatar_img()
 {
-    session_start();
     if (isset($_SESSION['id'])) {
         $avatar_img = ('<img class="rounded-circle" src="' . $_SESSION['img'] . '">');
     } else {
