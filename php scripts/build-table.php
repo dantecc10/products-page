@@ -38,6 +38,7 @@ if (isset($_GET['filter'])) {
 } else {
     $query = "";
 }
+
 $data = fetch_fields($tabla, $campos, "", $query);
 $n = sizeof($data);
 // Inician filas
