@@ -152,7 +152,7 @@ include "php scripts/functions.php";
                             <div class="row">
                                 <div class="col">
                                     <!--<form>-->
-                                    <div class="input-group"><input class="form-control" id="filtering-input" type="text" placeholder="Buscar" onchange="javascript:table_filter();"><button class="btn btn-primary main-branding-background-color" type="button"><i class="fas fa-search"></i></button></div>
+                                    <div class="input-group"><input class="form-control" id="filtering-input" type="text" placeholder="Buscar" oninput="javascript:table_filter();" onkeyup="javascript:table_filter();" onchange="javascript:table_filter();"><button class="btn btn-primary main-branding-background-color" type="button"><i class="fas fa-search"></i></button></div>
                                     <!--</form>-->
                                 </div>
                             </div>
