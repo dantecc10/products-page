@@ -317,6 +317,7 @@ include "php scripts/functions.php";
                         // Procesar la respuesta del servidor
                         if (this.responseText != null) {
                             // La construcción de la tabla no es nula y procede
+                            objective.innerHTML = "";
                             objective.innerHTML = this.responseText;
                         } else {
                             // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
