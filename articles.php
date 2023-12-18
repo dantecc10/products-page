@@ -152,7 +152,7 @@ include "php scripts/functions.php";
                             <div class="row">
                                 <div class="col">
                                     <!--<form>-->
-                                        <div class="input-group"><input class="form-control" id="filtering-input" type="text" placeholder="Buscar" onchange="javascript:table_filter();"><button class="btn btn-primary main-branding-background-color" type="button"><i class="fas fa-search"></i></button></div>
+                                    <div class="input-group"><input class="form-control" id="filtering-input" type="text" placeholder="Buscar" onchange="javascript:table_filter();"><button class="btn btn-primary main-branding-background-color" type="button"><i class="fas fa-search"></i></button></div>
                                     <!--</form>-->
                                 </div>
                             </div>
@@ -302,6 +302,32 @@ include "php scripts/functions.php";
             xhr.send("table=" + table);
         }
         build_table();
+
+        function table_filter() {
+            var search_text = document.getElementById("filtering-input").value;
+            // Obtener los valores de los campos de entrada
+            //let table = "juguetes";
+            if (search_text != "" && search_text != null && search_text != " ") {
+                let objective = document.getElementById("table-toys");
+
+                // Crear objeto XMLHttpRequest
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        // Procesar la respuesta del servidor
+                        if (this.responseText != null) {
+                            // La construcción de la tabla no es nula y procede
+                            objective.innerHTML = this.responseText;
+                        } else {
+                            // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
+                        }
+                    }
+                };
+                xhr.open("GET", "php scripts/build-table.php", true);
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhr.send("filter=" + search_text);
+            }
+        }
     </script>
     <script src="assets/js/table-filter.js"></script>
     <!--<div onload="javascript:build_table();" style="display: none"></div>-->
