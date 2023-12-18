@@ -26,7 +26,19 @@ $campos = [
     "quant_imgs_toy",
 ];
 
-$data = fetch_fields($tabla, $campos, "", "");
+if (isset($_GET['filter'])) {
+    $query = ("SELECT * FROM `" . $tabla . "` WHERE ");
+    for ($i = 0; $i < sizeof($campos); $i++) {
+        if ($i == (sizeof($campos) - 1)) {
+            $query .= ("`" . $campos[$i] . "` LIKE '%" . $_GET['filter'] . "%'");
+        } else {
+            $query .= ("`" . $campos[$i] . "` LIKE '%" . $_GET['filter'] . "%' OR ");
+        }
+    }
+} else {
+    $query = "";
+}
+$data = fetch_fields($tabla, $campos, "", $query);
 $n = sizeof($data);
 // Inician filas
 for ($i = 0; $i < $n; $i++) {
