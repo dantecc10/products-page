@@ -23,6 +23,8 @@ function table_filter() {
     xhr.send("table=" + table + "&filter=" + search_text);
   }
 }
+
+/*
 function build_table() {
   // Obtener los valores de los campos de entrada
   let table = "juguetes";
@@ -47,3 +49,4 @@ function build_table() {
   xhr.send("table=" + table);
 }
 build_table();
+*/
