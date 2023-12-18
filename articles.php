@@ -152,7 +152,7 @@ include "php scripts/functions.php";
                             <div class="row">
                                 <div class="col">
                                     <!--<form>-->
-                                        <div class="input-group"><input class="form-control" type="text" placeholder="Buscar"><button class="btn btn-primary main-branding-background-color" type="button"><i class="fas fa-search"></i></button></div>
+                                        <div class="input-group"><input class="form-control" id="filtering_input" type="text" placeholder="Buscar" onclick="javascript:table_filter();"><button class="btn btn-primary main-branding-background-color" type="button"><i class="fas fa-search"></i></button></div>
                                     <!--</form>-->
                                 </div>
                             </div>
@@ -303,6 +303,7 @@ include "php scripts/functions.php";
         }
         build_table();
     </script>
+    <script src="assets/js/table-filter.js"></script>
     <!--<div onload="javascript:build_table();" style="display: none"></div>-->
 </body>
 
