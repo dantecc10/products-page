@@ -18,15 +18,20 @@ $campos = [
 ];
 */
 
-function fetch_fields($table, $fields, $id, $query)
+function fetch_fields($table, $fields, $id, $custom_query)
 {
     include "connection.php";
-    if ($id == "" or $id == null) {
-        $query = "SELECT * FROM `$table`";
+    if ($custom_query != "" && $custom_query != null) {
+        $query = $custom_query;
     } else {
-        $query_field = ($fields[0]);
-        $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
+        if ($id == "" or $id == null) {
+            $query = "SELECT * FROM `$table`";
+        } else {
+            $query_field = ($fields[0]);
+            $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
+        }
     }
+
     $result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
     $data = array();
     $n = sizeof($fields);
