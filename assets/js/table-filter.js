@@ -3,7 +3,7 @@ function table_filter() {
   // Obtener los valores de los campos de entrada
   //let table = "juguetes";
   if (search_text != "" && search_text != null && search_text != " ") {
-    let objective = document.getElementById("table-toys");
+    var objective = document.getElementById("table-toys");
 
     // Crear objeto XMLHttpRequest
     let xhr = new XMLHttpRequest();
