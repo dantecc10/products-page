@@ -21,7 +21,7 @@ if (isset($_GET['product'])) {
         "imgs_toy",
         "quant_imgs_toy",
     ];
-    $data = fetch_fields($tabla, $campos, "$id");
+    $data = fetch_fields($tabla, $campos, "$id", "");
 } else {
     header("Location: articles.php");
 }

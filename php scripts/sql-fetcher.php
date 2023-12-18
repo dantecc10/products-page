@@ -18,7 +18,7 @@ $campos = [
 ];
 */
 
-function fetch_fields($table, $fields, $id)
+function fetch_fields($table, $fields, $id, $query)
 {
     include "connection.php";
     if ($id == "" or $id == null) {
@@ -75,5 +75,5 @@ $tabla = "juguetes";
         "imgs_toy",
         "quant_imgs_toy",
     ];
-echo (fetch_fields($tabla, $campos, null))[23][1]; # Línea de prueba (comentar)
+echo (fetch_fields($tabla, $campos, null, null))[23][1]; # Línea de prueba (comentar)
 */
