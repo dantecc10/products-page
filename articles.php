@@ -309,6 +309,7 @@ include "php scripts/functions.php";
             //let table = "juguetes";
             if (search_text != "" && search_text != null && search_text != " ") {
                 objective = document.getElementById("table-toys");
+                url = ("php scripts/build-table.php?filter="+search_text);
                 // Crear objeto XMLHttpRequest
                 let xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function() {
@@ -322,9 +323,9 @@ include "php scripts/functions.php";
                         }
                     }
                 };
-                xhr.open("GET", "php scripts/build-table.php", true);
+                xhr.open("GET", url /*"php scripts/build-table.php"*/, true);
                 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhr.send("filter=" + search_text);
+                //xhr.send("filter=" + search_text);
             }
         }
     </script>
