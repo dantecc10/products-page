@@ -304,12 +304,11 @@ include "php scripts/functions.php";
         build_table();
 
         function table_filter() {
-            var search_text = document.getElementById("filtering-input").value;
+            search_text = document.getElementById("filtering-input").value;
             // Obtener los valores de los campos de entrada
             //let table = "juguetes";
             if (search_text != "" && search_text != null && search_text != " ") {
-                var objective = document.getElementById("table-toys");
-
+                objective = document.getElementById("table-toys");
                 // Crear objeto XMLHttpRequest
                 let xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function() {
