@@ -20,7 +20,7 @@ function table_filter() {
     };
     xhr.open("GET", "php scripts/build-table.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.send("table=" + table + "&filter=" + search_text);
+    xhr.send("filter=" + search_text);
   }
 }
 
