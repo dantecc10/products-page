@@ -1,5 +1,5 @@
 function table_filter() {
-  const search_text = document.getElementById("filtering_input").value;
+  const search_text = document.getElementById("filtering-input").value;
   // Obtener los valores de los campos de entrada
   //let table = "juguetes";
   if (search_text != "" && search_text != null && search_text != " ") {
