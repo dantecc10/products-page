@@ -328,7 +328,7 @@ include "php scripts/functions.php";
             }
         }
     </script>
-    <script src="assets/js/table-filter.js"></script>
+    <!--<script src="assets/js/table-filter.js"></script>-->
     <!--<div onload="javascript:build_table();" style="display: none"></div>-->
 </body>
 
