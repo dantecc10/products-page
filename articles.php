@@ -151,9 +151,9 @@ include "php scripts/functions.php";
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <form>
+                                    <!--<form>-->
                                         <div class="input-group"><input class="form-control" type="text" placeholder="Buscar"><button class="btn btn-primary main-branding-background-color" type="button"><i class="fas fa-search"></i></button></div>
-                                    </form>
+                                    <!--</form>-->
                                 </div>
                             </div>
                             <div class="table-responsive table mt-2 text-center" id="dataTable" role="grid" aria-describedby="dataTable_info">
