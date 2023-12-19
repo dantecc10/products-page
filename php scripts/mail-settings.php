@@ -41,7 +41,8 @@ $mail->Body = $msg;
 try {
     $mail->Send();
     // Resto del código...
+    ec
 } catch (Exception $e) {
-    //echo "Error al enviar el correo electrónico: " . $mail->ErrorInfo;
-    //echo "Excepción lanzada: " . $e->getMessage();
+    echo "Error al enviar el correo electrónico: " . $mail->ErrorInfo;
+    echo "Excepción lanzada: " . $e->getMessage();
 }
