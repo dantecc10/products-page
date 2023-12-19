@@ -22,7 +22,7 @@ $mail->Port = 587;
 $mail->SMTPAuth = true;
 $mail->Username = $username;
 $mail->Password = $password;
-$mail->From = "Comercio CC";
+$mail->From = $username;
 $mail->FromName = "Dante";
 $mail->CharSet = "UTF-8";
 
