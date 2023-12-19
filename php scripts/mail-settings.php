@@ -14,8 +14,9 @@ $username = "pruebas@comercial.castelancarpinteyro.com";
 $password = "TiempoEnUnaBotella23!!";
 
 $mail = new PHPMailer;
+$mail->SMTPDebug = 3;
 $mail->isSMTP();
-$mail->Host = ""; //dominio o subdominio
+$mail->Host = "comercial.castelancarpinteyro.com"; //dominio o subdominio
 $mail->SMTPSecure = 'TLS';
 $mail->Port = 587;
 $mail->SMTPAuth = true;
@@ -41,7 +42,7 @@ $mail->Body = $msg;
 try {
     $mail->Send();
     // Resto del código...
-    echo("Correo enviado 'con éxito'");
+    echo ("Correo enviado 'con éxito'");
 } catch (Exception $e) {
     echo "Error al enviar el correo electrónico: " . $mail->ErrorInfo;
     echo "Excepción lanzada: " . $e->getMessage();
