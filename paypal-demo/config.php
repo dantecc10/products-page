@@ -1,5 +1,4 @@
 <?php
-<?php
 //ProPayPal es vital para declarar si es demo o prueba las transacciones
 
 //define('ProPayPal', 0); // El cero simboliza entorno de Prueba
@@ -17,5 +16,4 @@ define("PayPalSecret", "EMA6lVCQBJ20WMKOj93Z-M3t9cB5_sq0lV3AZgB0eu8pX2PKuFAsHus8
 define("PayPalBaseUrl", "https://demo.baulphp.com/paypal-php-integracion-con-ejemplo-completo/");
 define("PayPalENV", "sandbox");
 }
-?>
 ?>
