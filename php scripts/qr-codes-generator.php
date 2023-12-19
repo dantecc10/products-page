@@ -4,16 +4,19 @@ require '../vendor/autoload.php';
 use chillerlan\QRCode\QRCode;
 
 // URL que quieres codificar en el QR
-$url = 'https://tusitio.com';
+$url = 'https://castelancarpinteyro.com';
 
 // Crea una instancia del generador QR
 $qr = new QRCode();
 
-// Genera el código QR y guarda los datos en base64
+// Genera el código QR y guarda la imagen
 $imagenQR = $qr->render($url);
-$imagenBase64 = 'data:image/png;base64,' . base64_encode($imagenQR);
+$rutaImagen = 'qrcodes/qrcode_' . time() . '.png'; // Nombre del archivo con una marca de tiempo para evitar sobrescribir
 
-// Devuelve la imagen en formato base64 para usarla en el src
-//echo $imagenBase64;
+// Guarda la imagen QR
+file_put_contents($rutaImagen, $imagenQR);
 
-echo ('<img src="' . $imagenBase64 . '">');
+// Devuelve la ruta de la imagen
+//echo $rutaImagen;
+
+echo ('<img src="' . $rutaImagen . ">");
