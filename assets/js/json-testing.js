@@ -40,3 +40,22 @@ function add_article() {
 }
 
 add_article();
+
+function send_json_to_server(json_data) {
+  // Suponiendo que tienes la variable Articles con la información de los artículos
+
+  // Convertir Articles a formato JSON
+  var articlesJSON = JSON.stringify(json_data);
+
+  // Hacer la petición AJAX
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "../../php scripts/save_cart.php", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Petición completada
+      console.log("Artículos guardados en la sesión");
+    }
+  };
+  xhr.send(articlesJSON);
+}
