@@ -131,6 +131,7 @@ function calculate_totals() {
     document.getElementById(total_articles_target_id).innerHTML =
       "(" + total + ")";
   } else {
+    // Insertar ceros para los datos finales...
     document.getElementById(total_articles_target_id).innerText = "(0)";
     document.getElementById(total_price_target_id).innerText = "$0";
   }
