@@ -12,6 +12,7 @@ var article_structure = {
 function add_article() {
   var added_article = Object.create(article_structure);
   // Llenando información:
+
   Articles.push(added_article);
 }
 
@@ -136,3 +137,5 @@ function calculate_totals() {
     document.getElementById(total_price_target_id).innerText = "$0";
   }
 }
+
+
