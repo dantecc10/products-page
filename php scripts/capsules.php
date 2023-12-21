@@ -8,30 +8,30 @@ $capsule[] = ['', ''];
 ?>
 <tr id="article-row-1" class="align-middle articles-row">
     <td class="article-icon">
-        <a href="detalle.html">
+        <a href="detalle.php">
             <img class="mini-image" src="">
         </a>
     </td>
     <td>
-        <a href="detalle.html">
+        <a href="detalle.php">
             <span>Producto 2 de prueba para tablita</span><br>
         </a>
     </td>
-    <td><a href="detalle.html"><span>Playmobil</span><br></a></td>
-    <td><a href="detalle.html"><span>$279</span><br></a></td>
+    <td><a href="detalle.php"><span>Playmobil</span><br></a></td>
+    <td><a href="detalle.php"><span>$279</span><br></a></td>
     <td>
-        <div class="col"><span id="quant-1"><a href="detalle.html">3</a></span></div>
+        <div class="col"><span id="quant-1"><a href="detalle.php">3</a></span></div>
     </td>
-    <td><a href="detalle.html"><span style="color: rgb(133, 135, 150);">70142</span><br></a></td>
+    <td><a href="detalle.php"><span style="color: rgb(133, 135, 150);">70142</span><br></a></td>
     <td>
         <div class="col d-flex align-middle">
             <div class="row" style="margin: 0px !important;">
                 <div class="col">
                     <div class="row">
-                        <div class="col"><a href="detalle.html"><span style="font-size: 100% !important;">4008789701428</span></a></div>
+                        <div class="col"><a href="detalle.php"><span style="font-size: 100% !important;">4008789701428</span></a></div>
                     </div>
                     <div class="row">
-                        <div class="col" style="padding: 3px !important;"><a href="detalle.html"><img class="barcode-img" src="assets/img/test-barcode.png"></a></div>
+                        <div class="col" style="padding: 3px !important;"><a href="detalle.php"><img class="barcode-img" src="assets/img/test-barcode.png"></a></div>
                     </div>
                 </div>
             </div>
