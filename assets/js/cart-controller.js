@@ -1,15 +1,13 @@
-var article_structure = {
-    id: 0,
-    name: "",
-    description: "",
-    category: "",
-    price: 0,
-    img: "",
-    quantity: 0,
-    stock: 0,
-  };
-
 var Articles = [];
+var article_structure = {
+  id: 0,
+  name: "",
+  category: "",
+  price: 0,
+  img: "",
+  quantity: 0,
+  stock: 0,
+};
 
 function add_article() {
   var added_article = Object.create(article_structure);
@@ -17,13 +15,50 @@ function add_article() {
   Articles.push(added_article);
 }
 
+function get_data(index) {
+  var data = [];
+  data[0] = document
+    .getElementsByClassName("data-id")
+    [index].innerText.substring(4);
+  data[1] = document.getElementsByClassName("data-name")[index].innerText;
+  data[2] =
+    document
+      .getElementsByClassName("data-category")
+      [index].innerText.charAt(11)
+      .toLowerCase() +
+    document
+      .getElementsByClassName("data-category")
+      [index].innerText.substring(12);
+  data[3] = document
+    .getElementsByClassName("data-price")
+    [index].innerText.substring(1);
+  data[4] = document.getElementsByClassName("data-img")[index].src;
+  data[5] = document.getElementsByClassName("data-quantity")[index].value;
+  data[6] = document.getElementsByClassName("data-stock")[index].value;
+  // Subtotal: document.getElementsByClassName("data-subtotal")[index].innerText = ("$" + ((document.getElementsByClassName("data-price")[index].innerText.substring(1))*(document.getElementsByClassName("data-quantity")[index].value)));
+  return data;
+}
+
 function create_json_data() {
-  var data = {};
+  var data = new article_structure();
   var n = document.getElementsByClassName("articles-row").length;
   for (var i = 0; i < n; i++) {
-    
-    img = document.getElementsByClassName("mini-image")[i].src;
+    data_array = get_data(i);
+    data.id = data_array[0];
+    data.name = data_array[1];
+    data.category = data_array[2];
+    data.price = data_array[3];
+    data.img = data_array[4];
+    data.quantity = data_array[5];
+    data.stock = data_array[6];
+    Articles.push(data);
   }
+  console.log("JSON creado correctamente.");
+}
+
+function remove_product(number, articles) {
+  document.getElementsByClassName("articles-row")[number].remove();
+  articles.splice(number, 1);
 }
 
 function send_json_to_server(json_data) {
@@ -43,4 +78,35 @@ function send_json_to_server(json_data) {
     }
   };
   xhr.send(articlesJSON);
+}
+
+function calculate_totals() {
+  // Función para calcular totales de venta (artículos e importe)
+  const total_price_target_id = "total-container";
+  const subtotals_price_class = "subtotal-container";
+
+  const total_articles_target_id = "total-articles-container";
+  const articles_quantity_class = "quantity-input";
+
+  n = document.getElementsByClassName(subtotals_price_class).length;
+  var total = 0;
+  for (let i = 0; i < n; i++) {
+    // console.log("Suma = " + total); // Debug line
+    valor = document.getElementsByClassName(subtotals_price_class)[i].outerText;
+    valor = valor.substring(1, valor.length);
+    total = total + parseFloat(valor);
+  }
+  // Insertar cambio en el DOM (precio total)
+  document.getElementById(total_price_target_id).innerHTML = "$" + total;
+
+  n = document.getElementsByClassName(articles_quantity_class).length;
+  var total = 0;
+  for (let i = 0; i < n; i++) {
+    // console.log("Artículos = " + total); // Debug line
+    valor = document.getElementsByClassName(articles_quantity_class)[i].value;
+    total = total + parseFloat(valor);
+  }
+  // Insertar cambio en el DOM (artículos totales)
+  document.getElementById(total_articles_target_id).innerHTML =
+    "(" + total + ")";
 }

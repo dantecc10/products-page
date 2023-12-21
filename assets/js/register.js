@@ -29,7 +29,7 @@ function calculate_totals() {
 }
 
 
-Venta = new Object = {
+/*Venta = new Object = {
     Artículos,
     Total
 }
@@ -41,7 +41,7 @@ Venta = new Object = {
     IMG
     Subtotal
   Total
-  */
+  
 
   data = {
     "Venta": {
@@ -71,4 +71,4 @@ Venta = new Object = {
         }
       ],
       "Total": {}
-  };
+  };*/
