@@ -40,8 +40,13 @@ function get_data(index) {
 }
 
 function create_json_data() {
-  var data = new article_structure();
+  var data = article_structure;
   var n = document.getElementsByClassName("articles-row").length;
+
+  for (let index = Articles.length; index > 0; index--) {
+    Articles.pop();
+  }
+
   for (var i = 0; i < n; i++) {
     data_array = get_data(i);
     data.id = data_array[0];
@@ -53,12 +58,14 @@ function create_json_data() {
     data.stock = data_array[6];
     Articles.push(data);
   }
-  console.log("JSON creado correctamente.");
+  //console.log("JSON creado correctamente.");
+  //return data; // No devolver, pues variable ya está en Articles[]
 }
 
-function remove_product(number, articles) {
+function remove_product(number) {
   document.getElementsByClassName("articles-row")[number].remove();
-  articles.splice(number, 1);
+  Articles.splice(number, 1);
+  calculate_totals();
 }
 
 function send_json_to_server(json_data) {
@@ -88,25 +95,43 @@ function calculate_totals() {
   const total_articles_target_id = "total-articles-container";
   const articles_quantity_class = "quantity-input";
 
-  n = document.getElementsByClassName(subtotals_price_class).length;
-  var total = 0;
-  for (let i = 0; i < n; i++) {
-    // console.log("Suma = " + total); // Debug line
-    valor = document.getElementsByClassName(subtotals_price_class)[i].outerText;
-    valor = valor.substring(1, valor.length);
-    total = total + parseFloat(valor);
-  }
-  // Insertar cambio en el DOM (precio total)
-  document.getElementById(total_price_target_id).innerHTML = "$" + total;
+  n = document.getElementsByClassName("articles-row").length;
+  if (n > 0) {
+    n = document.getElementsByClassName(subtotals_price_class).length;
+    for (let s = 0; s < n; s++) {
+      quantity = document.getElementsByClassName(articles_quantity_class)[s]
+        .value;
 
-  n = document.getElementsByClassName(articles_quantity_class).length;
-  var total = 0;
-  for (let i = 0; i < n; i++) {
-    // console.log("Artículos = " + total); // Debug line
-    valor = document.getElementsByClassName(articles_quantity_class)[i].value;
-    total = total + parseFloat(valor);
+      price = document.getElementsByClassName("data-price")[s].innerHTML;
+      price = price.substring(1, price.length);
+      subtotal = parseFloat(quantity) * parseFloat(price);
+      document.getElementsByClassName(subtotals_price_class)[s].innerText =
+        "$" + subtotal;
+    }
+
+    var total = 0;
+    for (let i = 0; i < n; i++) {
+      // console.log("Suma = " + total); // Debug line
+      valor = document.getElementsByClassName(subtotals_price_class)[i]
+        .outerText;
+      valor = valor.substring(1, valor.length);
+      total = total + parseFloat(valor);
+    }
+    // Insertar cambio en el DOM (precio total)
+    document.getElementById(total_price_target_id).innerHTML = "$" + total;
+
+    n = document.getElementsByClassName(articles_quantity_class).length;
+    var total = 0;
+    for (let i = 0; i < n; i++) {
+      // console.log("Artículos = " + total); // Debug line
+      valor = document.getElementsByClassName(articles_quantity_class)[i].value;
+      total = total + parseFloat(valor);
+    }
+    // Insertar cambio en el DOM (artículos totales)
+    document.getElementById(total_articles_target_id).innerHTML =
+      "(" + total + ")";
+  } else {
+    document.getElementById(total_articles_target_id).innerText = "(0)";
+    document.getElementById(total_price_target_id).innerText = "$0";
   }
-  // Insertar cambio en el DOM (artículos totales)
-  document.getElementById(total_articles_target_id).innerHTML =
-    "(" + total + ")";
 }
