@@ -138,4 +138,4 @@ function calculate_totals() {
   }
 }
 
-
+document.getElementById("input-barcode").focus();
