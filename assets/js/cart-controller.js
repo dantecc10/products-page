@@ -134,36 +134,38 @@ function calculate_totals() {
 function add_article() {
   // Obtener los valores del campo de entrada
   var bar_code_input = document.getElementById("input-barcode").value;
-  var objective = document.getElementById("table-products");
-  var category = "juguetes";
-  n = document.getElementsByClassName("articles-row").length;
-  // Crear objeto XMLHttpRequest
-  let xhr = new XMLHttpRequest();
-  let url =
-    "../../php scripts/build-table.php?filter=" +
-    bar_code_input +
-    "&table=" +
-    category +
-    "&client=sale&articlen=" +
-    n;
-    document.getElementById('input-barcode').value = '';
-  xhr.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      // Procesar la respuesta del servidor
-      if (this.responseText != null) {
-        // La construcción de la tabla no es nula y procede
-        objective.innerHTML += this.responseText;
-        // Ejecutar función que actualice JSON y muestre totales actualizados
-        create_json_data();
-        calculate_totals();
-      } else {
-        // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
+  if (bar_code_input != null && bar_code_input != "") {
+    var objective = document.getElementById("table-products");
+    var category = "juguetes";
+    n = document.getElementsByClassName("articles-row").length;
+    // Crear objeto XMLHttpRequest
+    let xhr = new XMLHttpRequest();
+    let url =
+      "../../php scripts/build-table.php?filter=" +
+      bar_code_input +
+      "&table=" +
+      category +
+      "&client=sale&articlen=" +
+      n;
+    document.getElementById("input-barcode").value = "";
+    xhr.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        // Procesar la respuesta del servidor
+        if (this.responseText != null) {
+          // La construcción de la tabla no es nula y procede
+          objective.innerHTML += this.responseText;
+          // Ejecutar función que actualice JSON y muestre totales actualizados
+          create_json_data();
+          calculate_totals();
+        } else {
+          // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
+        }
       }
-    }
-  };
-  xhr.open("GET", url, true);
-  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhr.send();
+    };
+    xhr.open("GET", url, true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send();
+  }
 }
 
 document.getElementById("input-barcode").focus();
