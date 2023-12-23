@@ -161,8 +161,9 @@ function add_article() {
 					document.getElementsByClassName("data-quantity")[i].value
 				);
 				if (quantity < stock) {
-					stock = stock+1;
+					stock = stock + 1;
 					document.getElementsByClassName("data-quantity")[i].value = stock;
+					document.getElementById("input-barcode").value = "";
 				} else {
 					alert("No hay suficiente stock del artículo ingresado.");
 				}
@@ -209,3 +210,4 @@ document.getElementById("input-barcode").focus();
 calculate_totals();
 
 Articles = create_json_data(Articles);
+
