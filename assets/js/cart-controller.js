@@ -58,6 +58,12 @@ function create_json_data() {
 
 function remove_product(number) {
   document.getElementsByClassName("articles-row")[number].remove();
+  n = document.getElementsByClassName("delete-button").length;
+  for (let i = 0; i < n; i++) {
+    document
+      .getElementsByClassName("delete-button")
+      [s].setAttribute("onclick", "javascript:remove_product(" + s + ");");
+  }
   Articles.splice(number, 1);
   calculate_totals();
 }
@@ -93,9 +99,6 @@ function calculate_totals() {
   if (n > 0) {
     n = document.getElementsByClassName(subtotals_price_class).length;
     for (let s = 0; s < n; s++) {
-      document
-        .getElementsByClassName("delete-button")
-        [s].setAttribute("onclick", "javascript:remove_product(" + s + ");");
       quantity = document.getElementsByClassName(articles_quantity_class)[s]
         .value;
 
