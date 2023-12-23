@@ -140,6 +140,7 @@ function main_build($data)
                             <td>
                                 <span class="fw-bold fs-5 subtotal-container">$' . $info[9] . '</span></td>
                             </tr>');
+                    $i = $n;
                 }
             } else {
                 $barras = bar_code_img($generator, $info[5]);
