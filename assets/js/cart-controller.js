@@ -144,7 +144,9 @@ function add_article() {
     bar_code_input +
     "&table=" +
     category +
-    "&client=sale&articlen="+n;
+    "&client=sale&articlen=" +
+    n;
+  bar_code_input = "";
   xhr.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       // Procesar la respuesta del servidor
@@ -154,7 +156,6 @@ function add_article() {
         // Ejecutar función que actualice JSON y muestre totales actualizados
         create_json_data();
         calculate_totals();
-        bar_code_input = "";
       } else {
         // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
       }
