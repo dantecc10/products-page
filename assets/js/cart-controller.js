@@ -142,7 +142,8 @@ function add_article() {
     "../../php scripts/build-table.php?filter=" +
     bar_code_input +
     "&table=" +
-    category;
+    category +
+    "&client=sale";
   xhr.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       // Procesar la respuesta del servidor

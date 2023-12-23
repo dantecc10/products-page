@@ -66,7 +66,80 @@ function main_build($data)
 
             $barras = bar_code_img($generator, $info[5]);
 
-            echo ('<tr id="article-row-' . $info[0] . '" class="align-middle articles-row">
+            if (isset($_GET['client'])) {
+                $client = $_GET['client'];
+                if ($client == "sale") {
+                    // Generar DOM para sale.html/.php
+                    echo ('<tr class="align-middle articles-row">
+                            <td class="article-icon">
+                                <a href="details.php?product=' . $info[0] . '">
+                                    <img class="mini-image data-img" src="' . $info[10] . '">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="detalle.html">
+                                    <span class="data-name" style="color: rgb(133, 135, 150);">' . $info[1] . '</span><br />
+                                </a>
+                                <div class="col d-flex align-middle justify-content-center">
+                                    <div class="row" style="margin: 0px !important;">
+                                        <div class="col">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a href="details.php?product=' . $info[0] . '">
+                                                        <span class="data-barcode" style="font-size: 100% !important;">' . $info[5] . '</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col" style="padding: 3px !important;">
+                                                    <a href="details.php?product=' . $info[0] . '">
+                                                        <img class="barcode-img" src="' . $info[10] . '">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col col-3" style="padding: 3px !important;">
+                                                    <a href="details.php?product=' . $info[0] . '">
+                                                        <span class="data-id" style="font-size: xx-small !important;">ID: ' . $info[0] . '</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col" style="padding: 3px !important;">
+                                                    <a href="details.php?product=' . $info[0] . '">
+                                                        <span class="data-category" style="font-size: xx-small !important;line-height: .2;">Categoría: Juguetes</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a class="fs-5" href="details.php?product=' . $info[0] . '">
+                                    <span class="data-price" style="color: rgb(133, 135, 150);">$' . $info[9] . '</span><br />
+                                </a>
+                            </td>
+                            <td>
+                                <div class="col" style="height: 100% !important;width: 90% !important;">
+                                    <div class="row">
+                                        <div class="col col-6 pe-0 d-flex align-items-center justify-content-end">
+                                            <input type="number" class="quantity-input d-flex justify-content-center data-quantity" style="width: 100% !important;text-align: center !important;" value="1" max="' . $info[8] . '">
+                                            <input type="number" class="d-flex justify-content-center data-stock visually-hidden" style="width: 100% !important;text-align: center !important;" value="' . $info[8] . '" max="3" min="3" disabled="">
+                                        </div>
+                                        <div class="col col-6 p-0">
+                                            <span class="delete-button p-2 fw-bold m-0" onclick="javascript:remove_product(' . $article_n . ');">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="fw-bold fs-5 subtotal-container">$' . $info[9] . '</span></td>
+                            </tr>');
+                }
+            } else {
+
+                echo ('<tr id="article-row-' . $info[0] . '" class="align-middle articles-row">
                                         <td class="article-icon">
                                             <a href="details.php?product=' . $info[0] . '">
                                                 <img class="mini-image" src="' . $info[10] . '">
@@ -98,6 +171,7 @@ function main_build($data)
                                             </div><br>
                                         </td>
                                     </tr>');
+            }
         }
     }
     // Terminan filas
