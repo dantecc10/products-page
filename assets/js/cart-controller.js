@@ -43,6 +43,7 @@ function create_json_data() {
   }
 
   for (var i = 0; i < n; i++) {
+    data[i] = article_structure;
     data_array = get_data(i);
     data[i].id = data_array[0];
     data[i].name = data_array[1];
