@@ -64,8 +64,6 @@ function main_build($data)
                 $info[10] = split_urls($info[10]);
             }
 
-            $barras = bar_code_img($generator, $info[5]);
-
             if (isset($_GET['client'])) {
                 $client = $_GET['client'];
                 if ($client == "sale") {
@@ -144,7 +142,7 @@ function main_build($data)
                             </tr>');
                 }
             } else {
-
+                $barras = bar_code_img($generator, $info[5]);
                 echo ('<tr id="article-row-' . $info[0] . '" class="align-middle articles-row">
                                         <td class="article-icon">
                                             <a href="details.php?product=' . $info[0] . '">
