@@ -40,23 +40,25 @@ if (isset($_GET['filter'])) {
 }
 
 $data = fetch_fields($tabla, $campos, "", $query);
-if (is_array($data)) {
-    $n = sizeof($data);
+function main_build($data)
+{
+    if (is_array($data)) {
+        $n = sizeof($data);
 
-    // Inician filas
-    for ($i = 0; $i < $n; $i++) {
-        $info = array();
-        $info = $data[$i];
+        // Inician filas
+        for ($i = 0; $i < $n; $i++) {
+            $info = array();
+            $info = $data[$i];
 
-        if (is_array(split_urls($info[10]))) {
-            $info[10] = (split_urls($info[10]))[0];
-        } else {
-            $info[10] = split_urls($info[10]);
-        }
+            if (is_array(split_urls($info[10]))) {
+                $info[10] = (split_urls($info[10]))[0];
+            } else {
+                $info[10] = split_urls($info[10]);
+            }
 
-        $barras = bar_code_img($generator, $info[5]);
+            $barras = bar_code_img($generator, $info[5]);
 
-        echo ('<tr id="article-row-' . $info[0] . '" class="align-middle articles-row">
+            echo ('<tr id="article-row-' . $info[0] . '" class="align-middle articles-row">
                                         <td class="article-icon">
                                             <a href="details.php?product=' . $info[0] . '">
                                                 <img class="mini-image" src="' . $info[10] . '">
@@ -88,6 +90,9 @@ if (is_array($data)) {
                                             </div><br>
                                         </td>
                                     </tr>');
+        }
     }
+    // Terminan filas
 }
-// Terminan filas
+
+main_build($data);
