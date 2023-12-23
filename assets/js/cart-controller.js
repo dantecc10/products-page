@@ -33,7 +33,7 @@ function get_data(index) {
   return data;
 }
 
-function create_json_data() {
+function create_json_data(Articles) {
   //var data = article_structure;
   var n = document.getElementsByClassName("articles-row").length;
   
