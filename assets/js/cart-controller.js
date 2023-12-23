@@ -121,11 +121,7 @@ function calculate_totals() {
 function add_article() {
 	// Obtener los valores del campo de entrada
 	var bar_code_input = document.getElementById("input-barcode").value;
-	if (
-		bar_code_input != null &&
-		bar_code_input != "" &&
-		bar_code_input.length > 8
-	) {
+	if (bar_code_input != null && bar_code_input != "" && bar_code_input.length > 8) {
 		for (let i = 0; i < document.getElementsByClassName("data-barcode").length; i++) {
 			fetch_ajax = true;
 			if (document.getElementsByClassName("data-barcode")[i].innerText == bar_code_input) {
@@ -135,7 +131,6 @@ function add_article() {
 				if (quantity < stock) {
 					stock = stock + 1;
 					document.getElementsByClassName("data-quantity")[i].value = stock;
-					document.getElementById("input-barcode").value = "";
 				} else {
 					alert("No hay suficiente stock del artículo ingresado.");
 				}
@@ -169,6 +164,7 @@ function add_article() {
 			xhr.send();
 			// Termina lógica de AJAX y búsqueda
 		}
+		document.getElementById("input-barcode").value = "";
 	}
 }
 
