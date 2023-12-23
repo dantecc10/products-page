@@ -22,25 +22,37 @@ function get_data(index) {
 	return data;
 }
 
-function create_json_data(Articles) {
+function create_json_data() {
 	//var data = article_structure;
+	var product_structure = {
+		id: 0,
+		name: "",
+		category: "",
+		price: 0,
+		img: "",
+		quantity: 0,
+		stock: 0,
+	};
+
+	json_cart = new Object();
+	var Products = [];
 	var n = document.getElementsByClassName("articles-row").length;
-	Articles = [];
 	for (var i = 0; i < n; i++) {
 		var data = get_data(i);
-		Articles[i] = article_structure;
-		Articles[i].id = data[0];
-		Articles[i].name = data[1];
-		Articles[i].category = data[2];
-		Articles[i].price = data[3];
-		Articles[i].img = data[4];
-		Articles[i].quantity = data[5];
-		Articles[i].stock = data[6];
+		Products[i] = new Object(product_structure);
+		Products[i].id = data[0];
+		Products[i].name = data[1];
+		Products[i].category = data[2];
+		Products[i].price = data[3];
+		Products[i].img = data[4];
+		Products[i].quantity = data[5];
+		Products[i].stock = data[6];
 	}
 	//Articles.push(data);
 	//console.log("JSON creado correctamente.");
 	//return data; // No devolver, pues variable ya está en Articles[]
-	return Articles;
+	json_cart = { Products };
+	return json_cart;
 }
 
 function remove_product(number) {
@@ -156,7 +168,7 @@ function add_article() {
 						calculate_totals();
 					} else {
 						// La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
-						alert("El código de barra no existe o no está asignado un producto.");
+						alert("El código de barra no existe o no está asignado a un producto.");
 					}
 				}
 			};
