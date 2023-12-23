@@ -65,11 +65,11 @@ function main_build($data)
             }
 
             if (isset($_GET['client'])) {
+                $barras = barcode_src_generator($generator, $info[5]);
                 $client = $_GET['client'];
                 if ($client == "sale") {
                     if (isset($_GET['articlen'])) {
                         $article_n = $_GET['articlen'];
-                        $barras = barcode_src_generator($generator, $info[5]);
                     } else {
                         $article_n = "Error en el GET";
                     }
