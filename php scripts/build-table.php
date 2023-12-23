@@ -98,7 +98,7 @@ function main_build($data)
                                             <div class="row">
                                                 <div class="col" style="padding: 3px !important;">
                                                     <a href="details.php?product=' . $info[0] . '">
-                                                        <img class="barcode-img" src="' . $info[10] . '">
+                                                        <img class="barcode-img" src="' . $barras . '">
                                                     </a>
                                                 </div>
                                             </div>
