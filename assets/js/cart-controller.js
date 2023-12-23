@@ -156,6 +156,7 @@ function add_article() {
 						calculate_totals();
 					} else {
 						// La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
+						alert("El código de barra no existe o no está asignado un producto.");
 					}
 				}
 			};
