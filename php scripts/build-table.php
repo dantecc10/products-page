@@ -2,7 +2,6 @@
 // Imprimir tabla
 include "sql-fetcher.php";
 include "functions.php";
-include "barcode-generator.php";
 
 if (isset($_GET['table'])) {
     $tabla = $_GET['table'];
@@ -42,6 +41,7 @@ if (isset($_GET['filter'])) {
 $data = fetch_fields($tabla, $campos, "", $query);
 function main_build($data)
 {
+    include "barcode-generator.php";
     if (is_array($data)) {
         $n = sizeof($data);
 
