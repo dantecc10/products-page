@@ -16,6 +16,13 @@ function bar_code_img($generator, $dynamicBarCode)
     return $img; # Devuelve imagen con clase para adaptar con CSS
 }
 
+function barcode_src_generator($generator, $bars)
+{
+    $barcode = $generator->getBarcode($bars, $generator::TYPE_CODE_128);
+    $src = ("data:image/png;base64," + base64_encode($barcode));
+    return $src;
+}
+
 if (isset($_GET['bars'])) {
     $dynamicBarCode = $_GET['bars'];
     $barcode = $generator->getBarcode($dynamicBarCode, $generator::TYPE_CODE_128);
