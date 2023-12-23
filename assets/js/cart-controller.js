@@ -36,9 +36,7 @@ function get_data(index) {
 function create_json_data(Articles) {
   //var data = article_structure;
   var n = document.getElementsByClassName("articles-row").length;
-  
   Articles = [];
-  
   for (var i = 0; i < n; i++) {
     var data = get_data(i);
     Articles[i] = article_structure;
@@ -165,7 +163,7 @@ function add_article() {
           // La construcción de la tabla no es nula y procede
           objective.innerHTML += this.responseText;
           // Ejecutar función que actualice JSON y muestre totales actualizados
-          Articles = create_json_data(Articles);
+          Articles = create_json_data();
           calculate_totals();
         } else {
           // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
@@ -180,3 +178,5 @@ function add_article() {
 
 document.getElementById("input-barcode").focus();
 calculate_totals();
+
+Articles = create_json_data();
