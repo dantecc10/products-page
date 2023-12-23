@@ -136,6 +136,7 @@ function add_article() {
   var bar_code_input = document.getElementById("input-barcode").value;
   var objective = document.getElementById("table-products");
   var category = "juguetes";
+  n = document.getElementsByClassName("articles-row").length;
   // Crear objeto XMLHttpRequest
   let xhr = new XMLHttpRequest();
   let url =
@@ -143,7 +144,7 @@ function add_article() {
     bar_code_input +
     "&table=" +
     category +
-    "&client=sale";
+    "&client=sale&articlen="+n;
   xhr.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       // Procesar la respuesta del servidor
