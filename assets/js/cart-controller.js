@@ -134,7 +134,11 @@ function calculate_totals() {
 function add_article() {
   // Obtener los valores del campo de entrada
   var bar_code_input = document.getElementById("input-barcode").value;
-  if (bar_code_input != null && bar_code_input != "") {
+  if (
+    bar_code_input != null &&
+    bar_code_input != "" &&
+    bar_code_input.length > 8
+  ) {
     var objective = document.getElementById("table-products");
     var category = "juguetes";
     n = document.getElementsByClassName("articles-row").length;
