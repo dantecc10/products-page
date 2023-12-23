@@ -14,7 +14,8 @@ switch ($tabla) {
         $campos = array();
         $campos = [
             "id_toy", "name_toy", "description_toy", "model_toy", "line_toy", "bars_toy", "brand_toy", "pieces_toy", "quantity_toy",
-            "price_toy", "imgs_toy", "quant_imgs_toy"];
+            "price_toy", "imgs_toy", "quant_imgs_toy"
+        ];
         break;
 
     default:
@@ -115,7 +116,7 @@ function main_build($data)
                                 <div class="col" style="height: 100% !important;width: 90% !important;">
                                     <div class="row">
                                         <div class="col col-6 pe-0 d-flex align-items-center justify-content-end">
-                                            <input type="number" class="quantity-input d-flex justify-content-center data-quantity" style="width: 100% !important;text-align: center !important;" value="1" max="' . $info[8] . '">
+                                            <input type="number" class="quantity-input d-flex justify-content-center data-quantity" style="width: 100% !important;text-align: center !important;" value="1" max="' . $info[8] . '" onchange="javascript:calculate_totals();">
                                             <input type="number" class="d-flex justify-content-center data-stock visually-hidden" style="width: 100% !important;text-align: center !important;" value="' . $info[8] . '" max="3" min="3" disabled="">
                                         </div>
                                         <div class="col col-6 p-0">
