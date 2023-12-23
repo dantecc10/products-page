@@ -64,7 +64,7 @@ function remove_product(number) {
       .getElementsByClassName("delete-button")
       [i].setAttribute("onclick", "javascript:remove_product(" + i + ");");
   }
-  create_json_data();
+  Articles = create_json_data(Articles);
   calculate_totals();
 }
 
@@ -165,7 +165,7 @@ function add_article() {
           // La construcción de la tabla no es nula y procede
           objective.innerHTML += this.responseText;
           // Ejecutar función que actualice JSON y muestre totales actualizados
-          create_json_data();
+          Articles = create_json_data(Articles);
           calculate_totals();
         } else {
           // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
