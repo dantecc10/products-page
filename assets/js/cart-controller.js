@@ -146,7 +146,7 @@ function add_article() {
     category +
     "&client=sale&articlen=" +
     n;
-  bar_code_input = "";
+    document.getElementById('input-barcode').value = '';
   xhr.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       // Procesar la respuesta del servidor
