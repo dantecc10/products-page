@@ -53,6 +53,7 @@ function create_json_data(Articles) {
   //Articles.push(data);
   //console.log("JSON creado correctamente.");
   //return data; // No devolver, pues variable ya está en Articles[]
+  return Articles;
 }
 
 function remove_product(number) {
