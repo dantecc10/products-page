@@ -34,7 +34,8 @@ function get_data(index) {
 }
 
 function create_json_data() {
-  var data = article_structure;
+  var data = [];
+  //var data = article_structure;
   var n = document.getElementsByClassName("articles-row").length;
 
   for (let index = Articles.length; index > 0; index--) {
@@ -43,13 +44,13 @@ function create_json_data() {
 
   for (var i = 0; i < n; i++) {
     data_array = get_data(i);
-    data.id = data_array[0];
-    data.name = data_array[1];
-    data.category = data_array[2];
-    data.price = data_array[3];
-    data.img = data_array[4];
-    data.quantity = data_array[5];
-    data.stock = data_array[6];
+    data[i].id = data_array[0];
+    data[i].name = data_array[1];
+    data[i].category = data_array[2];
+    data[i].price = data_array[3];
+    data[i].img = data_array[4];
+    data[i].quantity = data_array[5];
+    data[i].stock = data_array[6];
     Articles.push(data);
   }
   //console.log("JSON creado correctamente.");
