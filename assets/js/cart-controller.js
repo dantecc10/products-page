@@ -64,7 +64,7 @@ function remove_product(number) {
       .getElementsByClassName("delete-button")
       [i].setAttribute("onclick", "javascript:remove_product(" + i + ");");
   }
-  Articles.splice(number, 1);
+  create_json_data();
   calculate_totals();
 }
 
