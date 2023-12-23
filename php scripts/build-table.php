@@ -71,6 +71,8 @@ function main_build($data)
                 if ($client == "sale") {
                     if (isset($_GET['articlen'])) {
                         $article_n = $_GET['articlen'];
+                    } else {
+                        $article_n = "Error en el GET";
                     }
                     // Generar DOM para sale.html/.php
                     echo ('<tr class="align-middle articles-row">
