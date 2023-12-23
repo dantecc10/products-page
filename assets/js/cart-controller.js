@@ -153,6 +153,7 @@ function add_article() {
         // Ejecutar función que actualice JSON y muestre totales actualizados
         create_json_data();
         calculate_totals();
+        bar_code_input = "";
       } else {
         // La respuesta es nula, interpretar como que no se encontraron datos y avisar vacío
       }
