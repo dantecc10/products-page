@@ -38,15 +38,15 @@ function create_json_data() {
 	var Products = [];
 	var n = document.getElementsByClassName("articles-row").length;
 	for (var i = 0; i < n; i++) {
-		var data = get_data(i);
-		Products[i] = new Object(product_structure);
-		Products[i].id = data[0];
-		Products[i].name = data[1];
-		Products[i].category = data[2];
-		Products[i].price = data[3];
-		Products[i].img = data[4];
-		Products[i].quantity = data[5];
-		Products[i].stock = data[6];
+		data = new Object(product_structure);
+		data.id = get_data(i)[0];
+		data.name = get_data(i)[1];
+		data.category = get_data(i)[2];
+		data.price = get_data(i)[3];
+		data.img = get_data(i)[4];
+		data.quantity = get_data(i)[5];
+		data.stock = get_data(i)[6];
+		Products.push(data);
 	}
 	//Articles.push(data);
 	//console.log("JSON creado correctamente.");
