@@ -19,7 +19,7 @@ function bar_code_img($generator, $dynamicBarCode)
 function barcode_src_generator($generator, $bars)
 {
     $barcode = $generator->getBarcode($bars, $generator::TYPE_CODE_128);
-    $src = ("data:image/png;base64," + base64_encode($barcode));
+    $src = ("data:image/png;base64," . base64_encode($barcode));
     return $src;
 }
 
