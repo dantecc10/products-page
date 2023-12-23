@@ -200,8 +200,8 @@ function add_article() {
       xhr.open("GET", url, true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.send();
+      // Termina lógica de AJAX y búsqueda
     }
-    // Termina lógica de AJAX y búsqueda
   }
 }
 
