@@ -36,9 +36,9 @@ function create_json_data() {
 
 	json_cart = new Object();
 	var Products = [];
-	var n = document.getElementsByClassName("articles-row").length;
-	for (var i = 0; i < n; i++) {
-		data = new Object(product_structure);
+	n = document.getElementsByClassName("articles-row").length;
+	for (i = 0; i < n; i++) {
+		data = Object.assign({}, product_structure);
 		data.id = get_data(i)[0];
 		data.name = get_data(i)[1];
 		data.category = get_data(i)[2];
