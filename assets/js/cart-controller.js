@@ -143,6 +143,32 @@ function add_article() {
     bar_code_input != "" &&
     bar_code_input.length > 8
   ) {
+    for (
+      let i = 0;
+      i < document.getElementsByClassName("data-barcode").length;
+      i++
+    ) {
+      fetch_ajax = true;
+      if (
+        document.getElementsByClassName("data-barcode")[i].innerText ==
+        bar_code_input
+      ) {
+        var stock = parseInt(
+          document.getElementsByClassName("data-stock")[i].value
+        );
+        var quantity = parseInt(
+          document.getElementsByClassName("data-quantity")[i].value
+        );
+        if (quantity < stock) {
+          stock++;
+          document.getElementsByClassName("data-quantity")[i].value = stock;
+        }else{
+          alert('No hay suficiente stock del artículo ingresado.');
+        }
+      }
+    }
+
+    // Empieza lógica de AJAX y búsqueda
     var objective = document.getElementById("table-products");
     var category = "juguetes";
     n = document.getElementsByClassName("articles-row").length;
@@ -174,6 +200,7 @@ function add_article() {
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send();
   }
+  // Termina lógica de AJAX y búsqueda
 }
 
 document.getElementById("input-barcode").focus();
