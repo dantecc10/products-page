@@ -52,8 +52,8 @@ function create_json_data() {
     data[i].img = data_array[4];
     data[i].quantity = data_array[5];
     data[i].stock = data_array[6];
-    Articles.push(data);
   }
+  Articles.push(data);
   //console.log("JSON creado correctamente.");
   //return data; // No devolver, pues variable ya está en Articles[]
 }
