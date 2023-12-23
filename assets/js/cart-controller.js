@@ -34,26 +34,23 @@ function get_data(index) {
 }
 
 function create_json_data() {
-  var data = [];
   //var data = article_structure;
   var n = document.getElementsByClassName("articles-row").length;
-
-  for (let index = Articles.length; index > 0; index--) {
-    Articles.pop();
-  }
-
+  
+  Articles = [];
+  
   for (var i = 0; i < n; i++) {
-    data[i] = article_structure;
-    data_array = get_data(i);
-    data[i].id = data_array[0];
-    data[i].name = data_array[1];
-    data[i].category = data_array[2];
-    data[i].price = data_array[3];
-    data[i].img = data_array[4];
-    data[i].quantity = data_array[5];
-    data[i].stock = data_array[6];
+    var data = get_data(i);
+    Articles[i] = article_structure;
+    Articles[i].id = data[0];
+    Articles[i].name = data[1];
+    Articles[i].category = data[2];
+    Articles[i].price = data[3];
+    Articles[i].img = data[4];
+    Articles[i].quantity = data[5];
+    Articles[i].stock = data[6];
   }
-  Articles.push(data);
+  //Articles.push(data);
   //console.log("JSON creado correctamente.");
   //return data; // No devolver, pues variable ya está en Articles[]
 }
