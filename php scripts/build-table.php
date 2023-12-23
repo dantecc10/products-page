@@ -69,6 +69,9 @@ function main_build($data)
             if (isset($_GET['client'])) {
                 $client = $_GET['client'];
                 if ($client == "sale") {
+                    if (isset($_GET['articlen'])) {
+                        $article_n = $_GET['articlen'];
+                    }
                     // Generar DOM para sale.html/.php
                     echo ('<tr class="align-middle articles-row">
                             <td class="article-icon">
