@@ -11,21 +11,10 @@ var article_structure = {
 
 function get_data(index) {
 	var data = [];
-	data[0] = document
-		.getElementsByClassName("data-id")
-		[index].innerText.substring(4);
+	data[0] = document.getElementsByClassName("data-id")[index].innerText.substring(4);
 	data[1] = document.getElementsByClassName("data-name")[index].innerText;
-	data[2] =
-		document
-			.getElementsByClassName("data-category")
-			[index].innerText.charAt(11)
-			.toLowerCase() +
-		document
-			.getElementsByClassName("data-category")
-			[index].innerText.substring(12);
-	data[3] = document
-		.getElementsByClassName("data-price")
-		[index].innerText.substring(1);
+	data[2] = document.getElementsByClassName("data-category")[index].innerText.charAt(11).toLowerCase() + document.getElementsByClassName("data-category")[index].innerText.substring(12);
+	data[3] = document.getElementsByClassName("data-price")[index].innerText.substring(1);
 	data[4] = document.getElementsByClassName("data-img")[index].src;
 	data[5] = document.getElementsByClassName("data-quantity")[index].value;
 	data[6] = document.getElementsByClassName("data-stock")[index].value;
@@ -58,9 +47,7 @@ function remove_product(number) {
 	document.getElementsByClassName("articles-row")[number].remove();
 	n = document.getElementsByClassName("delete-button").length;
 	for (let i = 0; i < n; i++) {
-		document
-			.getElementsByClassName("delete-button")
-			[i].setAttribute("onclick", "javascript:remove_product(" + i + ");");
+		document.getElementsByClassName("delete-button")[i].setAttribute("onclick", "javascript:remove_product(" + i + ");");
 	}
 	Articles = create_json_data(Articles);
 	calculate_totals();
@@ -97,21 +84,18 @@ function calculate_totals() {
 	if (n > 0) {
 		n = document.getElementsByClassName(subtotals_price_class).length;
 		for (let s = 0; s < n; s++) {
-			quantity = document.getElementsByClassName(articles_quantity_class)[s]
-				.value;
+			quantity = document.getElementsByClassName(articles_quantity_class)[s].value;
 
 			price = document.getElementsByClassName("data-price")[s].innerHTML;
 			price = price.substring(1, price.length);
 			subtotal = parseFloat(quantity) * parseFloat(price);
-			document.getElementsByClassName(subtotals_price_class)[s].innerText =
-				"$" + subtotal;
+			document.getElementsByClassName(subtotals_price_class)[s].innerText = "$" + subtotal;
 		}
 
 		var total = 0;
 		for (let i = 0; i < n; i++) {
 			// console.log("Suma = " + total); // Debug line
-			valor = document.getElementsByClassName(subtotals_price_class)[i]
-				.outerText;
+			valor = document.getElementsByClassName(subtotals_price_class)[i].outerText;
 			valor = valor.substring(1, valor.length);
 			total = total + parseFloat(valor);
 		}
@@ -126,8 +110,7 @@ function calculate_totals() {
 			total = total + parseFloat(valor);
 		}
 		// Insertar cambio en el DOM (artículos totales)
-		document.getElementById(total_articles_target_id).innerHTML =
-			"(" + total + ")";
+		document.getElementById(total_articles_target_id).innerHTML = "(" + total + ")";
 	} else {
 		// Insertar ceros para los datos finales...
 		document.getElementById(total_articles_target_id).innerText = "(0)";
@@ -143,23 +126,12 @@ function add_article() {
 		bar_code_input != "" &&
 		bar_code_input.length > 8
 	) {
-		for (
-			let i = 0;
-			i < document.getElementsByClassName("data-barcode").length;
-			i++
-		) {
+		for (let i = 0; i < document.getElementsByClassName("data-barcode").length; i++) {
 			fetch_ajax = true;
-			if (
-				document.getElementsByClassName("data-barcode")[i].innerText ==
-				bar_code_input
-			) {
+			if (document.getElementsByClassName("data-barcode")[i].innerText == bar_code_input) {
 				fetch_ajax = false;
-				var stock = parseInt(
-					document.getElementsByClassName("data-stock")[i].value
-				);
-				var quantity = parseInt(
-					document.getElementsByClassName("data-quantity")[i].value
-				);
+				var stock = parseInt(document.getElementsByClassName("data-stock")[i].value);
+				var quantity = parseInt(document.getElementsByClassName("data-quantity")[i].value);
 				if (quantity < stock) {
 					stock = stock + 1;
 					document.getElementsByClassName("data-quantity")[i].value = stock;
@@ -176,13 +148,7 @@ function add_article() {
 			n = document.getElementsByClassName("articles-row").length;
 			// Crear objeto XMLHttpRequest
 			let xhr = new XMLHttpRequest();
-			let url =
-				"../../php scripts/build-table.php?filter=" +
-				bar_code_input +
-				"&table=" +
-				category +
-				"&client=sale&articlen=" +
-				n;
+			let url = ("../../php scripts/build-table.php?filter=" + bar_code_input + "&table=" + category + "&client=sale&articlen=" + n);
 			document.getElementById("input-barcode").value = "";
 			xhr.onreadystatechange = function () {
 				if (this.readyState == 4 && this.status == 200) {
