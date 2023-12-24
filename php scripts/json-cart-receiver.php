@@ -14,9 +14,8 @@ if (!isset($_GET['send'])) {
 
         // Enviar confirmación al cliente
         echo "true";
-    } else { // Si no se recibe nada, mostrar mensaje de error
+    } else {
         //echo "No se recibe nada"; # Debug line
-
         // Mostrar el contenido actual de la sesión (para depuración)
         echo json_encode($_SESSION['cart']);
     }

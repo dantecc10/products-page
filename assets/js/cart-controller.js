@@ -181,7 +181,7 @@ function send_json_to_server(json_data) {
 	// Enviar la cadena JSON al archivo PHP
 	xmlhttp.send(json_string);
 }
-function get_json_form_server() {
+function get_json_from_server() {
 	// Convertir el objeto JSON a una cadena JSON
 	var server_json_data;
 
