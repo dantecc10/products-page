@@ -7,8 +7,11 @@ if (file_get_contents('php://input')) {
     $json_cart = json_decode($json, true); // true para obtener un array asociativo
     // Puedes realizar acciones con los datos recibidos, por ejemplo, imprimirlos
     //print_r($json_cart); // Debug line
+    session_start();
+    $_SESSION['cart'] = $json_cart;
     echo true;
     echo ($json_cart['Products'][0]['category']);
 } else {
     echo ("No se recibe nada");
+    $json_cart = json_encode()
 }
