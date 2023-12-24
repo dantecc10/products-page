@@ -191,7 +191,7 @@ function send_json_to_server(json_data) {
 	// Enviar la cadena JSON al archivo PHP
 	xmlhttp.send(json_string);
 }
-function get_json_from_server() {
+/*function get_json_from_server() {
 	// Convertir el objeto JSON a una cadena JSON
 	var server_json_data;
 
@@ -216,6 +216,31 @@ function get_json_from_server() {
 	};
 	// Enviar la cadena JSON al archivo PHP
 	xmlhttp.send();
+}*/
+
+function get_json_from_server(callback) {
+	var xmlhttp = new XMLHttpRequest();
+	var server_json_data;
+
+	var url = "../../php scripts/json-cart-receiver.php?send=true";
+	xmlhttp.open("GET", url, true);
+	xmlhttp.setRequestHeader("Content-Type", "application/json");
+
+	xmlhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			server_json_data = JSON.parse(this.responseText);
+			callback(server_json_data); // Llamar a la función de devolución de llamada con los datos
+		}
+	};
+
+	xmlhttp.send();
 }
+
+// Ejemplo de cómo utilizar la función get_json_from_server con una función de devolución de llamada
+get_json_from_server(function (data) {
+	// Hacer algo con los datos recibidos del servidor
+	return data;
+	// Aquí puedes llamar a la función calculate_totals() o realizar otras operaciones con los datos
+});
 
 send_json_to_server(Articles);
