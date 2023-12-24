@@ -1,4 +1,3 @@
-
 function get_data(index) {
 	var data = [];
 	data[0] = document.getElementsByClassName("data-id")[index].innerText.substring(4);
@@ -174,5 +173,4 @@ function add_article() {
 document.getElementById("input-barcode").focus();
 calculate_totals();
 
-Articles = create_json_data(Articles);
-
+Articles = create_json_data();
