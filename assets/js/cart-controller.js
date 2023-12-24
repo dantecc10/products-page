@@ -101,7 +101,7 @@ function calculate_totals() {
 	}
 }
 
-function add_article() {
+/*function add_article() {
 	// Obtener los valores del campo de entrada
 	var bar_code_input = document.getElementById("input-barcode").value;
 	if (bar_code_input != null && bar_code_input != "" && bar_code_input.length > 8) {
@@ -113,8 +113,8 @@ function add_article() {
 				var quantity = parseInt(document.getElementsByClassName("data-quantity")[i].value);
 				if (quantity < stock) {
 					stock = stock + 1;
-					i = document.getElementsByClassName("data-barcode").length;
 					document.getElementsByClassName("data-quantity")[i].value = stock;
+					i = document.getElementsByClassName("data-barcode").length;
 				} else {
 					alert("No hay suficiente stock del artículo ingresado.");
 				}
@@ -151,7 +151,62 @@ function add_article() {
 		}
 		document.getElementById("input-barcode").value = "";
 	}
+}*/
+
+function add_article() {
+	var bar_code_input = document.getElementById("input-barcode").value;
+
+	if (bar_code_input != null && bar_code_input != "" && bar_code_input.length > 8) {
+		var foundDuplicate = false;
+
+		for (let i = 0; i < document.getElementsByClassName("data-barcode").length; i++) {
+			if (document.getElementsByClassName("data-barcode")[i].innerText == bar_code_input) {
+				foundDuplicate = true;
+				var stock = parseInt(document.getElementsByClassName("data-stock")[i].value);
+				var quantity = parseInt(document.getElementsByClassName("data-quantity")[i].value);
+
+				if (quantity < stock) {
+					quantity += 1; // Incrementar la cantidad
+					document.getElementsByClassName("data-quantity")[i].value = quantity;
+				} else {
+					alert("No hay suficiente stock del artículo ingresado.");
+				}
+				break; // Salir del bucle una vez encontrado el artículo
+			}
+		}
+
+		if (!foundDuplicate) {
+			// Realizar la lógica de AJAX y búsqueda
+			var objective = document.getElementById("table-products");
+			var category = "juguetes";
+			n = document.getElementsByClassName("articles-row").length;
+
+			let xhr = new XMLHttpRequest();
+			let url = ("../../php scripts/build-table.php?filter=" + bar_code_input + "&table=" + category + "&client=sale&articlen=" + n);
+
+			document.getElementById("input-barcode").value = "";
+
+			xhr.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					if (this.responseText != null) {
+						objective.innerHTML += this.responseText;
+						Articles = create_json_data();
+						calculate_totals();
+					} else {
+						alert("El código de barra no existe o no está asignado a un producto.");
+					}
+				}
+			};
+
+			xhr.open("GET", url, true);
+			xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhr.send();
+		}
+
+		document.getElementById("input-barcode").value = "";
+	}
 }
+
 
 document.getElementById("input-barcode").focus();
 calculate_totals();
