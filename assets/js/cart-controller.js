@@ -1,3 +1,4 @@
+var myData; // Declara la variable fuera de la función de devolución de llamada
 function get_data(index) {
 	var data = [];
 	data[0] = document.getElementsByClassName("data-id")[index].innerText.substring(4);
@@ -232,12 +233,23 @@ function get_json_from_server(callback) {
 			callback(server_json_data); // Llamar a la función de devolución de llamada con los datos
 		}
 	};
-
 	xmlhttp.send();
 }
 
 get_json_from_server(function (data) {
-	return data;
+	myData = data; // Asigna la respuesta JSON a la variable externa
 });
+
+function json_updater(receiver, sender){
+	get_json_from_server(function (data) {
+		sender = data; // Asigna la respuesta JSON a la variable externa
+	});
+	receiver = sender;
+	return receiver;
+}
+
+json_updater(Articles, myData);
+
+
 
 send_json_to_server(Articles);
