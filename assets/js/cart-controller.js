@@ -54,24 +54,6 @@ function remove_product(number) {
 	calculate_totals();
 }
 
-function send_json_to_server(json_data) {
-	// Suponiendo que tienes la variable Articles con la información de los artículos
-
-	// Convertir Articles a formato JSON
-	var articlesJSON = JSON.stringify(json_data);
-
-	// Hacer la petición AJAX
-	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "../../php scripts/save_cart.php", true);
-	xhr.setRequestHeader("Content-Type", "application/json");
-	xhr.onreadystatechange = function () {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			// Petición completada
-			console.log("Artículos guardados en la sesión");
-		}
-	};
-	xhr.send(articlesJSON);
-}
 
 function calculate_totals() {
 	// Función para calcular totales de venta (artículos e importe)
@@ -174,3 +156,30 @@ document.getElementById("input-barcode").focus();
 calculate_totals();
 
 Articles = create_json_data();
+
+function send_json_to_server(json_data) {
+	// Convertir el objeto JSON a una cadena JSON
+	var json_string = JSON.stringify(json_data);
+
+	// Crear una solicitud AJAX
+	var xmlhttp = new XMLHttpRequest();
+
+	// Especificar el método y la URL del archivo PHP receptor
+	xmlhttp.open("POST", "../../php scripts/json-cart-receiver.php", true);
+
+	// Configurar el encabezado para indicar que se enviará un JSON
+	xmlhttp.setRequestHeader("Content-Type", "application/json");
+
+	// Función que se ejecuta al recibir la respuesta del servidor
+	xmlhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			// Manejar la respuesta del servidor si es necesario
+			console.log(this.responseText);
+		}
+	};
+
+	// Enviar la cadena JSON al archivo PHP
+	xmlhttp.send(json_string);
+}
+
+send_json_to_server(Articles);
