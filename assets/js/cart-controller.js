@@ -181,5 +181,31 @@ function send_json_to_server(json_data) {
 	// Enviar la cadena JSON al archivo PHP
 	xmlhttp.send(json_string);
 }
+function get_json_form_server() {
+	// Convertir el objeto JSON a una cadena JSON
+	var server_json_data;
+
+	// Crear una solicitud AJAX
+	var xmlhttp = new XMLHttpRequest();
+
+	// Especificar el método y la URL del archivo PHP receptor
+	xmlhttp.open("GET", "../../php scripts/json-cart-receiver.php", true);
+
+	// Configurar el encabezado para indicar que se enviará un JSON
+	xmlhttp.setRequestHeader("Content-Type", "application/json");
+
+	// Función que se ejecuta al recibir la respuesta del servidor
+	xmlhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			// Manejar la respuesta del servidor si es necesario
+			server_json_data = JSON.parse(this.responseText);
+			console.log(server_json_data);
+			return server_json_data
+		}
+	};
+
+	// Enviar la cadena JSON al archivo PHP
+	xmlhttp.send();
+}
 
 send_json_to_server(Articles);
