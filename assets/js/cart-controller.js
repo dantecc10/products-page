@@ -113,6 +113,7 @@ function add_article() {
 				var quantity = parseInt(document.getElementsByClassName("data-quantity")[i].value);
 				if (quantity < stock) {
 					stock = stock + 1;
+					i = document.getElementsByClassName("data-barcode").length;
 					document.getElementsByClassName("data-quantity")[i].value = stock;
 				} else {
 					alert("No hay suficiente stock del artículo ingresado.");
@@ -200,7 +201,7 @@ function get_json_from_server() {
 		if (this.readyState == 4 && this.status == 200) {
 			// Manejar la respuesta del servidor si es necesario
 			server_json_data = JSON.parse(this.responseText);
-			console.log(server_json_data);
+			calculate_totals();
 			return server_json_data;
 		}
 	};
