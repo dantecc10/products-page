@@ -236,11 +236,8 @@ function get_json_from_server(callback) {
 	xmlhttp.send();
 }
 
-// Ejemplo de cómo utilizar la función get_json_from_server con una función de devolución de llamada
 get_json_from_server(function (data) {
-	// Hacer algo con los datos recibidos del servidor
 	return data;
-	// Aquí puedes llamar a la función calculate_totals() o realizar otras operaciones con los datos
 });
 
 send_json_to_server(Articles);
