@@ -1,13 +1,3 @@
-var Articles = [];
-var article_structure = {
-	id: 0,
-	name: "",
-	category: "",
-	price: 0,
-	img: "",
-	quantity: 0,
-	stock: 0,
-};
 
 function get_data(index) {
 	var data = [];
