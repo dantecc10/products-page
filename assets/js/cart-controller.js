@@ -249,7 +249,4 @@ function json_updater(receiver, sender){
 }
 
 json_updater(Articles, myData);
-
-
-
 send_json_to_server(Articles);
