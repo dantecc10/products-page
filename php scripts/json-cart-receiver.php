@@ -14,10 +14,10 @@ if (!isset($_GET['send'])) {
 
         // Enviar confirmación al cliente
         echo "true";
-    } else {
-        //echo "No se recibe nada"; # Debug line
-        // Mostrar el contenido actual de la sesión (para depuración)
-        header('Content-Type: application/json');
-        echo (json_encode($_SESSION['cart']));
     }
+} else {
+    //echo "No se recibe nada"; # Debug line
+    // Mostrar el contenido actual de la sesión (para depuración)
+    header('Content-Type: application/json');
+    echo (json_encode($_SESSION['cart']));
 }
