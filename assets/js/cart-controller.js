@@ -210,11 +210,10 @@ function get_json_from_server() {
 		if (this.readyState == 4 && this.status == 200) {
 			// Manejar la respuesta del servidor si es necesario
 			server_json_data = JSON.parse(this.responseText);
-			calculate_totals();
+			// calculate_totals();
 			return server_json_data;
 		}
 	};
-
 	// Enviar la cadena JSON al archivo PHP
 	xmlhttp.send();
 }
