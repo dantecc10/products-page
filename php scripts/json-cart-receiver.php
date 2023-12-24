@@ -17,6 +17,7 @@ if (!isset($_GET['send'])) {
     } else {
         //echo "No se recibe nada"; # Debug line
         // Mostrar el contenido actual de la sesión (para depuración)
-        echo json_encode($_SESSION['cart']);
+        header('Content-Type: application/json');
+        echo (json_encode($_SESSION['cart']));
     }
 }
