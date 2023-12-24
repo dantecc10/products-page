@@ -11,7 +11,7 @@ if (file_get_contents('php://input')) {
     $_SESSION['cart'] = $json_cart;
     echo true;
     echo ($json_cart['Products'][0]['category']);
-    echo($_SESSION['cart'][0]['category']);
+    echo($_SESSION['cart']['Products'][0]['category']);
 } else {
     echo ("No se recibe nada");
     //$json_cart = json_encode();
