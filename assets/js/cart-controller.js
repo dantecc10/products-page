@@ -189,7 +189,8 @@ function get_json_form_server() {
 	var xmlhttp = new XMLHttpRequest();
 
 	// Especificar el método y la URL del archivo PHP receptor
-	xmlhttp.open("GET", "../../php scripts/json-cart-receiver.php", true);
+	url = ("../../php scripts/json-cart-receiver.php?send=true");
+	xmlhttp.open("GET", url, true);
 
 	// Configurar el encabezado para indicar que se enviará un JSON
 	xmlhttp.setRequestHeader("Content-Type", "application/json");
@@ -200,7 +201,7 @@ function get_json_form_server() {
 			// Manejar la respuesta del servidor si es necesario
 			server_json_data = JSON.parse(this.responseText);
 			console.log(server_json_data);
-			return server_json_data
+			return server_json_data;
 		}
 	};
 
