@@ -1,6 +1,6 @@
 <?php
-require "../vendor/autoload.php";
-require_once('tcpdf/tcpdf.php');
+require_once '../vendor/autoload.php'; // Ruta al archivo autoload.php de Composer
+use TCPDF;
 
 // Crear una instancia de TCPDF
 $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
