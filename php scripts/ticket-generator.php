@@ -1,5 +1,5 @@
 <?php
-
+require "../vendor/autoload.php";
 require_once('tcpdf/tcpdf.php');
 
 // Crear una instancia de TCPDF
