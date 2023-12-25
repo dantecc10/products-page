@@ -27,7 +27,7 @@ function fetch_fields($table, $fields, $id, $custom_query)
     // Comprobar si las filas son mayores que 0
     $result = $connection->query($query);
     // Verificar si se encontró un usuario válido
-    if ((stripos($query, "UPDATE") == false)) {
+    if ((stripos($query, "UPDATE") === false)) {
         if ($result->num_rows > 0) {
             $i = 0;
             // Hacer fetch a los datos
