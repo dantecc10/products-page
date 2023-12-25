@@ -47,7 +47,7 @@ function fetch_fields($table, $fields, $id, $custom_query)
             return $data;
         }
     } else {
-        // No hay registros en la tabla, devolver null
+        // No hay registros en la tabla, o la consulta hizo una actualización: devolver null
         return null;
     }
 }
