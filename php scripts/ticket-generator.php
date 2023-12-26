@@ -1,4 +1,5 @@
 <?php
+include "barcode-generator.php";
 require_once '../vendor/autoload.php'; // Ruta al archivo autoload.php de Composer
 use TCPDF;
 
