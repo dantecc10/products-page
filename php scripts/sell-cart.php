@@ -25,6 +25,7 @@ if (isset($_SESSION['cart'])) {
         $user = 1;
     }/*else{}*/
     $total_transaction = floatval($total_transaction);
+    echo ($total_transaction);
     $data = array(6);
     $data = [$channel, $articles_transaction, $categories, $total_transaction, $type, $user];
     if (sql_transaction_insert($data, "transacciones") !== false) {
