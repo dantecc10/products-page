@@ -49,6 +49,7 @@ if (isset($_SESSION['cart'])) {
     $ticket_capsule_1 = "";
     $ticket_capsule_2 = "";
     $ticket_articles = "";
+    echo($n);
     for ($i = 0; $i < $n; $i++) {
         $query = "UPDATE `juguetes` SET `quantity_toy` = " . ($_SESSION['cart']['Products'][$i]['stock'] - $_SESSION['cart']['Products'][$i]['quantity']) . " WHERE `id_toy` = " . $_SESSION['cart']['Products'][$i]['id'] . ";";
         if (fetch_fields("juguetes", $campos, "", $query) == null) {
