@@ -96,7 +96,7 @@ function avatar_img($src)
     if ($src == "" || $src == null) {
         if (isset($_SESSION['id'])) {
             $final_src = $_SESSION['img'];
-        }else{
+        } else {
             $final_src = "assets/img/avatars/avatar5.jpeg";
         }
     } else {
@@ -105,4 +105,79 @@ function avatar_img($src)
 
     $avatar_img = ('<img class="border rounded-circle img-profile" src="' . $final_src . '">');
     return $avatar_img;
+}
+
+function fecha()
+{
+    $day = date('l');
+    $month = date('m');
+    $year = date('Y');
+    switch ($day) {
+        case "Monday":
+            $str_day = "Lunes";
+            break;
+        case "Tuesday":
+            $str_day = "Martes";
+            break;
+        case "Wednesday":
+            $str_day = "Miercoles";
+            break;
+        case "Thursday":
+            $str_day = " Jueves";
+            break;
+        case "Friday":
+            $str_day = "Viernes";
+            break;
+        case "Saturday":
+            $str_day = "Sábado";
+            break;
+        case "Sunday":
+            $str_day = "Domingo";
+            break;
+    }
+
+    $day = date('j');
+
+    switch ($month) {
+        case '01':
+            $month = 'Enero';
+            break;
+        case '02':
+            $month = 'Febrero';
+            break;
+        case '03':
+            $month = 'Marzo';
+            break;
+        case '04':
+            $month = 'Abril';
+            break;
+        case '05':
+            $month = 'Mayo';
+            break;
+        case '06':
+            $month = 'Junio';
+            break;
+        case '07':
+            $month = 'Julio';
+            break;
+        case '08':
+            $month = 'Agosto';
+            break;
+        case '09':
+            $month = 'Septiembre';
+            break;
+        case '10':
+            $month = 'Octubre';
+            break;
+        case '11':
+            $month = 'Noviembre';
+            break;
+        case '12':
+            $month = 'Diciembre';
+            break;
+    }
+
+    $fecha = ($str_day . " " . $day . " de " . lcfirst($month) . " del " . $year);
+    $hora = date('H:i:s');
+    return ($fecha . " " . $hora);
 }
