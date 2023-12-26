@@ -11,7 +11,7 @@ $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Author');
 $pdf->SetTitle('Ticket');
 $pdf->SetMargins(10, 10, 10);
-$pdf->SetFont('Helvetica', '', 6);
+$pdf->SetFont('Helvetica', '', 3);
 
 // Agregar una página
 $pdf->AddPage();
@@ -77,20 +77,12 @@ $html = '
         <div class="container">
             <div class="row">
                 <div class="col col-6 d-flex justify-content-center" style="width: 50%;">
-                    <img src="../assets/img/branding/logo.jpeg">
+                    <img src="../assets/img/branding/logo.jpeg" width="auto">
                 </div>
                 <div class="col col-6 d-flex justify-content-center" style="width: 50%;">
                     Divisor
                 </div>
             </div>
-            <!--<div class="row">
-                <div class="col col-4">
-                </div>
-                <div class="col col-6">
-                </div>
-                <div class="col col-4">
-                </div>
-            </div>-->
         </div>
 
         <table class="table table-striped">
