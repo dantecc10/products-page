@@ -9,8 +9,8 @@ $pdf = new TCPDF('P', 'mm', [58, 100]);
 //$pdf->setpage(58, 0);
 // Establecer información del documento
 $pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('Author');
-$pdf->SetTitle('Ticket');
+$pdf->SetAuthor('Dante Castelán Carpinteyro');
+$pdf->SetTitle('Ticket de Venta (XXXXXXXXXX)');
 $pdf->SetMargins(5, 2, 5);
 $pdf->SetFont('Helvetica', '', 3);
 
