@@ -118,12 +118,6 @@ $html = '
             border: 1px solid #ccc;
             padding: 3mm;
         }
-        th {
-            font-size: 2mm;
-        }
-        td {
-            font-size: 2.8mm;
-        }
         p {
             font-size: 3mm;
             line-height: 1.1;
@@ -133,8 +127,6 @@ $html = '
             justify-content: center;
             align-items: center;
             text-align: center;
-            /*height: 200px;*/
-            /*border: 3px solid green;*/
         }
 
         .width-1 {
@@ -149,6 +141,12 @@ $html = '
         .width-4 {
             width: 20%;
         }
+        th {
+            font-size: 2mm !important;
+        }
+        td {
+            font-size: 2.8mm !important;
+        }
     </style>
 </head>
 <body>
@@ -161,23 +159,25 @@ $html = '
             <p>Fecha: 24 de diciembre de 2023</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
-        <table>
-            <tr>
-                <th class="width-1 super-center">ID</th>
-                <th class="width-2 super-center">Descripción / Precio</th>
-                <th class="width-3 super-center">Cant.</th>
-                <th class="width-4 super-center">Subtotal</th>
-            </tr>
-            <tr>
-                <td class="width-1 super-center">5</td>
-                <td class="width-2 super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
-                <td class="width-3 super-center">1</td>
-                <td class="width-4 super-center">$671</td>
-            </tr>
-        </table>
+        <div class="container">
+            <table>
+                <tr>
+                    <th class="width-1 super-center">ID</th>
+                    <th class="width-2 super-center">Descripción / Precio</th>
+                    <th class="width-3 super-center">Cant.</th>
+                    <th class="width-4 super-center">Subtotal</th>
+                </tr>
+                <tr>
+                    <td class="width-1 super-center">5</td>
+                    <td class="width-2 super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
+                    <td class="width-3 super-center">1</td>
+                    <td class="width-4 super-center">$671</td>
+                </tr>
+            </table>
 
-        <p>Total: $30</p>
-        <p>Gracias por su compra</p>
+            <p>Total: $30</p>
+            <p>Gracias por su compra</p>
+        </div>
     </div>
 </body>
 </html>
