@@ -58,7 +58,7 @@ $html = '
         <link rel="stylesheet" href="../assets/css/extra.css">
     </head>
     <body>
-        <table>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
