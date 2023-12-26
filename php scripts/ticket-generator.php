@@ -4,9 +4,9 @@ use TCPDF;
 
 // Crear una instancia de TCPDF
 //$pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
-$pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
+$pdf = new TCPDF('P', 'mm', [58, 100]);
 
-$pdf->SetPageFormat(58, 0);
+//$pdf->setpage(58, 0);
 // Establecer información del documento
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Author');
@@ -87,4 +87,4 @@ $html = '
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Generar el PDF y mostrarlo en el navegador
-$pdf->Output('ticket.pdf', 'I');
+$pdf->Output('ticket.pdf', 'I', 'F', 0, 'auto');
