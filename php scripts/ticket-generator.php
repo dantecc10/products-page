@@ -63,7 +63,7 @@ $html = '
             <p>Fecha: 24 de diciembre de 2023</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
-        <table style="width: 95%;">
+        <table style="width: 100%;">
             <tr>
                 <th style="width: 10%;">ID</th>
                 <th style="width: 53%;">Descripción / Precio</th>
