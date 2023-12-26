@@ -168,10 +168,10 @@ $html = '
                     <th class="width-4 fs-mm super-center">Subtotal</th>
                 </tr>
                 <tr>
-                    <td class="width-1 fs-mm super-center">5</td>
-                    <td class="width-2 fs-mm super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
-                    <td class="width-3 fs-mm super-center">1</td>
-                    <td class="width-4 fs-mm super-center">$671</td>
+                    <td style="font-size: 3mm;" class="width-1 fs-mm super-center">5</td>
+                    <td style="font-size: 3mm;" class="width-2 fs-mm super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
+                    <td style="font-size: 3mm;" class="width-3 fs-mm super-center">1</td>
+                    <td style="font-size: 3mm;" class="width-4 fs-mm super-center">$671</td>
                 </tr>
             </table>
 
