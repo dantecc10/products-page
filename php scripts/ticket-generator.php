@@ -72,14 +72,14 @@ $html = '
                 <td style="width: 20%;">$671</td>
             </tr>
         </table>
+        <p>Total: $30</p>
+        <p>Gracias por su compra</p>
         <!--<ul class="items">
             <li class="item">Producto 1: $10</li>
             <li class="item">Producto 2: $20</li>
             <!-- Agrega más productos según sea necesario -->
         </ul>-->
         <hr>
-        <p>Total: $30</p>
-        <p>Gracias por su compra</p>
     </div>
 </body>
 </html>
