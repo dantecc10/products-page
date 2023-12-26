@@ -17,36 +17,10 @@ $pdf->SetFont('Helvetica', '', 3);
 $pdf->AddPage();
 
 // HTML para el ticket con diseño de Bootstrap
-//$html = '
-//    <!DOCTYPE html>
-//    <html lang="es-MX">
-//    <head>
-//        <meta charset="UTF-8">
-//        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//        <title>Document</title>
-//    </head>
-//    <body>
-//        <div class="container">
-//            <div class="row>
-//                <div class="col-md-6">
-//                    <h2>Ticket de Compra</h2>
-//                    <p>Detalles de la compra:</p>
-//                    <ul>
-//                        <li>Producto 1: $10</li>
-//                        <li>Producto 2: $20</li>
-//                        <!-- ... Otros productos -->
-//                    </ul>
-//                    <p>Total: $30</p>
-//                </div>
-//            </div>
-//        </div>
-//    </body>
-//    </html>
-//    
-//';
 
-$html = '<!DOCTYPE html>
-<html lang="es">
+$html = '
+<!DOCTYPE html>
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <title>Ticket de Venta</title>
@@ -77,8 +51,10 @@ $html = '<!DOCTYPE html>
 <body>
     <div class="ticket">
         <div class="header">
+            <h1>Comercial: Castelán Carpinteyro</h1>
             <h2>Ticket de Venta</h2>
             <p>Fecha: 24 de diciembre de 2023</p>
+            <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
         <ul class="items">
             <li class="item">Producto 1: $10</li>
