@@ -121,7 +121,7 @@ $html = '
         p {
             font-size: 3mm;
             line-height: 1.1;
-            margin: 2mm 0;
+            margin: 1mm 0;
         }
         .super-center {
             display: flex;
