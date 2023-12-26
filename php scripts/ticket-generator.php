@@ -11,7 +11,7 @@ $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Author');
 $pdf->SetTitle('Ticket');
 $pdf->SetMargins(10, 10, 10);
-$pdf->SetFont('Helvetica', '', 12);
+$pdf->SetFont('Helvetica', '', 6);
 
 // Agregar una página
 $pdf->AddPage();
