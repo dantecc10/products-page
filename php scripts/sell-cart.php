@@ -23,7 +23,12 @@ if (isset($_SESSION['cart'])) {
         $categories = "juguetes";
         $type = "sale";
         $user = 1;
-    }/*else{}*/
+    }
+    $channel = "Physical";
+    $categories = "juguetes";
+    $type = "sale";
+    $user = 1;
+
     $total_transaction = doubleval($total_transaction);
     //echo ($total_transaction);
     $data = array(6);
