@@ -103,7 +103,8 @@ $html = '
         .ticket {
             border: 1px solid #ccc;
             padding: 5mm;
-            width: 100%;
+            width: 90%;
+            margin-left: 5%;
         }
         .header {
             text-align: center;
