@@ -10,7 +10,7 @@ $pdf = new TCPDF('P', 'mm', array(58, 100));
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Author');
 $pdf->SetTitle('Ticket');
-$pdf->SetMargins(10, 10, 10);
+$pdf->SetMargins(5, 2, 5);
 $pdf->SetFont('Helvetica', '', 3);
 
 // Agregar una página
