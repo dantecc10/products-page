@@ -4,8 +4,9 @@ use TCPDF;
 
 // Crear una instancia de TCPDF
 //$pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
-$pdf = new TCPDF('P', 'mm', array(58, 100));
+$pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
 
+$pdf->SetPageFormat(58, 0);
 // Establecer información del documento
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Author');
