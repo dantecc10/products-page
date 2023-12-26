@@ -197,18 +197,18 @@ function sql_insertion_get_id($data, $table)
     return $id_transaction;
 }
 
-function sql_transaction_insert($data, $table)
+function sql_transaction_insert($params, $table)
 {
     include "connection.php";
     // Consulta para la inserción
     // INSERT INTO `transacciones` VALUES('', 'Physical', 1, 'juguetes', 671.00, 'sale', 1, CURRENT_TIMESTAMP);
     print_r($data);
-    $channel = strval($data[0]);
-    $quantity = intval($data[1]);
-    $categories = strval($data[2]);
-    $amount = floatval($data[3]);
-    $type = strval($data[4]);
-    $user = intval($data[5]);
+    $channel = strval($params[0]);
+    $quantity = intval($params[1]);
+    $categories = strval($params[2]);
+    $amount = floatval($params[3]);
+    $type = strval($params[4]);
+    $user = intval($params[5]);
     $sql = ("INSERT INTO `" . $table . "` VALUES ('', '" . $channel . "', " . $quantity . ", '" . $categories . "', " . $amount . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
 
     // Ejecutar la consulta
