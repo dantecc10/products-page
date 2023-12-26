@@ -80,14 +80,14 @@ $html = '
                     <img src="../assets/img/branding/logo.jpeg">
                 </div>
             </div>
-            <div class="row">
+            <!--<div class="row">
                 <div class="col col-4">
                 </div>
                 <div class="col col-6">
                 </div>
                 <div class="col col-4">
                 </div>
-            </div>
+            </div>-->
         </div>
 
         <table class="table table-striped">
