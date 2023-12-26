@@ -106,7 +106,7 @@ $html = '
             width: 90%;
             margin-left: 5%;
         }
-        .header {
+        .header, .container {
             text-align: center;
             margin-bottom: 5mm;
         }
