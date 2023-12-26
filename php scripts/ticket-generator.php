@@ -51,7 +51,7 @@ $html = '
 </head>
 <body>
     <div class="ticket" style="text-align: center;">
-        <div class="header">
+        <div class="header" style="padding: 15%;">
             <h1>Comercial: Castelán Carpinteyro</h1>
             <h2>Ticket de Venta</h2>
             <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
