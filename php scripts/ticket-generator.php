@@ -68,7 +68,7 @@ $html = '
             th.w-20, td.w-20 {
                 width: 20%;          
             }
-            th.w-5, td.w-5 {
+            th.w-55, td.w-55 {
                 width: 55%;          
             }
         </style>
