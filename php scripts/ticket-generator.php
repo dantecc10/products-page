@@ -56,20 +56,20 @@ $html = '
             <p>Fecha: 24 de diciembre de 2023</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
-        <table>
+        <table style="width: 80%;">
             <tr>
-                <th>ID</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-                <th>Cant.</th>
-                <th>Subtotal</th>
+                <th style="width: 10%;">ID</th>
+                <th style="width: 55%;">Descripción</th>
+                <th style="width: 10%;">Precio</th>
+                <th style="width: 10%;">Cant.</th>
+                <th style="width: 15%;">Subtotal</th>
             </tr>
             <tr>
-                <td>5</td>
-                <td>Avión de Pasajeros Playmobil</td>
-                <td>$671</td>
-                <td>1</td>
-                <td>$671</td>
+                <td style="width: 10%;">5</td>
+                <td style="width: 55%;">Avión de Pasajeros Playmobil</td>
+                <td style="width: 10%;">$671</td>
+                <td style="width: 10%;">1</td>
+                <td style="width: 15%;">$671</td>
             </tr>
         </table>
         <!--<ul class="items">
