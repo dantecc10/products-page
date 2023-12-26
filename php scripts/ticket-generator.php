@@ -130,6 +130,7 @@ $html = '
             justify-content: center;
             align-items: center;
             text-align: center;
+            vertical-align: middle;
         }
 
         .width-1 {
