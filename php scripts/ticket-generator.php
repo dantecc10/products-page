@@ -134,16 +134,16 @@ $html = '
         }
 
         .width-1 {
-            width: 10%;
+            width: 8%;
         }
         .width-2 {
             width: 50%;
         }
         .width-3 {
-            width: 20%;
+            width: 18%;
         }
         .width-4 {
-            width: 20%;
+            width: 24%;
         }
         fs-mm {
             font-size: 2.8mm !important;
