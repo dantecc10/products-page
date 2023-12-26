@@ -124,7 +124,7 @@ $pdf->writeHTML($html, true, false, true, false, '');
 $transaction = "4008789713766";
 
 // Generar el PDF y guardar en una ruta específica
-$pdf->Output('../assets/tickets/digital-ticket-' . $transaction . '.pdf', 'F');
+$pdf->Output('../tickets/digital-ticket-' . $transaction . '.pdf', 'F');
 
 // Generar el PDF y mostrarlo en el navegador
 $pdf->Output('ticket.pdf', 'I');
