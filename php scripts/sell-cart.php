@@ -66,17 +66,14 @@ if (isset($_SESSION['cart'])) {
             // INSERT INTO `ventas` VALUES('', ?, ?, ?, ?, ?, ?);
             $query = ("INSERT INTO `ventas` VALUES('', " . $transaction_id . ", " . $id . ", '" . $category . "', " . $price . ", " . $quantity . ", " . $subtotal . ")");
             echo ("Pasando el if de inserción ventas");
-            if (fetch_fields("ventas", $campos, "", $query) === null) {
-                // Consulta exitosa
-                // Crear HTML para ticket PDF
-                $ticket_articles .= ("" . $id .
-                    "" . $name .
-                    " / ($" . $price . " MXN)" .
-                    "" . $quantity .
-                    "" . ((intval($quantity)) * (floatval($price))) . "");
-            } else {
-                echo ("Error en la inserción del artículo con index [" . $i . "].");
-            }
+            $resultado = fetch_fields("ventas", $campos, "", $query);
+            // Consulta exitosa
+            // Crear HTML para ticket PDF
+            $ticket_articles .= ("" . $id .
+                "" . $name .
+                " / ($" . $price . " MXN)" .
+                "" . $quantity .
+                "" . ((intval($quantity)) * (floatval($price))) . "");
         }
     }
     $ticket_html = ($ticket_capsule_1 . $ticket_articles . $ticket_capsule_2);
