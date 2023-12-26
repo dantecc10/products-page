@@ -120,7 +120,7 @@ $html = '
         }
         p {
             font-size: 3mm;
-            line-height: 1;
+            line-height: .;
         }
         .super-center {
             display: flex;
