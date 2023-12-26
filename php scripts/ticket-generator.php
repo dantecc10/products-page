@@ -18,7 +18,7 @@ $pdf->AddPage();
 // HTML para el ticket con diseño de Bootstrap
 $html = '
     <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-end">
             <div class="col-md-6">
                 <h2>Ticket de Compra</h2>
                 <p>Detalles de la compra:</p>
