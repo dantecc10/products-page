@@ -202,7 +202,6 @@ function sql_transaction_insert($params, $table)
     include "connection.php";
     // Consulta para la inserción
     // INSERT INTO `transacciones` VALUES('', 'Physical', 1, 'juguetes', 671.00, 'sale', 1, CURRENT_TIMESTAMP);
-    print_r($data);
     $channel = strval($params[0]);
     $quantity = intval($params[1]);
     $categories = strval($params[2]);
