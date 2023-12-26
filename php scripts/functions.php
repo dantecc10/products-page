@@ -199,7 +199,13 @@ function sql_insertion_get_id($data, $table)
 
 function sql_transaction_insert($params, $table)
 {
-    include "connection.php";
+    $data = generatePasskey('sql');
+    $connection = new mysqli("localhost", $data[0], $data[1], $data[2]);
+    if ($connection->connect_error) {
+        die("La conexión a la base de datos falló: " . $connection->connect_error);
+    } else {
+        #echo ("Conexión establecida"); # Confirmación de conexión
+    }
     // Consulta para la inserción
     // INSERT INTO `transacciones` VALUES('', 'Physical', 1, 'juguetes', 671.00, 'sale', 1, CURRENT_TIMESTAMP);
     $channel = strval($params[0]);
@@ -216,7 +222,7 @@ function sql_transaction_insert($params, $table)
     } else {
         //echo "Error en la inserción: " . $conexion->error;
     }
-    
+
     // Cerrar la conexión
     $connection->close();
     return $last_id;
