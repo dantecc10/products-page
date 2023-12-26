@@ -58,23 +58,37 @@ $html = '
         <link rel="stylesheet" href="../assets/css/extra.css">
     </head>
     <body>
+        <style>
+            th.w-5, td.w-5 {
+                width: 5%; 
+            }
+            th.w-10, td.w-10 {
+                width: 10%;          
+            }
+            th.w-20, td.w-20 {
+                width: 20%;          
+            }
+            th.w-5, td.w-5 {
+                width: 55%;          
+            }
+        </style>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th style="width: 5%;">ID</th>
-                    <th style="width: 65%;">DESC</th>
-                    <th style="width: 10%;">PRECIO</th>
-                    <th style="width: 10%;">UDS.</th>
-                    <th style="width: 10%;">SUBTOTAL</th>
+                    <th class="w-5">ID</th>
+                    <th class="w-55">DESC</th>
+                    <th class="w-10">PRECIO</th>
+                    <th class="w-10">UDS.</th>
+                    <th class="w-20">SUBTOTAL</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>13</td>
-                    <td>AVIÓN PASAJEROS PLAYMOBIL</td>
-                    <td>$671</td>
-                    <td>1</td>
-                    <td>$671</td>
+                    <td class="w-5">13</td>
+                    <td class="w-55">AVIÓN PASAJEROS PLAYMOBIL</td>
+                    <td class="w-10">$671</td>
+                    <td class="w-10">1</td>
+                    <td class="w-20">$671</td>
                 </tr>
             </tbody
             <tfooter>
