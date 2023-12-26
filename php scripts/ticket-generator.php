@@ -1,6 +1,7 @@
 <?php
 include "barcode-generator.php";
 include "functions.php";
+$transaction = "4008789713766"; // Sustituir por dato de $_SESSION cuando dinamismo avance
 require_once '../vendor/autoload.php'; // Ruta al archivo autoload.php de Composer
 use TCPDF;
 
@@ -110,7 +111,7 @@ $html = ('
 
             <p>Total: $30</p>
             <p style="margin-bottom: 0px; padding-bottom: 1mm;">Referencia de operación:</p>
-            <img style="width: 40mm;" src="' . barcode_src_generator($generator, "4008789056818") . '">
+            <img style="width: 40mm;" src="' . barcode_src_generator($generator, $transaction) . '">
             <p>Gracias por su compra</p>
         </div>
     </div>
@@ -120,8 +121,6 @@ $html = ('
 
 // Agregar el HTML al PDF
 $pdf->writeHTML($html, true, false, true, false, '');
-
-$transaction = "4008789713766";
 
 // Generar el PDF y guardar en una ruta específica
 //$pdf->Output('tickets/digital-ticket-' . $transaction . '.pdf', 'F');
