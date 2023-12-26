@@ -32,7 +32,7 @@ $html = '
         }
         .ticket {
             border: 1px solid #ccc;
-            padding: 10px;
+            padding: 20px;
             width: 300px;
         }
         .header {
@@ -54,10 +54,10 @@ $html = '
         <div class="header" style="padding: 15%;">
             <h1>Comercial: Castelán Carpinteyro</h1>
             <h2>Ticket de Venta</h2>
-            <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
-            <p>C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
-            <p>Fecha: 24 de diciembre de 2023</p>
-            <p>Vendedor: Dante Castelán Carpinteyro</p>
+            <p style="font-size: 30px;" >Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
+            <p style="font-size: 30px;" >C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
+            <p style="font-size: 30px;" >Fecha: 24 de diciembre de 2023</p>
+            <p style="font-size: 30px;" >Vendedor: Dante Castelán Carpinteyro</p>
         </div>
         <table style="width: 100%;">
             <tr>
