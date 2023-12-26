@@ -22,7 +22,7 @@ $html = '
             <div class="col-md-6">
                 <h2>Ticket de Compra</h2>
                 <p>Detalles de la compra:</p>
-                <ul>
+                <ul class="d-flex justify-content-end col-12">
                     <li>Producto 1: $10</li>
                     <li>Producto 2: $20</li>
                     <!-- ... Otros productos -->
