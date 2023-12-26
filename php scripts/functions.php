@@ -203,14 +203,20 @@ function sql_transaction_insert($data, $table)
     include "connection.php";
     $sql = "INSERT INTO `$table` VALUES ('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
     $stmt = $connection->prepare($sql);
-    
-    $stmt->bind_param("sisisi", $data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
-    if ($stmt->execute()) {
-        //return true; // Inserción exitosa
-        return $connection->insert_id;
+
+    // Consulta para la inserción
+    $sql = "INSERT INTO transacciones VALUES ('', '$data[0]', '$data[1]', '$data[2]', $data[3], '$data[4]', '$data[5]', CURRENT_TIMESTAMP)";
+
+    // Ejecutar la consulta
+    if ($conexion->query($sql) === TRUE) {
+        $last_id = $conexion->insert_id;
+        echo "Último ID insertado es: " . $last_id;
     } else {
-        return false; // Manejar el error aquí
+        //echo "Error en la inserción: " . $conexion->error;
     }
+
+    // Cerrar la conexión
+    $conexion->close();
 }
 
 function get_last_insert_id($connection)
