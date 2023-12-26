@@ -130,6 +130,19 @@ $html = '
             /*height: 200px;*/
             /*border: 3px solid green;*/
         }
+
+        .width-1 {
+            width: 10%;
+        }
+        .width-2 {
+            width: 50%;
+        }
+        .width-3 {
+            width: 20%;
+        }
+        .width-4 {
+            width: 20%;
+        }
     </style>
 </head>
 <body>
