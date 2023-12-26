@@ -181,3 +181,38 @@ function fecha()
     $hora = date('H:i:s');
     return ($fecha . " " . $hora);
 }
+
+function sql_insertion_get_id($data, $table)
+{
+    include "connection.php";
+    // Realizar la inserción en la base de datos
+    // INSERT INTO `transacciones` VALUES('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP);
+    // INSERT INTO `transacciones` VALUES('', 'Physical', 1, 'juguetes', 671.00, 'sale', 1, CURRENT_TIMESTAMP);
+    $sql = ("INSERT INTO `" . $table . "` VALUES ('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)");
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("sisdsi", $data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
+    $stmt->execute();
+
+    // Obtener el ID de la última inserción con conexión de tipo PDO mysqli
+    $id_transaction = $connection->insert_id;
+    return $id_transaction;
+}
+
+function sql_transaction_insert($data, $table)
+{
+    include "connection.php";
+    $sql = "INSERT INTO `$table` VALUES ('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("sisdsi", $data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
+    if ($stmt->execute()) {
+        //return true; // Inserción exitosa
+        return $connection->insert_id;
+    } else {
+        return false; // Manejar el error aquí
+    }
+}
+
+function get_last_insert_id($connection)
+{
+    return $connection->insert_id;
+}

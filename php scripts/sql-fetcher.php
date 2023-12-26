@@ -22,17 +22,17 @@ function fetch_fields($table, $fields, $id, $custom_query)
 
     $result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
     $data = array();
-    $n = sizeof($fields);
-
+    
     // Comprobar si las filas son mayores que 0
     $result = $connection->query($query);
     // Verificar si se encontró un usuario válido
-    if ((stripos($query, "UPDATE") === false)) {
+    if ((stripos($query, "UPDATE") === false) && (stripos($query, "INSERT") === false)) {
         if ($result->num_rows > 0) {
             $i = 0;
             // Hacer fetch a los datos
             while ($row = $result->fetch_array()) {
                 // Procesar cada registro obtenido
+                $n = sizeof($fields);
                 for ($j = 0; $j < $n; $j++) {
                     if ($id == "" or $id == null) {
                         // Procesar cada columna de cada registro 
