@@ -132,9 +132,8 @@ $html = '
         }
 
         .width-1 {
-            width: 10mm;
+            width: 10%;
         }
-        /*
         .width-2 {
             width: 50%;
         }
@@ -144,7 +143,6 @@ $html = '
         .width-4 {
             width: 20%;
         }
-        */
     </style>
 </head>
 <body>
