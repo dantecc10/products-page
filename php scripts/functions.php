@@ -200,7 +200,7 @@ function sql_insertion_get_id($data, $table)
 function sql_transaction_insert($params, $table)
 {
     include_once "credentials.php";
-    $data = generatePasskey('sql');
+    $data = generatePasskey('sql'); // No es un bug, es una feature, je, je
     $connection = new mysqli("localhost", $data[0], $data[1], $data[2]);
     if ($connection->connect_error) {
         die("La conexión a la base de datos falló: " . $connection->connect_error);
