@@ -25,7 +25,7 @@ if (isset($_SESSION['cart'])) {
         $user = 1;
     }/*else{}*/
     $data = array(6);
-    $data = [$channel, $articles_transaction, $categories, $total_transaction, $type, $user];
+    $data = [$channel, $articles_transaction, $categories, floatval($total_transaction), $type, $user];
     if (sql_transaction_insert($data, "transacciones") !== false) {
         $transaction_id = sql_transaction_insert($data, "transacciones");
     } else {
