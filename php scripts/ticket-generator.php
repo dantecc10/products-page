@@ -121,5 +121,9 @@ $html = ('
 // Agregar el HTML al PDF
 $pdf->writeHTML($html, true, false, true, false, '');
 
+$transaction = "4008789713766";
+// Generar el PDF y mostrarlo en el navegador
+$pdf->Output(('../assets/files/tickets/digital-ticket-'.$transaction.'.pdf'), 'F');
+
 // Generar el PDF y mostrarlo en el navegador
 $pdf->Output('ticket.pdf', 'I');
