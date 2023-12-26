@@ -117,6 +117,11 @@ $html = '
         th, td {
             border: 1px solid #ccc;
             padding: 3mm;
+        }
+        th {
+            font-size: 2mm;
+        }
+        td {
             font-size: 2.8mm;
         }
         p {
