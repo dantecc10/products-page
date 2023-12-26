@@ -144,10 +144,7 @@ $html = '
         .width-4 {
             width: 20%;
         }
-        th {
-            font-size: 2mm !important;
-        }
-        td {
+        fs-mm {
             font-size: 2.8mm !important;
         }
     </style>
@@ -165,16 +162,16 @@ $html = '
         <div class="container">
             <table>
                 <tr>
-                    <th class="width-1 super-center">ID</th>
-                    <th class="width-2 super-center">Descripción / Precio</th>
-                    <th class="width-3 super-center">Cant.</th>
-                    <th class="width-4 super-center">Subtotal</th>
+                    <th class="width-1 fs-mm super-center">ID</th>
+                    <th class="width-2 fs-mm super-center">Descripción / Precio</th>
+                    <th class="width-3 fs-mm super-center">Cant.</th>
+                    <th class="width-4 fs-mm super-center">Subtotal</th>
                 </tr>
                 <tr>
-                    <td class="width-1 super-center">5</td>
-                    <td style="font-size: 3mm;" class="width-2 super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
-                    <td class="width-3 super-center">1</td>
-                    <td class="width-4 super-center">$671</td>
+                    <td class="width-1 fs-mm super-center">5</td>
+                    <td class="width-2 fs-mm super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
+                    <td class="width-3 fs-mm super-center">1</td>
+                    <td class="width-4 fs-mm super-center">$671</td>
                 </tr>
             </table>
 
