@@ -202,7 +202,13 @@ function sql_transaction_insert($data, $table)
     include "connection.php";
     // Consulta para la inserción
     // INSERT INTO `transacciones` VALUES('', 'Physical', 1, 'juguetes', 671.00, 'sale', 1, CURRENT_TIMESTAMP);
-    $sql = ("INSERT INTO `" . $table . "` VALUES ('', '" . $data[0] . "', " . $data[1] . ", '" . $data[2] . "', " . $data[3] . ", '" . $data[4] . "', " . $data[5] . ", CURRENT_TIMESTAMP)");
+    $channel = strval($data[0]);
+    $quantity = intval($data[1]);
+    $categories = strval($data[2]);
+    $amount = doubleval($data[3]);
+    $type = strval($data[4]);
+    $user = intval($data[5]);
+    $sql = ("INSERT INTO `" . $table . "` VALUES ('', '" . $channel . "', " . $quantity . ", '" . $categories . "', " . $amount . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
 
     // Ejecutar la consulta
     if ($connection->query($sql) === TRUE) {
