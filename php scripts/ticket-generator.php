@@ -49,7 +49,7 @@ $html = '
     </style>
 </head>
 <body>
-    <div class="ticket">
+    <div class="ticket" style="text-align: center;">
         <div class="header">
             <h1>Comercial: Castelán Carpinteyro</h1>
             <h2>Ticket de Venta</h2>
@@ -66,10 +66,10 @@ $html = '
             </tr>
             <tr>
                 <td style="width: 10%;">5</td>
-                <td style="width: 55%;">Avión de Pasajeros Playmobil</td>
-                <td style="width: 10%;">$671</td>
-                <td style="width: 10%;">1</td>
-                <td style="width: 15%;">$671</td>
+                <td style="width: 40%;">Avión de Pasajeros Playmobil</td>
+                <td style="width: 20%;">$671</td>
+                <td style="width: 15%;">1</td>
+                <td style="width: 20%;">$671</td>
             </tr>
         </table>
         <!--<ul class="items">
