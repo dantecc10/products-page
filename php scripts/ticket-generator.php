@@ -48,7 +48,7 @@ $html = '
             margin-bottom: 5px;
         }
         p {
-            font-size: 10px;
+            font-size: 7px;
             line-height: 1.3;
         }
     </style>
@@ -92,4 +92,4 @@ $html = '
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Generar el PDF y mostrarlo en el navegador
-$pdf->Output('ticket.pdf', 'I', 'F', 0, 'auto');
+$pdf->Output('ticket.pdf', 'I');
