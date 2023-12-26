@@ -49,6 +49,7 @@ $html = '
         }
         p {
             font-size: 10px;
+            line-height: 1.0;
         }
     </style>
 </head>
