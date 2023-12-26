@@ -50,6 +50,7 @@ function fetch_fields($table, $fields, $id, $custom_query)
         // No hay registros en la tabla, o la consulta hizo una actualización: devolver null
         return null;
     }
+    $connection->close();
 }
 
 //Debug zone
