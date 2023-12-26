@@ -178,6 +178,9 @@ $html = '
 
             <p>Total: $30</p>
             <p>Gracias por su compra</p>
+            <p>Referencia de operación:</p>
+            <img style="width: 30mm;" src="../assets/img/test-barcode.png">
+            
         </div>
     </div>
 </body>
