@@ -47,7 +47,9 @@ $html = '
         .item {
             margin-bottom: 5px;
         }
-        p
+        p {
+            font-size: 40px;
+        }
     </style>
 </head>
 <body>
