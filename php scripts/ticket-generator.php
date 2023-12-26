@@ -12,7 +12,7 @@ $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Dante Castelán Carpinteyro');
 $pdf->SetTitle('Ticket de Venta (XXXXXXXXXX)');
 $pdf->SetMargins(5, 2, 5);
-$pdf->SetFont('Helvetica', '', 3);
+$pdf->SetFont('Helvetica', '', 4);
 
 // Agregar una página
 $pdf->AddPage();
