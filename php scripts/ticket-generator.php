@@ -172,7 +172,7 @@ $html = '
                 </tr>
                 <tr>
                     <td class="width-1 super-center">5</td>
-                    <td style="font-size: 4mm;" class="width-2 super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
+                    <td style="font-size: 3mm;" class="width-2 super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
                     <td class="width-3 super-center">1</td>
                     <td class="width-4 super-center">$671</td>
                 </tr>
