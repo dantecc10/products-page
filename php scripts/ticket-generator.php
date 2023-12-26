@@ -84,10 +84,10 @@ $html = ('
     <div class="ticket">
         <div class="header">
             <div class="row">
-                <div id="logo-container" style="width: 50%; margin-left: 12.5%;" class="col">
-                    <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="20mm">
+                <div id="logo-container" style="width: 40%; margin-left: 12.5%;" class="col">
+                    <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm">
                 </div>
-                <div class="col" style="width: 50%;">
+                <div class="col" style="width: 60%;">
                     <h1 style="font-size: 5mm">Comercial: Castelán Carpinteyro</h1>
                 </div>
             </div>
