@@ -53,6 +53,7 @@ $html = '
         <div class="header">
             <h1>Comercial: Castelán Carpinteyro</h1>
             <h2>Ticket de Venta</h2>
+            <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente. C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
             <p>Fecha: 24 de diciembre de 2023</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
@@ -72,13 +73,9 @@ $html = '
                 <td style="width: 20%;">$671</td>
             </tr>
         </table>
+
         <p>Total: $30</p>
         <p>Gracias por su compra</p>
-        <!--<ul class="items">
-            <li class="item">Producto 1: $10</li>
-            <li class="item">Producto 2: $20</li>
-            <!-- Agrega más productos según sea necesario -->
-        </ul>-->
         <hr>
     </div>
 </body>
