@@ -31,7 +31,7 @@ if (isset($_SESSION['cart'])) {
 
     $total_transaction = doubleval($total_transaction);
     //echo ($total_transaction);
-    $data = array(6);
+    $data = array();
     $data = [$channel, $articles_transaction, $categories, $total_transaction, $type, $user];
     if (sql_transaction_insert($data, "transacciones") !== false) {
         $transaction_id = sql_transaction_insert($data, "transacciones");

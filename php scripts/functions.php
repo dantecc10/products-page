@@ -205,7 +205,7 @@ function sql_transaction_insert($data, $table)
     $channel = strval($data[0]);
     $quantity = intval($data[1]);
     $categories = strval($data[2]);
-    $amount = doubleval($data[3]);
+    $amount = intval($data[3]);
     $type = strval($data[4]);
     $user = intval($data[5]);
     $sql = ("INSERT INTO `" . $table . "` VALUES ('', '" . $channel . "', " . $quantity . ", '" . $categories . "', " . $amount . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
