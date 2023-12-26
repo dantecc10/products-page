@@ -88,7 +88,7 @@ $html = ('
                     <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="20mm">
                 </div>
                 <div class="col" style="width: 50%;">
-                    <h1 style="font-size: 7mm">Comercial: Castelán Carpinteyro</h1>
+                    <h1 style="font-size: 5mm">Comercial: Castelán Carpinteyro</h1>
                 </div>
             </div>
             <h2 style="font-size: 5mm">Ticket de Venta</h2>
