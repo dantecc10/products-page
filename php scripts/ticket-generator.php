@@ -83,6 +83,9 @@ $html = ('
 <body>
     <div class="ticket">
         <div class="header">
+            <div style="width: 50%; margin-left: 12.5%;">
+                <img src="../assets/img/branding/logo.jpeg" alt="Logo">
+            </div>
             <h1 style="font-size: 7mm">Comercial: Castelán Carpinteyro</h1>
             <h2 style="font-size: 5mm">Ticket de Venta</h2>
             <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
