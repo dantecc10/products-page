@@ -50,7 +50,7 @@ if (isset($_SESSION['cart'])) {
     $ticket_capsule_2 = "";
     $ticket_articles = "";
     for ($i = 0; $i < $n; $i++) {
-        $query = "UPDATE `juguetes` SET `quantity_toy` = " . $_SESSION['cart']['Products'][$i]['quantity'] . " WHERE `id_toy` = " . $_SESSION['cart']['Products'][$i]['id'] . ";";
+        $query = "UPDATE `juguetes` SET `quantity_toy` = " . ($_SESSION['cart']['Products'][$i]['stock'] - $_SESSION['cart']['Products'][$i]['quantity']) . " WHERE `id_toy` = " . $_SESSION['cart']['Products'][$i]['id'] . ";";
         if (fetch_fields("juguetes", $campos, "", $query) == null) {
             // Registrar venta por artículo
             $id = $_SESSION['cart']['Products'][$i]['id'];
@@ -63,7 +63,6 @@ if (isset($_SESSION['cart'])) {
             // Consulta para insertar una venta a la base de datos.
             // INSERT INTO `ventas` VALUES('', 1, 13, 'juguetes', 671.00, 1, 671.00);
             // INSERT INTO `ventas` VALUES('', ?, ?, ?, ?, ?, ?);
-            $data = [$transaction_id, $id, $category, $price, $quantity, $subtotal];
             $query = ("INSERT INTO `ventas` VALUES('', " . $transaction_id . ", " . $id . ", '" . $category . "', " . $price . ", " . $quantity . ", " . $subtotal . ")");
             if (fetch_fields("ventas", $campos, "", $query) === null) {
                 // Consulta exitosa
