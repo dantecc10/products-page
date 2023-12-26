@@ -163,10 +163,10 @@ $html = '
         <div class="container">
             <table>
                 <tr>
-                    <th class="width-1 fs-mm super-center">ID</th>
-                    <th class="width-2 fs-mm super-center">Descripción / Precio</th>
-                    <th class="width-3 fs-mm super-center">Cant.</th>
-                    <th class="width-4 fs-mm super-center">Subtotal</th>
+                    <th style="font-size: 2.3mm;" class="width-1 fs-mm super-center">ID</th>
+                    <th style="font-size: 2.3mm;" class="width-2 fs-mm super-center">Descripción / Precio</th>
+                    <th style="font-size: 2.3mm;" class="width-3 fs-mm super-center">Cant.</th>
+                    <th style="font-size: 2.3mm;" class="width-4 fs-mm super-center">Subtotal</th>
                 </tr>
                 <tr>
                     <td style="font-size: 3mm;" class="width-1 fs-mm super-center">5</td>
