@@ -14,4 +14,4 @@ for %%i in ("%dir%\*.html") do (
 
 echo Archivos .html copiados y convertidos a .php en el directorio actual.
 
-"commit-deploy.bat"
+commit-deploy.bat
