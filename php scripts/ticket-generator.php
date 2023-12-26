@@ -48,7 +48,7 @@ $html = '
             margin-bottom: 5px;
         }
         p {
-            font-size: 20px;
+            font-size: 10px;
         }
     </style>
 </head>
