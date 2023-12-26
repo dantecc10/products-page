@@ -76,7 +76,7 @@ $html = '
 
         <div class="container">
             <div class="row">
-                <div class="col col-6 d-flex justify-content-center">
+                <div class="col d-flex justify-content-center" style="width: 50%; margin: 0 12.5% 0 12.5%;">
                     <img src="../assets/img/branding/logo.jpeg">
                 </div>
             </div>
