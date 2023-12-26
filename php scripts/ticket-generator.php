@@ -3,7 +3,8 @@ require_once '../vendor/autoload.php'; // Ruta al archivo autoload.php de Compos
 use TCPDF;
 
 // Crear una instancia de TCPDF
-$pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
+//$pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
+$pdf = new TCPDF('P', 'mm', array(58, 100));
 
 // Establecer información del documento
 $pdf->SetCreator(PDF_CREATOR);
