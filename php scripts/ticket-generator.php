@@ -19,7 +19,7 @@ $pdf->AddPage();
 
 // HTML para el ticket con diseño de Bootstrap
 
-$html = '
+/*$html = ('
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -82,6 +82,74 @@ $html = '
         <p>Total: $30</p>
         <p>Gracias por su compra</p>
         <hr>
+    </div>
+</body>
+</html>
+');
+*/
+
+$html = '
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket de Venta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .ticket {
+            border: 1px solid #ccc;
+            padding: 5mm;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 5mm;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 3mm;
+        }
+        p {
+            font-size: 5mm;
+            line-height: 1.1;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket">
+        <div class="header">
+            <h1>Comercial: Castelán Carpinteyro</h1>
+            <h2>Ticket de Venta</h2>
+            <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
+            <p>C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
+            <p>Fecha: 24 de diciembre de 2023</p>
+            <p>Vendedor: Dante Castelán Carpinteyro</p>
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Descripción / Precio</th>
+                <th>Cant.</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
+                <td>1</td>
+                <td>$671</td>
+            </tr>
+        </table>
+
+        <p>Total: $30</p>
+        <p>Gracias por su compra</p>
     </div>
 </body>
 </html>
