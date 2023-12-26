@@ -56,11 +56,27 @@ $html = '
             <p>Fecha: 24 de diciembre de 2023</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
-        <ul class="items">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Cant.</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Avión de Pasajeros Playmobil</td>
+                <td>$671</td>
+                <td>1</td>
+                <td>$671</td>
+            </tr>
+        </table>
+        <!--<ul class="items">
             <li class="item">Producto 1: $10</li>
             <li class="item">Producto 2: $20</li>
             <!-- Agrega más productos según sea necesario -->
-        </ul>
+        </ul>-->
         <hr>
         <p>Total: $30</p>
         <p>Gracias por su compra</p>
