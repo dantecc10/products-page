@@ -83,8 +83,8 @@ $html = ('
 <body>
     <div class="ticket">
         <div class="header">
-            <h1>Comercial: Castelán Carpinteyro</h1>
-            <h2>Ticket de Venta</h2>
+            <h1 style="font-size: 7mm">Comercial: Castelán Carpinteyro</h1>
+            <h2 style="font-size: 5mm">Ticket de Venta</h2>
             <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
             <p>C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
             <p>Fecha: 24 de diciembre de 2023</p>
