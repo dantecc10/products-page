@@ -203,7 +203,7 @@ function sql_transaction_insert($data, $table)
     include "connection.php";
     $sql = "INSERT INTO `$table` VALUES ('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
     $stmt = $connection->prepare($sql);
-    $stmt->bind_param("sisdsi", $data[0], $data[1], $data[2], floatval($data[3]), $data[4], $data[5]);
+    $stmt->bind_param("sisdsi", $data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
     if ($stmt->execute()) {
         //return true; // Inserción exitosa
         return $connection->insert_id;
