@@ -83,7 +83,7 @@ $html = ('
 <body>
     <div class="ticket">
         <div class="header">
-            <div class="row">
+            <div class="row" style="display: flex;">
                 <div id="logo-container" style="width: 40%; margin-left: 12.5%;" class="col">
                     <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm">
                 </div>
