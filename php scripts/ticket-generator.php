@@ -88,7 +88,7 @@ $html = ('
             <h2 style="font-size: 5mm">Ticket de Venta</h2>
             <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
             <p>C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
-            <p>Fecha: '. date('DD-MM-YYYY', null) .'</p>
+            <p>Fecha: '. date('r', null) .'</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
         <div class="container">
