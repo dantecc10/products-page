@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (isset($_SESSION['cart'])) {
-    include "functions.php";
     include "sql-fetcher.php";
+    include "functions.php";
     $campos = array();
     $campos = [
         "id_toy", "name_toy", "description_toy", "model_toy", "line_toy", "bars_toy", "brand_toy", "pieces_toy", "quantity_toy",
