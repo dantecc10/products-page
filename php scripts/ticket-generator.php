@@ -68,13 +68,13 @@ $html = '
                 <th style="width: 5%;">ID</th>
                 <th style="width: 53%;">Descripción / Precio</th>
     
-                <th style="width: 12%;">Cant.</th>
+                <th style="width: 15%;">Cant.</th>
                 <th style="width: 20%;">Subtotal</th>
             </tr>
             <tr>
                 <td style="width: 5%;">5</td>
                 <td style="width: 53%;">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
-                <td style="width: 12%;">1</td>
+                <td style="width: 15%;">1</td>
                 <td style="width: 20%;">$671</td>
             </tr>
         </table>
