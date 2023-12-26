@@ -105,6 +105,7 @@ $html = '
             padding: 5mm;
             width: 90%;
             margin-left: 5%;
+            margin-right: 5%;
         }
         .header, .container {
             text-align: center;
