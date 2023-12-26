@@ -59,10 +59,10 @@ $html = '
         <table style="width: 80%;">
             <tr>
                 <th style="width: 10%;">ID</th>
-                <th style="width: 55%;">Descripción</th>
-                <th style="width: 10%;">Precio</th>
-                <th style="width: 10%;">Cant.</th>
-                <th style="width: 15%;">Subtotal</th>
+                <th style="width: 40%;">Descripción</th>
+                <th style="width: 20%;">Precio</th>
+                <th style="width: 15%;">Cant.</th>
+                <th style="width: 20%;">Subtotal</th>
             </tr>
             <tr>
                 <td style="width: 10%;">5</td>
