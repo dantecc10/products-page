@@ -207,14 +207,13 @@ function sql_transaction_insert($data, $table)
     // Ejecutar la consulta
     if ($connection->query($sql) === TRUE) {
         $last_id = $connection->insert_id;
-        echo ($last_id);
-        return $last_id;
     } else {
         //echo "Error en la inserción: " . $conexion->error;
     }
-
+    
     // Cerrar la conexión
     $connection->close();
+    return $last_id;
 }
 
 function get_last_insert_id($connection)
