@@ -142,7 +142,7 @@ $html = '
         </div>
         <table>
             <tr>
-                <th>ID</th>
+                <th class="suer-center">ID</th>
                 <th>Descripción / Precio</th>
                 <th>Cant.</th>
                 <th>Subtotal</th>
