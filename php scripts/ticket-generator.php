@@ -61,7 +61,7 @@ $html = '
                 <th style="width: 10%;">ID</th>
                 <th style="width: 40%;">Descripción</th>
                 <th style="width: 20%;">Precio</th>
-                <th style="width: 15%;">Cant.</th>
+                <th style="width: 15%;">Cantidad</th>
                 <th style="width: 20%;">Subtotal</th>
             </tr>
             <tr>
