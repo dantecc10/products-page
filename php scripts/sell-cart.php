@@ -57,7 +57,6 @@ if (isset($_SESSION['cart'])) {
             $category = $_SESSION['cart']['Products'][$i]['category'];
             $quantity = $_SESSION['cart']['Products'][$i]['quantity'];
             $price = $_SESSION['cart']['Products'][$i]['price'];
-            $sale = $_SESSION['cart']['Products'][$i]['sale'];
             $subtotal = (floatval($price) * intval($quantity));
 
             // Consulta para insertar una venta a la base de datos.
