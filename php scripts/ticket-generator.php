@@ -125,6 +125,7 @@ $html = '
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             /*height: 200px;*/
             /*border: 3px solid green;*/
         }
