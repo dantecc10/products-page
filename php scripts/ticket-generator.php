@@ -47,17 +47,18 @@ $html = '
         .item {
             margin-bottom: 5px;
         }
+        p
     </style>
 </head>
 <body>
     <div class="ticket" style="text-align: center;">
-        <div class="header" style="padding: 15%;">
+        <div class="header" style="padding: 25%;">
             <h1>Comercial: Castelán Carpinteyro</h1>
             <h2>Ticket de Venta</h2>
-            <p style="font-size: 30px;" >Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
-            <p style="font-size: 30px;" >C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
-            <p style="font-size: 30px;" >Fecha: 24 de diciembre de 2023</p>
-            <p style="font-size: 30px;" >Vendedor: Dante Castelán Carpinteyro</p>
+            <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
+            <p>C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
+            <p>Fecha: 24 de diciembre de 2023</p>
+            <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
         <table style="width: 100%;">
             <tr>
