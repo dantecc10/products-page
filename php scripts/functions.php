@@ -201,8 +201,6 @@ function sql_insertion_get_id($data, $table)
 function sql_transaction_insert($data, $table)
 {
     include "connection.php";
-    $sql = "INSERT INTO `$table` VALUES ('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
-    $stmt = $connection->prepare($sql);
 
     // Consulta para la inserción
     $sql = "INSERT INTO transacciones VALUES ('', '$data[0]', '$data[1]', '$data[2]', $data[3], '$data[4]', '$data[5]', CURRENT_TIMESTAMP)";
