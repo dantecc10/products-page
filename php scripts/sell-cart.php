@@ -33,17 +33,18 @@ if (isset($_SESSION['cart'])) {
     //echo ($total_transaction);
     $data = array();
     $data = [$channel, $articles_transaction, $categories, $total_transaction, $type, $user];
-    if (sql_transaction_insert($data, "transacciones") !== false) {
-        $transaction_id = sql_transaction_insert($data, "transacciones");
-    } else {
+
+    $transaction_id = sql_transaction_insert($data, "transacciones");
+    if ($transaction_id == false) {
         echo ("Error fatal en inserción y obtención de id de transacción.");
+        unset($transaction_id);
     }
 
     // Consulta para insertar una transacción a la base de datos.
     // INSERT INTO `transacciones` VALUES('', 'Physical', 1, 'juguetes', 671.00, 'sale', 1, CURRENT_TIMESTAMP);
     // INSERT INTO `transacciones` VALUES('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP);
-    $query = ("INSERT INTO `transacciones` VALUES('', '" . $channel . "', " . $articles_transaction . ", '" . $categories . "', " . $total_transaction . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
-    fetch_fields("juguetes", $campos, "", $query);
+    //$query = ("INSERT INTO `transacciones` VALUES('', '" . $channel . "', " . $articles_transaction . ", '" . $categories . "', " . $total_transaction . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
+    //fetch_fields("juguetes", $campos, "", $query);
 
     $ticket_capsule_1 = "";
     $ticket_capsule_2 = "";
