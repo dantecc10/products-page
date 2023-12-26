@@ -96,7 +96,7 @@ $html = ('
                     <th style="font-size: 2.8mm;" class="width-1 fs-mm super-center">ID</th>
                     <th style="font-size: 2.8mm;" class="width-2 fs-mm super-center">Descripción / Precio</th>
                     <th style="font-size: 2.8mm;" class="width-3 fs-mm super-center">Cant.</th>
-                    <th style="font-size: 2.8mm;" class="width-4 fs-mm super-center">Subtotal</th>
+                    <th style="font-size: 2.5mm;" class="width-4 fs-mm super-center">Subtotal</th>
                 </tr>
                 <tr>
                     <td style="font-size: 3mm; vertical-align: middle" class="width-1 fs-mm super-center">5</td>
@@ -109,8 +109,7 @@ $html = ('
             <p>Total: $30</p>
             <p style="margin-bottom: 0px; padding-bottom: 1mm;">Referencia de operación:</p>
             <img style="width: 40mm;" src="' . barcode_src_generator($generator, "4008789056818") . '">
-            <p>Gracias por su compra</p>f
-            
+            <p>Gracias por su compra</p>
         </div>
     </div>
 </body>

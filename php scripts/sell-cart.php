@@ -10,10 +10,20 @@ if (isset($_SESSION['cart'])) {
     ];
 
     $n = sizeof($_SESSION['cart']['Products']);
+    $ticket_capsule_1 = "";
+    $ticket_capsule_2 = "";
+    $ticket_articles = "";
     for ($i = 0; $i < $n; $i++) {
         $query = "UPDATE `juguetes` SET `quantity_toy` = " . $_SESSION['cart']['Products'][$i]['quantity'] . " WHERE `id_toy` = " . $_SESSION['cart']['Products'][$i]['id'] . ";";
         if (fetch_fields("juguetes", $campos, "", $query) == null) {
+            $ticket_articles .= ("" . $_SESSION['cart']['Products'][$i]['id']
+                . "" . $_SESSION['cart']['Products'][$i]['name']
+                . " / ($" . $_SESSION['cart']['Products'][$i]['price'] . " MXN)"
+                . "" . $_SESSION['cart']['Products'][$i]['quantity']
+                . "" . ((intval($_SESSION['cart']['Products'][$i]['quantity'])) * (floatval($_SESSION['cart']['Products'][$i]['price'])))
+                . "");
         } else {
         }
     }
+    $ticket_html = ($ticket_capsule_1 . $ticket_articles . $ticket_capsule_2);
 }
