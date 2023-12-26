@@ -108,7 +108,7 @@ $html = ('
 
             <p>Total: $30</p>
             <p>Gracias por su compra</p>
-            <p>Referencia de operación:</p>
+            <p style="margin-bottom: 0px; padding-bottom: 1mm;">Referencia de operación:</p>
             <img style="width: 30mm;" src="' . barcode_src_generator($generator, "4008789056818") . '">
             
         </div>
