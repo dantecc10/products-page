@@ -49,7 +49,7 @@ if (isset($_SESSION['cart'])) {
     $ticket_capsule_1 = "";
     $ticket_capsule_2 = "";
     $ticket_articles = "";
-    echo($n);
+    echo ($n);
     for ($i = 0; $i < $n; $i++) {
         $query = "UPDATE `juguetes` SET `quantity_toy` = " . ($_SESSION['cart']['Products'][$i]['stock'] - $_SESSION['cart']['Products'][$i]['quantity']) . " WHERE `id_toy` = " . $_SESSION['cart']['Products'][$i]['id'] . ";";
         if (fetch_fields("juguetes", $campos, "", $query) == null) {
@@ -65,7 +65,7 @@ if (isset($_SESSION['cart'])) {
             // INSERT INTO `ventas` VALUES('', 1, 13, 'juguetes', 671.00, 1, 671.00);
             // INSERT INTO `ventas` VALUES('', ?, ?, ?, ?, ?, ?);
             $query = ("INSERT INTO `ventas` VALUES('', " . $transaction_id . ", " . $id . ", '" . $category . "', " . $price . ", " . $quantity . ", " . $subtotal . ")");
-            echo("Pasando el if de inserción ventas");
+            echo ("Pasando el if de inserción ventas");
             if (fetch_fields("ventas", $campos, "", $query) === null) {
                 // Consulta exitosa
                 // Crear HTML para ticket PDF
@@ -74,9 +74,9 @@ if (isset($_SESSION['cart'])) {
                     " / ($" . $price . " MXN)" .
                     "" . $quantity .
                     "" . ((intval($quantity)) * (floatval($price))) . "");
+            } else {
+                echo ("Error en la inserción del artículo con index [" . $i . "].");
             }
-        } else {
-            echo ("Error en la inserción del artículo con index [" . $i . "].");
         }
     }
     $ticket_html = ($ticket_capsule_1 . $ticket_articles . $ticket_capsule_2);
