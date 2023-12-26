@@ -18,7 +18,7 @@ $pdf->SetFont('Helvetica', '', 5);
 // Agregar una página
 $pdf->AddPage();
 
-$html = '
+$html = ('
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -109,13 +109,13 @@ $html = '
             <p>Total: $30</p>
             <p>Gracias por su compra</p>
             <p>Referencia de operación:</p>
-            <img style="width: 30mm;" src="../assets/img/test-barcode.png">
+            <img style="width: 30mm;" src="' . barcode_src_generator($generator, "4008789056818") . '">
             
         </div>
     </div>
 </body>
 </html>
-';
+');
 
 // Agregar el HTML al PDF
 $pdf->writeHTML($html, true, false, true, false, '');
