@@ -134,7 +134,7 @@ $html = '
         }
 
         .width-1 {
-            width: 8%;
+            width: 10%;
         }
         .width-2 {
             width: 50%;
@@ -143,7 +143,7 @@ $html = '
             width: 18%;
         }
         .width-4 {
-            width: 24%;
+            width: 222%;
         }
         fs-mm {
             font-size: 2.8mm !important;
