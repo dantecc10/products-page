@@ -144,16 +144,16 @@ $html = '
         </div>
         <table>
             <tr>
-                <th class="super-center">ID</th>
-                <th>Descripción / Precio</th>
-                <th>Cant.</th>
-                <th>Subtotal</th>
+                <th class="width-1 super-center">ID</th>
+                <th class="width-2 super-center">Descripción / Precio</th>
+                <th class="width-3 super-center">Cant.</th>
+                <th class="width-4 super-center">Subtotal</th>
             </tr>
             <tr>
-                <td>5</td>
-                <td>Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
-                <td>1</td>
-                <td>$671</td>
+                <td class="width-1 super-center">5</td>
+                <td class="width-2 super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
+                <td class="width-3 super-center">1</td>
+                <td class="width-4 super-center">$671</td>
             </tr>
         </table>
 
