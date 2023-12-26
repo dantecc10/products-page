@@ -47,7 +47,7 @@ $pdf->AddPage();
 
 $html = '
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="es-MX">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,11 +76,16 @@ $html = '
 
         <div class="container">
             <div class="row">
-                <div class="col col-md-6">
+                <div class="col d-flex justify-content-center">
+                    <img src="../assets/img/branding/logo.jpeg" height="100px">
                 </div>
-                <div class="col col-md-6">
+            </div>
+            <div class="row">
+                <div class="col col-4">
                 </div>
-                <div class="col col-md-6">
+                <div class="col col-6">
+                </div>
+                <div class="col col-4">
                 </div>
             </div>
         </div>
