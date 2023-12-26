@@ -76,8 +76,11 @@ $html = '
 
         <div class="container">
             <div class="row">
-                <div class="col d-flex justify-content-center" style="width: 50%; margin: 0 12.5% 0 12.5%;">
+                <div class="col col-6 d-flex justify-content-center" style="width: 50%; margin: 0 12.5% 0 12.5%;">
                     <img src="../assets/img/branding/logo.jpeg">
+                </div>
+                <div class="col col-6 d-flex justify-content-center" style="width: 50%; margin: 0 12.5% 0 12.5%;">
+                    Divisor
                 </div>
             </div>
             <!--<div class="row">
