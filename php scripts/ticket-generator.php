@@ -143,7 +143,7 @@ $html = '
             width: 18%;
         }
         .width-4 {
-            width: 222%;
+            width: 22%;
         }
         fs-mm {
             font-size: 2.8mm !important;
