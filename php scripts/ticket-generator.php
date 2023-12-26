@@ -118,8 +118,15 @@ $html = '
             padding: 3mm;
         }
         p {
-            font-size: 5mm;
+            font-size: 3mm;
             line-height: 1.1;
+        }
+        .super-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*height: 200px;*/
+            /*border: 3px solid green;*/
         }
     </style>
 </head>
