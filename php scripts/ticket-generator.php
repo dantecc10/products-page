@@ -61,11 +61,11 @@ $html = '
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>DESC</th>
-                    <th>PRECIO</th>
-                    <th>UDS.</th>
-                    <th>SUBTOTAL</th>
+                    <th style="width: 5%;">ID</th>
+                    <th style="width: 65%;">DESC</th>
+                    <th style="width: 10%;">PRECIO</th>
+                    <th style="width: 10%;">UDS.</th>
+                    <th style="width: 10%;">SUBTOTAL</th>
                 </tr>
             </thead>
             <tbody>
