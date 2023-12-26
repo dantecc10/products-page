@@ -92,10 +92,10 @@ $html = '
         <div class="container">
             <table>
                 <tr>
-                    <th style="font-size: 2.3mm;" class="width-1 fs-mm super-center">ID</th>
-                    <th style="font-size: 2.3mm;" class="width-2 fs-mm super-center">Descripción / Precio</th>
-                    <th style="font-size: 2.3mm;" class="width-3 fs-mm super-center">Cant.</th>
-                    <th style="font-size: 2.3mm;" class="width-4 fs-mm super-center">Subtotal</th>
+                    <th style="font-size: 2.8mm;" class="width-1 fs-mm super-center">ID</th>
+                    <th style="font-size: 2.8mm;" class="width-2 fs-mm super-center">Descripción / Precio</th>
+                    <th style="font-size: 2.8mm;" class="width-3 fs-mm super-center">Cant.</th>
+                    <th style="font-size: 2.8mm;" class="width-4 fs-mm super-center">Subtotal</th>
                 </tr>
                 <tr>
                     <td style="font-size: 3mm; vertical-align: middle" class="width-1 fs-mm super-center">5</td>
