@@ -48,9 +48,9 @@ function fetch_fields($table, $fields, $id, $custom_query)
         }
     } else {
         // No hay registros en la tabla, o la consulta hizo una actualización: devolver null
+        $connection->close();
         return null;
     }
-    $connection->close();
 }
 
 //Debug zone

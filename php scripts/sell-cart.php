@@ -65,6 +65,7 @@ if (isset($_SESSION['cart'])) {
             // INSERT INTO `ventas` VALUES('', 1, 13, 'juguetes', 671.00, 1, 671.00);
             // INSERT INTO `ventas` VALUES('', ?, ?, ?, ?, ?, ?);
             $query = ("INSERT INTO `ventas` VALUES('', " . $transaction_id . ", " . $id . ", '" . $category . "', " . $price . ", " . $quantity . ", " . $subtotal . ")");
+            echo("Pasando el if de inserción ventas");
             if (fetch_fields("ventas", $campos, "", $query) === null) {
                 // Consulta exitosa
                 // Crear HTML para ticket PDF
