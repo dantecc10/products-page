@@ -83,14 +83,8 @@ $html = ('
 <body>
     <div class="ticket">
         <div class="header">
-            <div class="row" style="display: flex;">
-                <div id="logo-container" style="width: 40%; margin-left: 12.5%; padding: 1mm;" class="col">
-                    <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm" style="padding: 0mm;">
-                </div>
-                <div class="col" style="width: 60%;">
-                    <h1 style="font-size: 5mm">Comercial: Castelán Carpinteyro</h1>
-                </div>
-            </div>
+            <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm" style="padding: 0mm;">
+            <h1 style="font-size: 5mm">Comercial: Castelán Carpinteyro</h1>
             <h2 style="font-size: 5mm">Ticket de Venta</h2>
             <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
             <p>C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
