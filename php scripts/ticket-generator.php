@@ -2,7 +2,7 @@
 session_start();
 include "barcode-generator.php";
 include "functions.php";
-$transaction = "4008789713766"; // Sustituir por dato de $_SESSION cuando dinamismo avance
+$transaction = $_SESSION['ticket']['transaction_id']; // Sustituir por dato de $_SESSION cuando dinamismo avance
 require_once '../vendor/autoload.php'; // Ruta al archivo autoload.php de Composer
 use TCPDF;
 
@@ -116,3 +116,4 @@ $pdf->writeHTML($html, true, false, true, false, '');
 // Generar el PDF y mostrarlo en el navegador
 $pdf->Output('ticket.pdf', 'I');
 //file()
+
