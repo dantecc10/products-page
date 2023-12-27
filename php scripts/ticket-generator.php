@@ -94,7 +94,7 @@ $html = ('
             <p>Fecha: ' . fecha() . '</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
-        <div class="container" style="padding-bottom: 0px"; margin-buttom: 1 mm;">
+        <div class="container">
             ' .
     $_SESSION['ticket']['html']
     . '<p>Artículos: (' . $_SESSION['ticket']['totals'][1] . ')</p><p>Total: $' . $_SESSION['ticket']['totals'][0] . '</p>
