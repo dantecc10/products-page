@@ -65,8 +65,8 @@ if (isset($_SESSION['cart'])) {
             // INSERT INTO `ventas` VALUES('', 1, 13, 'juguetes', 671.00, 1, 671.00);
             // INSERT INTO `ventas` VALUES('', ?, ?, ?, ?, ?, ?);
             $query = ("INSERT INTO `ventas` VALUES('', " . $transaction_id . ", " . $id . ", '" . $category . "', " . $price . ", " . $quantity . ", " . $subtotal . ")");
-            $data = generatePasskey('sql');
-            $connection = new mysqli("localhost", $data[0], $data[1], $data[2]);
+            $keys = generatePasskey('sql');
+            $connection = new mysqli("localhost", $keys[0], $keys[1], $keys[2]);
             if ($connection->connect_error) {
                 die("La conexión a la base de datos falló: " . $connection->connect_error);
             } else {
