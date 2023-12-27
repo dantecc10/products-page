@@ -8,7 +8,7 @@ use TCPDF;
 
 // Crear una instancia de TCPDF
 //$pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
-$pdf = new TCPDF('P', 'mm', [58, 180]);
+$pdf = new TCPDF('P', 'mm', [58, 230]);
 
 //$pdf->setpage(58, 0);
 // Establecer información del documento
