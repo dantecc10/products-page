@@ -228,56 +228,61 @@
                                             </div>
                                         </div>
                                         <hr>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="row">
-                                                    <div class="col d-flex justify-content-center mb-1" style="text-align: end;"><span class="fw-bold">Método de pago</span></div>
-                                                </div>
-                                                <div class="row d-flex justify-content-center"><select class="col-11 col-sm-8 col-md-7" id="payment-method-select" style="/*width: 85% !important*/">
+                                        <form id="sale-form" method="post" action="php scripts/create-sale.php">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row">
+                                                        <div class="col d-flex justify-content-center mb-1" style="text-align: end;"><span class="fw-bold">Método de pago</span></div>
+                                                    </div>
+                                                    <div class="row d-flex justify-content-center"><select name="payment-method" id="payment-method-select" class="col-11 col-sm-8 col-md-7" required>
     <optgroup label="Métodos de pago">
-        <option value="0">Seleccione una opción</option>
+        <option value="">Seleccione una opción</option>
         <option value="1">Efectivo</option>
         <option value="2">Transferencia</option>
         <option value="3">Tarjeta - PayPal (cargos extra)</option>
     </optgroup>
 </select></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="row">
-                                                    <div class="col my-1">
-                                                        <div class="row">
-                                                            <div class="col d-flex justify-content-center"><span class="fw-bold">Ticket</span></div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col d-flex justify-content-center"><span style="font-size: smaller;text-align: center;">Es posible elegir ambas opciones</span></div>
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                                <div class="row d-flex justify-content-center">
-                                                    <div class="col">
-                                                        <div class="row">
-                                                            <div class="col d-flex justify-content-center">
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="digital-ticket"><label class="form-check-label" for="digital-ticket">Digital</label></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row">
+                                                        <div class="col my-1">
+                                                            <div class="row">
+                                                                <div class="col d-flex justify-content-center"><span class="fw-bold">Ticket</span></div>
                                                             </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col d-flex justify-content-center">
-                                                                <div class="form-check"><input class="form-check-input" type="checkbox" id="printed-ticket"><label class="form-check-label" for="printed-ticket">Impreso</label></div>
+                                                            <div class="row">
+                                                                <div class="col d-flex justify-content-center"><span style="font-size: smaller;text-align: center;">Es posible elegir ambas opciones</span></div>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="row d-flex justify-content-center">
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <div class="col d-flex justify-content-center col-12">
+                                                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="digital-ticket" name="digital-ticket-checkbox" onclick="javascript:digital_ticket_is_on();"><label class="form-check-label" for="digital-ticket">Digital</label></div>
+                                                                </div>
+                                                                <div class="col d-flex justify-content-center col-12">
+                                                                    <div class="input-group"><input class="form-control center-placeholder visually-hidden" type="email" id="customer-email-input" name="customer-email-input" placeholder="cliente@gmail.com" disabled=""></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col d-flex justify-content-center">
+                                                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="printed-ticket" name="printed-ticket-checkbox"><label class="form-check-label" for="printed-ticket">Impreso</label></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="row">
-                                                    <div class="col d-flex justify-content-center mt-2"><button class="btn btn-primary p-2 main-branding-background-color" type="button" style="/*font-size: small;*/line-height: .8;"><i class="fas fa-check-circle"></i>&nbsp;Finalizar venta</button></div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row">
+                                                        <div class="col d-flex justify-content-center mt-2"><button class="btn btn-primary p-2 main-branding-background-color" type="submit" style="/*font-size: small;*/line-height: .8;"><i class="fas fa-check-circle"></i>&nbsp;Finalizar venta</button></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="card-footer py-3">
