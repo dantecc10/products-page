@@ -14,7 +14,7 @@ $pdf = new TCPDF('P', 'mm', [58, 230]);
 // Establecer información del documento
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Dante Castelán Carpinteyro');
-$pdf->SetTitle('Ticket de Venta (XXXXXXXXXX)');
+$pdf->SetTitle('Ticket de Venta (' . $transaction . ')');
 $pdf->SetMargins(2.5, 1.5, 2.5);
 $pdf->SetFont('Helvetica', '', 5);
 
@@ -116,4 +116,3 @@ $pdf->writeHTML($html, true, false, true, false, '');
 // Generar el PDF y mostrarlo en el navegador
 $pdf->Output('ticket.pdf', 'I');
 //file()
-
