@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "barcode-generator.php";
 include "functions.php";
 $transaction = "4008789713766"; // Sustituir por dato de $_SESSION cuando dinamismo avance
