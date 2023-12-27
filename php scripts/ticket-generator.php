@@ -73,10 +73,10 @@ $html = ('
         }
 
         .width-1 {
-            width: 10%;
+            width: 15%;
         }
         .width-2 {
-            width: 50%;
+            width: 45%;
         }
         .width-3 {
             width: 18%;
