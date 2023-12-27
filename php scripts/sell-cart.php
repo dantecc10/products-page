@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['id'])) {
+    header("Location: ../index.php");
+}
+
 if (isset($_SESSION['cart'])) {
     include "sql-fetcher.php";
     include "functions.php";
@@ -55,7 +59,7 @@ if (isset($_SESSION['cart'])) {
                             </tr>';
     $ticket_capsule_2 = '</table>';
     $ticket_articles = "";
-    echo ($n); //Commit móvil 
+    //echo ($n); //Commit móvil 
     for ($i = 0; $i < $n; $i++) {
         $query = "UPDATE `juguetes` SET `quantity_toy` = " . ($_SESSION['cart']['Products'][$i]['stock'] - $_SESSION['cart']['Products'][$i]['quantity']) . " WHERE `id_toy` = " . $_SESSION['cart']['Products'][$i]['id'] . ";";
         if (fetch_fields("juguetes", $campos, "", $query) == null) {
@@ -104,5 +108,5 @@ if (isset($_SESSION['cart'])) {
     $_SESSION['ticket']['totals'][0] = $total_transaction;
     $_SESSION['ticket']['totals'][1] = $articles_transaction;
     $_SESSION['ticket']['employe_name'] = ($_SESSION['name'] . " " . $_SESSION['lastNames']);
+    header("Location: ticket-generator.php");
 }
-?>
