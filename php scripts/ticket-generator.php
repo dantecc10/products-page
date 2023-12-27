@@ -120,5 +120,5 @@ $pdf->writeHTML($html, true, false, true, false, '');
 //$pdf->Output('tickets/digital-ticket-' . $transaction . '.pdf', 'F');
 
 // Generar el PDF y mostrarlo en el navegador
-$pdf->Output('ticket.pdf', 'FI');
+$pdf->Output('ticket.pdf', 'I');
 //file()
