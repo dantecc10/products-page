@@ -1,4 +1,7 @@
 <?php
+
+use FontLib\Table\Type\head;
+
 session_start();
 if ($_POST['payment-method'] !== '3') {
     // El método de pago seleccionado no es PayPal
@@ -12,3 +15,5 @@ if ($_POST['payment-method'] !== '3') {
     //El método de pago seleccionado fue PayPal, iniciar configuración
     // This is not God's
 }
+
+header("Location: sell-cart.php");
