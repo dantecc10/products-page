@@ -15,7 +15,7 @@ $pdf = new TCPDF('P', 'mm', [58, 180]);
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Dante Castelán Carpinteyro');
 $pdf->SetTitle('Ticket de Venta (XXXXXXXXXX)');
-$pdf->SetMargins(2.5, 1, 2.5);
+$pdf->SetMargins(2.5, 1.5, 2.5);
 $pdf->SetFont('Helvetica', '', 5);
 
 // Agregar una página
