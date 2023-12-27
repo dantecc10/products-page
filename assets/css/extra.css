@@ -156,3 +156,7 @@
   color: var(--bs-gray-300);
 }
 
+.center-placeholder::placeholder {
+  text-align: center;
+}
+

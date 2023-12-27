@@ -240,12 +240,35 @@ get_json_from_server(function (data) {
 	myData = data; // Asigna la respuesta JSON a la variable externa
 });
 
-function json_updater(receiver, sender){
+function json_updater(receiver, sender) {
 	get_json_from_server(function (data) {
 		sender = data; // Asigna la respuesta JSON a la variable externa
 	});
 	receiver = sender;
 	return receiver;
+}
+
+document.getElementById('sale-form').addEventListener('submit', function (event) {
+	var paymentMethod = document.getElementById('payment-method-select').value;
+	if (paymentMethod === '') {
+		event.preventDefault(); // Detiene el envío del formulario si no se seleccionó una opción
+		alert('Por favor, seleccione un método de pago.');
+	}
+	if((document.getElementById('digital-ticket').checked) && ((document.getElementById('customer-email-input').value) == "")){
+		event.preventDefault(); // Detiene el envío del formulario si no se seleccionó una opción
+		alert('Por favor, indique un correo Gmail para enviar el ticket de compra. Recuérdele al cliente revisar su bandeja de spam para buscar el ticket.');
+	}
+});
+
+function digital_ticket_is_on() {
+	if (document.getElementById('digital-ticket').checked) {
+		document.getElementById('customer-email-input').classList.remove("visually-hidden");
+		document.getElementById('customer-email-input').disabled = false;
+	} else {
+		document.getElementById('customer-email-input').classList.add("visually-hidden");
+		document.getElementById('customer-email-input').disabled = true;
+		document.getElementById('customer-email-input').value="";
+	}
 }
 
 json_updater(Articles, myData);
