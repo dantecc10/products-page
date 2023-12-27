@@ -1,7 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['ticket'][''])) {
-    # code...
+if (!isset($_SESSION['ticket']['address'])) {
+    $city = "Zacatlán, Puebla, México.";
+    $cp = "C.P.: 73310. ";
+    $address = "Privada de Josefa Ortiz de Domínguez, Cuautilulco.";
 }
 
 $transaction = $_SESSION['ticket']['transaction_id']; // Sustituir por dato de $_SESSION cuando dinamismo avance
@@ -93,8 +95,8 @@ $html = ('
             <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm" style="padding: 0mm;">
             <h1 style="font-size: 5mm">Comercial: Castelán Carpinteyro</h1>
             <h2 style="font-size: 5mm">Ticket de Venta</h2>
-            <p>Domicilio de Ejemplo No. 1, en la Calle Algo Así, Barrio Inexistente.</p>
-            <p>C.P.: 00000. Ciudad Actual, Estado Impreso.</p>
+            <p>' . $address . '</p>
+            <p>' . $cp . ' ' . $city . '</p>
             <p>Fecha: ' . fecha() . '</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
