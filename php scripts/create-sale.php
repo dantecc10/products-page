@@ -16,4 +16,5 @@ if ($_POST['payment-method'] !== '3') {
     // This is not God's
 }
 
-header("Location: sell-cart.php");
+header("Location: ../php scripts/sell-cart.php"); // Debug dir
+
