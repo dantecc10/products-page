@@ -84,7 +84,7 @@ $html = ('
     </style>
 </head>
 <body>
-    <div class="ticket">
+    <div class="ticket" style="padding-bottom: 0px"; margin-buttom: 1 mm;">
         <div class="header">
             <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm" style="padding: 0mm;">
             <h1 style="font-size: 5mm">Comercial: Castelán Carpinteyro</h1>
@@ -94,13 +94,13 @@ $html = ('
             <p>Fecha: ' . fecha() . '</p>
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
-        <div class="container">
+        <div class="container" style="padding-bottom: 0px"; margin-buttom: 1 mm;">
             ' .
     $_SESSION['ticket']['html']
     . '<p>Artículos: (' . $_SESSION['ticket']['totals'][1] . ')</p><p>Total: $' . $_SESSION['ticket']['totals'][0] . '</p>
             <p style="margin-bottom: 0px; padding-bottom: 1mm;">Referencia de operación:</p>
             <img style="width: 40mm;" src="' . barcode_src_generator($generator, $transaction) . '">
-            <p>Gracias por su compra</p>
+            <p style="padding-bottom: 0px"; margin-buttom: 1 mm;">Gracias por su compra</p>
         </div>
     </div>
 </body>
