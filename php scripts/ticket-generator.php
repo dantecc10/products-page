@@ -84,7 +84,7 @@ $html = ('
     </style>
 </head>
 <body>
-    <div class="ticket" style="padding-bottom: 0px"; margin-buttom: 1 mm;">
+    <div class="ticket">
         <div class="header">
             <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm" style="padding: 0mm;">
             <h1 style="font-size: 5mm">Comercial: Castelán Carpinteyro</h1>
