@@ -33,3 +33,4 @@ if (isset($_GET['bars'])) {
 $number = "7501000278404";
 echo bar_code_img($generator, $number); // Imprime HTML <img>
 */
+?>

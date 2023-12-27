@@ -122,3 +122,4 @@ $pdf->writeHTML($html, true, false, true, false, '');
 // Generar el PDF y mostrarlo en el navegador
 $pdf->Output('ticket.pdf', 'I');
 //file()
+?>

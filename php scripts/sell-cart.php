@@ -105,3 +105,4 @@ if (isset($_SESSION['cart'])) {
     $_SESSION['ticket']['totals'][1] = $articles_transaction;
     $_SESSION['ticket']['employe_name'] = ($_SESSION['name'] . " " . $_SESSION['lastNames']);
 }
+?>

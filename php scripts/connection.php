@@ -7,3 +7,4 @@ if ($connection->connect_error) {
 } else {
     #echo ("Conexión establecida"); # Confirmación de conexión
 }
+?>

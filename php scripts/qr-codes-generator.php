@@ -20,3 +20,4 @@ file_put_contents($rutaImagen, $imagenQR);
 //echo $rutaImagen;
 
 echo ('<img src="' . $rutaImagen . ">");
+?>

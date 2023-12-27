@@ -233,3 +233,4 @@ function get_last_insert_id($connection)
 {
     return $connection->insert_id;
 }
+?>

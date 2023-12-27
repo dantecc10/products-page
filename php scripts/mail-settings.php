@@ -47,3 +47,4 @@ try {
     echo "Error al enviar el correo electrónico: " . $mail->ErrorInfo;
     echo "Excepción lanzada: " . $e->getMessage();
 }
+?>
