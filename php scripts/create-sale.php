@@ -10,7 +10,7 @@ if ($_POST['payment-method'] !== '3') {
     if (isset($_POST['digital-ticket-checkbox'])) {
         $_SESSION['sale']['payment']['digital-ticket'] = true;
     }else{
-        $_SESSION['sale']['payment']['digital-ticket'] = false;
+        $_SESSION['sale']['payment']['digital-ticket'] = "false";
     }
     if (isset($_POST['printed-ticket-checkbox'])) {
         $_SESSION['sale']['payment']['printed-ticket'] = true;
