@@ -97,7 +97,7 @@ $html = ('
         <div class="container">
             ' .
     $_SESSION['ticket']['html']
-    . '<p>Artículos: (' . $_SESSION['ticket']['totals'][1f] . ')</p><p>Total: $' . $_SESSION['ticket']['totals'][0] . '</p>
+    . '<p>Artículos: (' . $_SESSION['ticket']['totals'][1] . ')</p><p>Total: $' . $_SESSION['ticket']['totals'][0] . '</p>
             <p style="margin-bottom: 0px; padding-bottom: 1mm;">Referencia de operación:</p>
             <img style="width: 40mm;" src="' . barcode_src_generator($generator, $transaction) . '">
             <p>Gracias por su compra</p>
