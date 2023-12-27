@@ -260,15 +260,15 @@
                                                         <div class="col">
                                                             <div class="row">
                                                                 <div class="col d-flex justify-content-center col-12">
-                                                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="digital-ticket" name="digital-ticket-checkbox" onclick="javascript:digital_ticket_is_on();"><label class="form-check-label" for="digital-ticket">Digital</label></div>
+                                                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="digital-ticket" name="digital-ticket-checkbox" onclick="javascript:digital_ticket_is_on();" value="true"><label class="form-check-label" for="digital-ticket">Digital</label></div>
                                                                 </div>
                                                                 <div class="col d-flex justify-content-center col-12">
-                                                                    <div class="input-group"><input class="form-control center-placeholder visually-hidden" type="email" id="customer-email-input" name="customer-email-input" placeholder="cliente@gmail.com" disabled=""></div>
+                                                                    <div class="input-group"><input class="form-control center-placeholder visually-hidden" type="email" id="customer-email-input" name="customer-email-input" placeholder="cliente@gmail.com" disabled="" value=""></div>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col d-flex justify-content-center">
-                                                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="printed-ticket" name="printed-ticket-checkbox"><label class="form-check-label" for="printed-ticket">Impreso</label></div>
+                                                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="printed-ticket" name="printed-ticket-checkbox" value="true"><label class="form-check-label" for="printed-ticket">Impreso</label></div>
                                                                 </div>
                                                             </div>
                                                         </div>
