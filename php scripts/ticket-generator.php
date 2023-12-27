@@ -94,22 +94,9 @@ $html = ('
             <p>Vendedor: Dante Castelán Carpinteyro</p>
         </div>
         <div class="container">
-            <table>
-                <tr>
-                    <th style="font-size: 2.8mm;" class="width-1 fs-mm super-center">ID</th>
-                    <th style="font-size: 2.8mm;" class="width-2 fs-mm super-center">Descripción / Precio</th>
-                    <th style="font-size: 2.8mm;" class="width-3 fs-mm super-center">Cant.</th>
-                    <th style="font-size: 2.5mm;" class="width-4 fs-mm super-center">Subtotal</th>
-                </tr>
-                <tr>
-                    <td style="font-size: 3mm; vertical-align: middle" class="width-1 fs-mm super-center">5</td>
-                    <td style="font-size: 3mm; vertical-align: middle" class="width-2 fs-mm super-center">Avión de Pasajeros Playmobil / ($671.00 MXN)</td>
-                    <td style="font-size: 3mm; vertical-align: middle" class="width-3 fs-mm super-center">1</td>
-                    <td style="font-size: 3mm; vertical-align: middle" class="width-4 fs-mm super-center">$671</td>
-                </tr>
-            </table>
-
-            <p>Total: $30</p>
+            ' .
+    $_SESSION['ticket']['html']
+    . '<p>Total: $30</p>
             <p style="margin-bottom: 0px; padding-bottom: 1mm;">Referencia de operación:</p>
             <img style="width: 40mm;" src="' . barcode_src_generator($generator, $transaction) . '">
             <p>Gracias por su compra</p>

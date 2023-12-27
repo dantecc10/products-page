@@ -46,8 +46,14 @@ if (isset($_SESSION['cart'])) {
     //$query = ("INSERT INTO `transacciones` VALUES('', '" . $channel . "', " . $articles_transaction . ", '" . $categories . "', " . $total_transaction . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
     //fetch_fields("juguetes", $campos, "", $query);
 
-    $ticket_capsule_1 = "";
-    $ticket_capsule_2 = "";
+    $ticket_capsule_1 = '<table>
+                            <tr>
+                                <th style="font-size: 2.8mm;" class="width-1 fs-mm super-center">ID</th>
+                                <th style="font-size: 2.8mm;" class="width-2 fs-mm super-center">Descripción / Precio</th>
+                                <th style="font-size: 2.8mm;" class="width-3 fs-mm super-center">Cant.</th>
+                                <th style="font-size: 2.5mm;" class="width-4 fs-mm super-center">Subtotal</th>
+                            </tr>';
+    $ticket_capsule_2 = '</table>';
     $ticket_articles = "";
     echo ($n); //Commit móvil 
     for ($i = 0; $i < $n; $i++) {
@@ -73,16 +79,21 @@ if (isset($_SESSION['cart'])) {
                 #echo ("Conexión establecida"); # Confirmación de conexión
             }
             if ($connection->query($query) === TRUE) {
-                echo ("Insertando consulta");
+                //echo ("Insertando consulta"); // Inserción exitosa
             }
 
             // Consulta exitosa
             // Crear HTML para ticket PDF
-            $ticket_articles .= ("" . $id .
-                "" . $name .
+            $ticket_articles .= ('<tr>
+            <td style="font-size: 3mm; vertical-align: middle" class="width-1 fs-mm super-center">' . $id .
+                '</td>
+                <td style="font-size: 3mm; vertical-align: middle" class="width-2 fs-mm super-center">' . $name .
                 " / ($" . $price . " MXN)" .
-                "" . $quantity .
-                "" . ((intval($quantity)) * (floatval($price))) . "");
+                '</td>
+                <td style="font-size: 3mm; vertical-align: middle" class="width-3 fs-mm super-center">' . $quantity .
+                '</td>
+                <td style="font-size: 3mm; vertical-align: middle" class="width-4 fs-mm super-center">$' . ((intval($quantity)) * (floatval($price))) . "</td>
+                </tr>");
         }
     }
     $ticket_html = ($ticket_capsule_1 . $ticket_articles . $ticket_capsule_2);
