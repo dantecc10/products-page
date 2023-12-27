@@ -10,4 +10,5 @@ if ($_POST['payment-method'] !== '3') {
     }
 } else {
     //El método de pago seleccionado fue PayPal, iniciar configuración
+    // This is not God's
 }
