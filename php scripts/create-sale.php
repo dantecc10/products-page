@@ -2,7 +2,7 @@
 session_start();
 if ($_POST['payment-method'] !== '3') {
     // El método de pago seleccionado no es PayPal
-    $_SESSION['sale']['payment'] = $_POST['payment-method'];
+    $_SESSION['sale']['payment']['type'] = $_POST['payment-method'];
     //$_SESSION['sale']['payment']['digital-ticket'] = (isset($_POST['digital-ticket-checkbox'])) ? true : false;
     if (isset($_POST['digital-ticket-checkbox'])) {
         $_SESSION['sale']['payment']['digital-ticket'] = true;
