@@ -103,5 +103,5 @@ if (isset($_SESSION['cart'])) {
     $_SESSION['ticket']['transaction_id'] = $transaction_id;
     $_SESSION['ticket']['totals'][0] = $total_transaction;
     $_SESSION['ticket']['totals'][1] = $articles_transaction;
-    $_SESSION['ticket']['employe_name'] = ($_SESSION['name'] . $_SESSION['lastNames']);
+    $_SESSION['ticket']['employe_name'] = ($_SESSION['name'] . " " . $_SESSION['lastNames']);
 }

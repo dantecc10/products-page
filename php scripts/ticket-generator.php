@@ -98,7 +98,7 @@ $html = ('
             <p>' . $address . '</p>
             <p>' . $cp . ' ' . $city . '</p>
             <p>Fecha: ' . fecha() . '</p>
-            <p>Vendedor: Dante Castelán Carpinteyro</p>
+            <p>Vendedor: ' . $_SESSION['ticket']['employe_name'] . '</p>
         </div>
         <div class="container">
             ' .
