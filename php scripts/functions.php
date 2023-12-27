@@ -215,7 +215,7 @@ function sql_transaction_insert($params, $table)
     $amount = floatval($params[3]);
     $type = strval($params[4]);
     $user = intval($params[5]);
-    $sql = ("INSERT INTO `" . $table . "` VALUES (, '" . $channel . "', " . $quantity . ", '" . $categories . "', " . $amount . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
+    $sql = ("INSERT INTO `" . $table . "` VALUES ('', '" . $channel . "', " . $quantity . ", '" . $categories . "', " . $amount . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
 
     // Ejecutar la consulta
     if ($connection->query($sql) === TRUE) {
