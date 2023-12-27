@@ -66,7 +66,7 @@ if (isset($_SESSION['cart'])) {
             // INSERT INTO `ventas` VALUES('', ?, ?, ?, ?, ?, ?);
             $query = ("INSERT INTO `ventas` VALUES('', " . $transaction_id . ", " . $id . ", '" . $category . "', " . $price . ", " . $quantity . ", " . $subtotal . ")");
             include_once "connection.php";
-            if ($connection->query($sql) === TRUE) {
+            if ($connection->query($query) === TRUE) {
                 echo ("Insertando consulta");
             }
 
