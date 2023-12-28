@@ -34,7 +34,7 @@ if (isset($_SESSION['cart'])) {
     $user = 1;
 
     $total_transaction = doubleval($total_transaction);
-    //echo ($total_transaction);
+    //echo ($total_transaction); // Debug line
     $data = array();
     $data = [$channel, $articles_transaction, $categories, $total_transaction, $type, $user];
 
