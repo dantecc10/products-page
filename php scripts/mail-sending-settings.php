@@ -30,7 +30,7 @@ $mail->From = $username;
 $mail->FromName = $name;
 $mail->CharSet = "UTF-8";
 
-
+/*
 $mail->ClearAllRecipients();
 //$mail->AddAddress("dantecc10@gmail.com");
 $mail->AddCC("dante@castelancarpinteyro.com");
@@ -50,3 +50,4 @@ try {
     echo "Error al enviar el correo electrónico: " . $mail->ErrorInfo;
     echo "Excepción lanzada: " . $e->getMessage();
 }
+*/
