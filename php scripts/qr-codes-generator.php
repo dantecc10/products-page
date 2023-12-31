@@ -14,7 +14,7 @@ $options = [
     'imageTransparent' => false,
     'cacheEnabled' => true,
     'cacheDir' => __DIR__ . '/qr_cache/', // Directorio para almacenar en caché
-    'cacheFilename' => md5($qrContent) . '.png', // Nombre de archivo
+    'cacheFilename' => md5($url) . '.png', // Nombre de archivo
 ];
 
 // Crea una instancia del generador QR
