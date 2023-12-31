@@ -28,8 +28,19 @@ $msg = ('<!DOCTYPE html>
         <body>');
 
 
-$msg .= ('  <h1 class="fs-1">Envío exitoso</h1>
-            <p class="shadow">Si este mensaje es visible, la configuración de correo en subodminio fue exitosa.</p>
+$msg .= ('  <div class="container">
+                <div class="col">
+                    <div class="row">
+                        <h1 class="shadow text-dark text-center mb-4 main-branding-text-color fw-bold fs-1">Ticket digital de compra.</h1>
+                    </div>
+                    <div class="row">
+                        <h2 class="shadow" fs-3>Compra: 45676456</h2>
+                    </div>
+                    <div class="row">
+                        p
+                    </div>
+                </div>
+            </div>
         </body>
         </html>');
 $mail->Body = $msg;
