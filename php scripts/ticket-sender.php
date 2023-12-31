@@ -31,7 +31,7 @@ $msg = ('<!DOCTYPE html>
             <link rel="stylesheet" href="../assets/css/extra.css">
             ' . $style .
     '   </head>
-        <body>');
+        <body class="bg-aqua">');
 
 $data = 'comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf';
 $msg .= ('  <div class="container">
