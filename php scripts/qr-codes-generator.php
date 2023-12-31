@@ -9,7 +9,7 @@ $options = new QROptions([
     'outputType' => QRCode::OUTPUT_IMAGE_PNG,
     'eccLevel'   => QRCode::ECC_H, // Nivel de corrección de errores alto
 ]);
-
+$url = "comercial.castelancarpinteyro.com";
 // Crea una instancia del generador QR
 $qr = new QRCode($options);
 
