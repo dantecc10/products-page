@@ -1,21 +1,14 @@
 <?php
 require '../vendor/autoload.php';
 
-use chillerlan\QRCode\QRCode;
-use chillerlan\QRCode\Output\;
+use chillerlan\QRCode\{QRCode, QROptions, QRImage, QRGdImage};
+use chillerlan\Settings\SettingsContainerInterface;
 
-// URL que quieres codificar en el QR
-$url = 'https://castelancarpinteyro.com';
-
-$options = [
-    'outputType' => QRCode::QROutputInterface::GDIMAGE_PNG,
-    'eccLevel' => QRCode::ECC_H,
-    'imageBase64' => false,
-    'imageTransparent' => false,
-    'cacheEnabled' => true,
-    'cacheDir' => __DIR__ . '/qr_cache/', // Directorio para almacenar en caché
-    'cacheFilename' => md5($url) . '.png', // Nombre de archivo
-];
+$options = new QROptions([
+    'version'    => 10, // Tamaño del código (1-40), 10 es grande
+    'outputType' => QRCode::OUTPUT_IMAGE_PNG,
+    'eccLevel'   => QRCode::ECC_H, // Nivel de corrección de errores alto
+]);
 
 // Crea una instancia del generador QR
 $qr = new QRCode($options);
