@@ -19,5 +19,5 @@ file_put_contents($rutaImagen, $imagenQR);
 // Devuelve la ruta de la imagen
 //echo $rutaImagen;
 
-echo ('<img src="' . $rutaImagen . ">");
+//echo ('<img src="' . $rutaImagen . ">");
 ?>
