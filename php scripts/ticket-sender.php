@@ -6,7 +6,12 @@ $mail->ClearAllRecipients();
 $mail->AddCC("dante@castelancarpinteyro.com");
 $mail->IsHTML(true);  // Podemos activar o desactivar HTML en el mensaje
 $mail->Subject = 'Prueba de envío de correo desde subdominio.';
-$msg = '<!DOCTYPE html>
+$style = '<style>';
+$style .= file_get_contents("../assets/bootstrap/css/bootstrap.min.css");
+$style .= file_get_contents("../assets/css/Bootstrap-Callout-Info.css");
+$style .= file_get_contents("../assets/css/extra.css");
+$style .= '</style>';
+$msg = ('<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -18,10 +23,11 @@ $msg = '<!DOCTYPE html>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
             <link rel="stylesheet" href="../assets/css/Bootstrap-Callout-Info.css">
             <link rel="stylesheet" href="../assets/css/extra.css">
-        </head>
-        <body>';
+            ' . $style .
+    '   </head>
+        <body>');
 
-    
+
 $msg .= ('  <h1 class="fs-1">Envío exitoso</h1>
             <p class="shadow">Si este mensaje es visible, la configuración de correo en subodminio fue exitosa.</p>
         </body>
