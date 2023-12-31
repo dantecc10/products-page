@@ -47,7 +47,9 @@ $msg .= ('  <div class="container">
                     </div>
                     <div class="row">
                         <div class="col d-flex justify-content-center">
-                            <img src="' . (new QRCode)->render($data) . '">
+                            <a href="' . $data . '">
+                                <img src="' . (new QRCode)->render($data) . '">
+                            </a>
                         </div>
                     </div>
                 </div>
