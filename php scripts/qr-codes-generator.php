@@ -15,7 +15,7 @@ $qr = new QRCode($options);
 
 // Genera el código QR y guarda la imagen
 $imagenQR = $qr->render($url);
-$rutaImagen = 'qrcodes/qrcode_' . time() . '.png'; // Nombre del archivo con una marca de tiempo para evitar sobrescribir
+$rutaImagen = '/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com/qrcodes/qrcode_' . time() . '.png'; // Nombre del archivo con una marca de tiempo para evitar sobrescribir
 
 // Guarda la imagen QR
 file_put_contents($rutaImagen, $imagenQR);
