@@ -33,7 +33,7 @@ $msg = ('<!DOCTYPE html>
     '   </head>
         <body>');
 
-
+$data = 'comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf';
 $msg .= ('  <div class="container">
                 <div class="col">
                     <div class="row">
