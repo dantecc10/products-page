@@ -118,8 +118,8 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 // Generar el PDF y guardar en una ruta específica
 $pdf->Output('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com/tickets/digital-ticket-' . $transaction . '.pdf', 'F');
-
+header("Location: ticket-sender.php");
 // Generar el PDF y mostrarlo en el navegador
-$pdf->Output('ticket.pdf', 'I');
+//$pdf->Output('ticket.pdf', 'I');
 //file()
 ?>
