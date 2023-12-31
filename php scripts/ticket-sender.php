@@ -1,5 +1,11 @@
 <?php
 session_start();
+require '../vendor/autoload.php';
+
+use chillerlan\QRCode\QRCode;
+
+$data = 'comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf';
+
 include "mail-sending-settings.php";
 $mail->ClearAllRecipients();
 //$mail->AddAddress("dantecc10@gmail.com");
@@ -31,13 +37,18 @@ $msg = ('<!DOCTYPE html>
 $msg .= ('  <div class="container">
                 <div class="col">
                     <div class="row">
-                        <h1 class="shadow text-dark text-center mb-4 main-branding-text-color fw-bold fs-1">Ticket digital de compra.</h1>
+                        <h1 class="shadow text-dark text-center my-4 main-branding-text-color fw-bold fs-1">Ticket digital de compra.</h1>
+                    </div>
+                    <div class="row text-center">
+                        <h2 class="shadow" fs-3>Compra #45676456</h2>
+                    </div>
+                    <div class="row fs-4 text-center">
+                        <p>¡Hola, Dante! Para descargar tu ticket digital de compra escanea el siguiente código QR, o bien, haz click sobre él. Si el enlace no funciona, por favor, copia manualmente el link.</p>
                     </div>
                     <div class="row">
-                        <h2 class="shadow" fs-3>Compra: 45676456</h2>
-                    </div>
-                    <div class="row">
-                        p
+                        <div class="col d-flex justify-content-center">
+                            <img src="' . (new QRCode)->render($data) . '">
+                        </div>
                     </div>
                 </div>
             </div>
