@@ -11,7 +11,7 @@ $mail->ClearAllRecipients();
 //$mail->AddAddress("dantecc10@gmail.com");
 $mail->AddCC("dante@castelancarpinteyro.com");
 $mail->IsHTML(true);  // Podemos activar o desactivar HTML en el mensaje
-$mail->Subject = 'Confirmación de compra #4 - '.$_ENV['BUSINESS_NAME'];
+$mail->Subject = 'Confirmación de compra #4 - ' . $_ENV['BUSINESS_NAME'];
 $style = '<style>';
 $style .= file_get_contents("../assets/bootstrap/css/bootstrap.min.css");
 $style .= file_get_contents("../assets/css/Bootstrap-Callout-Info.css");
@@ -43,7 +43,8 @@ $msg .= ('  <div class="container">
                         <h2 class="shadow" fs-3>Compra #45676456</h2>
                     </div>
                     <div class="row fs-4 text-center">
-                        <p>¡Hola, Dante! Para descargar tu ticket digital de compra escanea el siguiente código QR, o bien, haz click sobre él. Si el enlace no funciona, por favor, copia manualmente el link.</p>
+                        <p>¡Hola, Dante! Te enviamos el archivo PDF del ticket de compra para que lo descargues. También podrás consultarlo en el siguiente link:</p>
+                        <p class="btn btn-primary main-branding-background-color"><a href="https://comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf">Click aquí para verlo en el navegador.</a></p>
                     </div>
                     <div class="row">
                         <div class="col d-flex justify-content-center">
@@ -57,7 +58,7 @@ $msg .= ('  <div class="container">
         </body>
         </html>');
 $mail->Body = $msg;
-$mail->addAttachment("../tickets/digital-ticket-4.pdf", "Ticket de Compra #4 - ".$_ENV['BUSINESS_NAME']);
+$mail->addAttachment("../tickets/digital-ticket-4.pdf", "Ticket de Compra #4 - " . $_ENV['BUSINESS_NAME']);
 
 try {
     $mail->Send();
