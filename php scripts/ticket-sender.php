@@ -1,6 +1,13 @@
 <?php
 session_start();
 require '../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com/');
+$dotenv->load();
+
+//// Acceder a las variables
+//$dbHost = $_ENV['DB_HOST'];
+//$dbUser = $_ENV['DB_USER'];
+//$dbPass = $_ENV['DB_PASS'];
 
 use chillerlan\QRCode\QRCode;
 
