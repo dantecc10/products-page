@@ -90,9 +90,7 @@ if (isset($_SESSION['cart'])) {
         $outputHTML .= $htmlCapsule2;
     }
 } else {
-    echo ('<tr>
-                <div class="row col-12 d-flex align-middle">
+    echo ('<div class="row col-12 d-flex align-middle">
                     <span class="col-12 d-flex justify-content-center">Aún no se han cargado artículos a la caja.</span>
-                </div>
-           </tr>');
+            </div>');
 }
