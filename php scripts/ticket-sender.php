@@ -1,7 +1,7 @@
 <?php
 session_start();
 require '../vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com/');
+$dotenv = Dotenv\Dotenv::createImmutable('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com');
 $dotenv->load();
 
 //// Acceder a las variables
