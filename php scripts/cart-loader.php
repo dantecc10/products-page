@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (isset($_SESSION['cart'])) {
+if (isset($_SESSION['cart']) && sizeof($_SESSION['cart']['Products']) > 0) {
     include_once "functions.php";
     include_once "sql-fetcher.php";
     include_once "barcode-generator.php";
