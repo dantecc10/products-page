@@ -11,7 +11,7 @@ $mail->ClearAllRecipients();
 //$mail->AddAddress("dantecc10@gmail.com");
 $mail->AddCC("dante@castelancarpinteyro.com");
 $mail->IsHTML(true);  // Podemos activar o desactivar HTML en el mensaje
-$mail->Subject = 'Prueba de envío de correo desde subdominio.';
+$mail->Subject = 'Confirmación de compra #4 - '.$_ENV['BUSINESS_NAME'];
 $style = '<style>';
 $style .= file_get_contents("../assets/bootstrap/css/bootstrap.min.css");
 $style .= file_get_contents("../assets/css/Bootstrap-Callout-Info.css");
@@ -57,7 +57,7 @@ $msg .= ('  <div class="container">
         </body>
         </html>');
 $mail->Body = $msg;
-$mail->addAttachment("../tickets/digital-ticket-4.pdf", "Ticket de Compra #4 - Comercial Castelán Carpinteyro");
+$mail->addAttachment("../tickets/digital-ticket-4.pdf", "Ticket de Compra #4 - ".$_ENV['BUSINESS_NAME']);
 
 try {
     $mail->Send();

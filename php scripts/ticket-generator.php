@@ -93,7 +93,7 @@ $html = ('
     <div class="ticket">
         <div class="header">
             <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm" style="padding: 0mm;">
-            <h1 style="font-size: 5mm">Comercial: Castelán Carpinteyro</h1>
+            <h1 style="font-size: 5mm">' . $_ENV['BUSINESS_NAME'] . '</h1>
             <h2 style="font-size: 5mm">Ticket de Venta</h2>
             <p>' . $address . '</p>
             <p>' . $cp . ' ' . $city . '</p>
@@ -122,4 +122,3 @@ header("Location: ticket-sender.php");
 // Generar el PDF y mostrarlo en el navegador
 //$pdf->Output('ticket.pdf', 'I');
 //file()
-?>
