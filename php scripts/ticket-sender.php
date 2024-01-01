@@ -57,6 +57,7 @@ $msg .= ('  <div class="container">
         </body>
         </html>');
 $mail->Body = $msg;
+$mail->addAttachment("../tickets/digital-ticket-4.pdf", "Ticket de Compra #4 - Comercial Castelán Carpinteyro");
 
 try {
     $mail->Send();
