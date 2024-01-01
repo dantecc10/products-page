@@ -18,24 +18,24 @@ include "php scripts/functions.php";
     <meta property="og:type" content="website">
     <meta name="description" content="Web-app de administración de inventario y ventas">
     <meta property="og:image" content="https://comercial.castelancarpinteyro.com/assets/img/branding/logo.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="../assets/img/branding/logo.jpeg">
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/branding/logo.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/branding/logo.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/branding/logo.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/branding/logo.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="1024x1024" href="assets/img/branding/logo.jpeg">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="../assets/css/Bootstrap-Callout-Info.css">
-    <link rel="stylesheet" href="../assets/css/extra.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-Callout-Info.css">
+    <link rel="stylesheet" href="assets/css/extra.css">
 </head>
 
 <body id="page-top">
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="index.php">
-                    <div class="sidebar-brand-icon col col-3 d-flex justify-content-center"><img class="icon-circle" onchange="javascript:filtroInventario();" src="../assets/img/branding/logo.jpeg"></div>
+                    <div class="sidebar-brand-icon col col-3 d-flex justify-content-center"><img class="icon-circle" onchange="javascript:filtroInventario();" src="assets/img/branding/logo.jpeg"></div>
                     <div class="sidebar-brand-text mx-3"><span>CC Comercial</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
@@ -90,7 +90,7 @@ include "php scripts/functions.php";
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">7</span><i class="fas fa-envelope fa-fw"></i></a>
                                     <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
                                         <h6 class="dropdown-header">MENSAJES</h6><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="../assets/img/avatars/avatar4.jpeg">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar4.jpeg">
                                                 <div class="bg-success status-indicator"></div>
                                             </div>
                                             <div class="fw-bold">
@@ -98,7 +98,7 @@ include "php scripts/functions.php";
                                                 <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
                                             </div>
                                         </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="../assets/img/avatars/avatar2.jpeg">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar2.jpeg">
                                                 <div class="status-indicator"></div>
                                             </div>
                                             <div class="fw-bold">
@@ -106,7 +106,7 @@ include "php scripts/functions.php";
                                                 <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
                                             </div>
                                         </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="../assets/img/avatars/avatar3.jpeg">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar3.jpeg">
                                                 <div class="bg-warning status-indicator"></div>
                                             </div>
                                             <div class="fw-bold">
@@ -114,7 +114,7 @@ include "php scripts/functions.php";
                                                 <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
                                             </div>
                                         </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="../assets/img/avatars/avatar5.jpeg">
+                                            <div class="dropdown-list-image me-3"><img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg">
                                                 <div class="bg-success status-indicator"></div>
                                             </div>
                                             <div class="fw-bold">
@@ -169,7 +169,7 @@ include "php scripts/functions.php";
                                             </thead>
                                             <tbody id="table-products" class="articles-table">
                                                 <tr class="align-middle articles-row">
-                                                    <td class="article-icon"><a href="detalle.html"><img class="mini-image data-img" src="../assets/img/test/pm1.jpg"></a></td>
+                                                    <td class="article-icon"><a href="detalle.html"><img class="mini-image data-img" src="assets/img/test/pm1.jpg"></a></td>
                                                     <td><a href="detalle.html"><span class="data-name" style="color: rgb(133, 135, 150);">Producto 2 de prueba para tablita</span><br /></a>
                                                         <div class="col d-flex align-middle justify-content-center">
                                                             <div class="row" style="margin: 0px !important;">
@@ -178,7 +178,7 @@ include "php scripts/functions.php";
                                                                         <div class="col"><a href="detalle.html"><span class="data-barcode" style="font-size: 100% !important;">4008789701428</span></a></div>
                                                                     </div>
                                                                     <div class="row">
-                                                                        <div class="col" style="padding: 3px !important;"><a href="detalle.html"><img class="barcode-img" src="../assets/img/test-barcode.png"></a></div>
+                                                                        <div class="col" style="padding: 3px !important;"><a href="detalle.html"><img class="barcode-img" src="assets/img/test-barcode.png"></a></div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col col-3" style="padding: 3px !important;"><a href="detalle.html"><span class="data-id" style="font-size: xx-small !important;">ID: 5</span></a></div>
@@ -313,8 +313,8 @@ include "php scripts/functions.php";
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/cart-controller.js"></script>
-    <script src="../assets/js/theme.js"></script>
+    <script src="assets/js/cart-controller.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>
