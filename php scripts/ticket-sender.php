@@ -45,6 +45,7 @@ $msg .= ('  <div class="container">
                     <div class="row fs-4 text-center">
                         <p>¡Hola, Dante! Te enviamos el archivo PDF del ticket de compra para que lo descargues. También podrás consultarlo en el siguiente link:</p>
                         <p class="btn btn-primary main-branding-background-color"><a href="https://comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf">Click aquí para verlo en el navegador.</a></p>
+                        <p class="fs-6">Si este email llegó a tu bandeja de <i>Spam</i>, por favor, informa que no lo es y múevelo a <i>Principal</i> para recibir ahí tus siguientes tickets.</p>
                     </div>
                     <div class="row">
                         <div class="col d-flex justify-content-center">
