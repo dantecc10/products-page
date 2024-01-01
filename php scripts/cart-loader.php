@@ -17,7 +17,7 @@ if (isset($_SESSION['cart'])) {
     $htmlCapsule2 = "";
 
     for ($i = 0; $i < $n; $i++) {
-        $product_info = fetch_fields("juguetes", $campos, $id, null);
+        $product_info = fetch_fields("juguetes", $campos, $i, null);
         $outputHTML .= $htmlCapsule1;
 
 
