@@ -273,20 +273,29 @@ function digital_ticket_is_on() {
 
 function products_dom_builder() {
 
-	// Crear una solicitud AJAX utilizando jQuery
-	$.ajax({
-		url: '../php scripts/cart-loader.php', // Ruta a tu archivo PHP
-		method: 'GET', // O 'POST' dependiendo de tu configuración
-		success: function (response) {
-			// Mostrar la respuesta en un elemento HTML con id "respuesta"
-			document.getElementById('table-products').innerHTML = response;
-		},
-		error: function (xhr, status, error) {
-			// Manejar errores si la solicitud falla
-			console.error(error);
-		}
-	});
+	var xhr = new XMLHttpRequest(); // Crear objeto XMLHttpRequest
 
+	// Configurar la solicitud
+	xhr.open('GET', '../php scripts/cart-loader.php', true); // Ruta a tu archivo PHP
+
+	// Manejar el evento de carga
+	xhr.onload = function () {
+		if (xhr.status === 200) {
+			// Mostrar la respuesta en un elemento HTML con id "respuesta"
+			document.getElementById('table-products').innerHTML = xhr.responseText;
+		} else {
+			// Manejar errores si la solicitud falla
+			console.error('Error al realizar la solicitud: ' + xhr.status);
+		}
+	};
+
+	// Manejar errores de red
+	xhr.onerror = function () {
+		console.error('Error de red al realizar la solicitud');
+	};
+
+	// Enviar la solicitud
+	xhr.send();
 }
 
 products_dom_builder();
