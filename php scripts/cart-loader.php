@@ -4,6 +4,7 @@ session_start();
 if (isset($_SESSION['cart'])) {
     include_once "functions.php";
     include_once "sql-fetcher.php";
+    include_once "barcode-generator.php";
 
     $n = sizeof($_SESSION['cart']['Products']);
     $tabla = "juguetes";
