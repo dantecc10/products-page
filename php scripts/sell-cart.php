@@ -4,7 +4,7 @@ if (!isset($_SESSION['id'])) {
     header("Location: ../index.php");
 }
 
-if (isset($_SESSION['cart'])) {
+if (isset($_SESSION['cart']) && sizeof($_SESSION['cart']['Products']) > 0) {
     include "sql-fetcher.php";
     include "functions.php";
     $campos = array();
