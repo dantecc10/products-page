@@ -65,12 +65,27 @@ if (isset($_SESSION['cart'])) {
                         </td>
                         <td>
                             <a href="details.php?product="' . $product_info[0] . '" class="fs-5">
-                                <span class="data-price" style="color: rgb(133, 135, 150);"></span>
+                                <span class="data-price" style="color: rgb(133, 135, 150);">$' . $product_info[9] . '</span><br>
                             </a>
                         </td>
-                        <td></td>
-                        <td></td>
-                        ');
+                        <td>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col col-6 pe-0 d-flex align-items-center justify-content-end">
+                                        <input type="number" class="d-flex justify-content-center data-quantity quantity-input" style="width: 100% !important; text-align: center !important;" value="' . $_SESSION['cart']['Products'][$i]['quantity'] . '" max="' . $product_info[8] . '" onchange="javascript:calculate_totals();"/>
+                                        <input type="number" class="d-flex justify-content-center data-stock visually-hidden" style="width: 100% !important; text-align: center !important;" value="' . $product_info[8] . '" max="' . $product_info[8] . '" min="' . $product_info[8] . '" disabled/>
+                                    </div>
+                                    <div class="col col-6 p-0">
+                                        <span class="delete-button p-2 fw-bold m-0" onclick="javascript:remove_product(' . $i . ');">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="fw-bold fs-5 subtotal-container">$' . $product_info[9] . '</span>
+                        </td>');
 
         $outputHTML .= $htmlCapsule2;
     }
