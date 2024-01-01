@@ -271,5 +271,25 @@ function digital_ticket_is_on() {
 	}
 }
 
+function products_dom_builder() {
+
+	// Crear una solicitud AJAX utilizando jQuery
+	$.ajax({
+		url: '../php scripts/cart-loader.php', // Ruta a tu archivo PHP
+		method: 'GET', // O 'POST' dependiendo de tu configuración
+		success: function (response) {
+			// Mostrar la respuesta en un elemento HTML con id "respuesta"
+			document.getElementById('table-products').innerHTML = response;
+		},
+		error: function (xhr, status, error) {
+			// Manejar errores si la solicitud falla
+			console.error(error);
+		}
+	});
+
+}
+
+products_dom_builder();
+
 json_updater(Articles, myData);
 send_json_to_server(Articles);
