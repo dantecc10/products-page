@@ -19,7 +19,7 @@ if (isset($_SESSION['cart']) && sizeof($_SESSION['cart']['Products']) > 0) {
     $htmlCapsule2 = "</tr>";
 
     for ($i = 0; $i < $n; $i++) {
-        $product_info = fetch_fields($tabla, $campos, intval($_SESSION['cart']['Products'][$i]['id']), null);
+        $product_info = fetch_fields($tabla, $campos, $_SESSION['cart']['Products'][$i]['id'], null);
         $outputHTML .= $htmlCapsule1;
 
         $outputHTML .= ('<td class="article-icon">
