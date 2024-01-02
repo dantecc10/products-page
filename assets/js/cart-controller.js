@@ -280,12 +280,12 @@ function products_dom_builder() {
 
 	// Manejar el evento de carga
 	xhr.onload = function () {
-		if (xhr.status === 200 && xhr.response !== null) {
+		if (xhr.status === 200) {
 			// Mostrar la respuesta en un elemento HTML con id "respuesta"
 			document.getElementById('table-products').innerHTML = xhr.responseText;
 		} else {
 			// Manejar errores si la solicitud falla
-			console.error('No se han cargado productos a la caja');
+			console.error('Error al realizar la solicitud: ' + xhr.status);
 		}
 	};
 
@@ -299,6 +299,6 @@ function products_dom_builder() {
 }
 
 products_dom_builder();
-
+calculate_totals();
 json_updater(Articles, myData);
 send_json_to_server(Articles);

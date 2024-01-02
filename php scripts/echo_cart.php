@@ -10,7 +10,7 @@ if (!empty($Articles)) {
     foreach ($Articles as $article) {
         echo "ID: " . $article['id'] . "<br>";
         echo "Nombre: " . $article['name'] . "<br>";
-        echo "Descripción: " . $article['description'] . "<br>";
+        
         echo "Categoría: " . $article['category'] . "<br>";
         echo "Precio: " . $article['price'] . "<br>";
         echo "Imagen: " . $article['img'] . "<br>";
