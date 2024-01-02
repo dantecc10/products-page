@@ -1,10 +1,5 @@
 <?php
 session_start();
-if (!isset($_SESSION['ticket']['address'])) {
-    $city = "Zacatlán, Puebla, México.";
-    $cp = "C.P.: 73310. ";
-    $address = "Privada de Josefa Ortiz de Domínguez, Cuautilulco.";
-}
 
 $transaction = $_SESSION['ticket']['transaction_id']; // Sustituir por dato de $_SESSION cuando dinamismo avance
 include "barcode-generator.php";
@@ -97,8 +92,7 @@ $html = ('
             <img src="../assets/img/branding/logo.jpeg" alt="Logo" width="15mm" style="padding: 0mm;">
             <h1 style="font-size: 5mm">' . $_ENV['BUSINESS_NAME'] . '</h1>
             <h2 style="font-size: 5mm">Ticket de Venta</h2>
-            <p>' . $address . '</p>
-            <p>' . $cp . ' ' . $city . '</p>
+            <p>' . $_ENV['BUSINESS_ADDRESS'] . '</p>
             <p>Fecha: ' . fecha() . '</p>
             <p>Vendedor: ' . $_SESSION['ticket']['employe_name'] . '</p>
         </div>

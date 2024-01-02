@@ -28,6 +28,7 @@ $mail->From = $username;
 $mail->FromName = $name;
 $mail->CharSet = "UTF-8";
 $mail->isHTML(true);
+$mail->XMailer = "Dante Castelán Carpinteyro (dante@castelancarpinteyro.com)";
 //$mail->DKIM_domain = 'comercial.castelancarpinteyro.com';
 //$mail->DKIM_private = '/'; // Ruta a la nueva clave privada de DKIM
 //$mail->DKIM_selector = 'selector_comercial'; // Selector DKIM para comercial.castelancarpinteyro.com

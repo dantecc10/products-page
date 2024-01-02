@@ -63,6 +63,7 @@ $msg .= ('  <div class="container">
         </body>
         </html>');
 $mail->Body = $msg;
+$mail->SMTPDebug = null;
 $mail->addAttachment("../tickets/digital-ticket-" . $_SESSION['ticket']['transaction_id'] . ".pdf", "Ticket de Compra #" . $_SESSION['ticket']['transaction_id'] . " - " . $_ENV['BUSINESS_NAME']);
 
 try {
@@ -71,7 +72,6 @@ try {
     header("Location: " . $ticket_url);
     // Resto del código...
     echo ("Correo enviado 'con éxito'");
-    
 } catch (Exception $e) {
     echo "Error al enviar el correo electrónico: " . $mail->ErrorInfo;
     echo "Excepción lanzada: " . $e->getMessage();
