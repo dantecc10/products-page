@@ -1,8 +1,7 @@
 <?php
 session_start();
-require_once '../vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com');
-$dotenv->load();
+include "functions.php";
+import_env_configs()->load();
 
 use chillerlan\QRCode\QRCode;
 
