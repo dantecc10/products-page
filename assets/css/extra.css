@@ -160,3 +160,7 @@
   text-align: center;
 }
 
+#dataTable table#dataTable th, #dataTable table#dataTable td {
+  vertical-align: middle;
+}
+
