@@ -13,7 +13,7 @@ if (isset($_SESSION['ticket']['receiver'])) {
     $mail->addAddress($_SESSION['sale']['digital-ticket']);
     $mail->AddCC("dante@castelancarpinteyro.com");
 } else {
-    $mail->AddAddress("dantecc10@gmail.com");
+    $mail->addAddress("dantecc10@gmail.com");
 }
 $mail->Subject = 'Confirmación de compra #' . $_SESSION['ticket']['transaction_id'] . ' - ' . $_ENV['BUSINESS_NAME'];
 $style = '<style>';
@@ -67,6 +67,8 @@ $mail->addAttachment("../tickets/digital-ticket-" . $_SESSION['ticket']['transac
 
 try {
     $mail->Send();
+    $ticket_url = ("../tickets/digital-tiket-" . $_SESSION['ticket']['transaction_id'] . ".pdf");
+    header("Location: ".$ticket_url);
     // Resto del código...
     echo ("Correo enviado 'con éxito'");
 } catch (Exception $e) {
