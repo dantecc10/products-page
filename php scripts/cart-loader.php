@@ -19,7 +19,7 @@ if (isset($_SESSION['cart']) && sizeof($_SESSION['cart']['Products']) > 0) {
     $htmlCapsule2 = "</tr>";
 
     for ($i = 0; $i < $n; $i++) {
-        $product_info = fetch_fields($tabla, $campos, $i, null);
+        $product_info = fetch_fields($tabla, $campos, intval($_SESSION['cart']['Products'][$i]['id']), null);
         $outputHTML .= $htmlCapsule1;
 
         $outputHTML .= ('<td class="article-icon">
@@ -95,4 +95,4 @@ if (isset($_SESSION['cart']) && sizeof($_SESSION['cart']['Products']) > 0) {
                  <span class="col-12 d-flex justify-content-center">Aún no se han cargado artículos a la caja.</span>
            </div>');
 }
-echo($outputHTML);
+echo ($outputHTML);
