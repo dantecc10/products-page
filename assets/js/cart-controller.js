@@ -280,12 +280,12 @@ function products_dom_builder() {
 
 	// Manejar el evento de carga
 	xhr.onload = function () {
-		if (xhr.status === 200) {
+		if (xhr.status === 200 && xhr.response !== null) {
 			// Mostrar la respuesta en un elemento HTML con id "respuesta"
 			document.getElementById('table-products').innerHTML = xhr.responseText;
 		} else {
 			// Manejar errores si la solicitud falla
-			console.error('Error al realizar la solicitud: ' + xhr.status);
+			console.error('No se han cargado productos a la caja');
 		}
 	};
 
