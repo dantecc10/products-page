@@ -68,7 +68,7 @@ $mail->addAttachment("../tickets/digital-ticket-" . $_SESSION['ticket']['transac
 try {
     $mail->Send();
     $ticket_url = ("../tickets/digital-tiket-" . $_SESSION['ticket']['transaction_id'] . ".pdf");
-    header("Location: ".$ticket_url);
+    header("Location: " . $ticket_url);
     // Resto del código...
     echo ("Correo enviado 'con éxito'");
 } catch (Exception $e) {
