@@ -300,5 +300,7 @@ function products_dom_builder() {
 
 products_dom_builder();
 
-json_updater(Articles, myData);
-send_json_to_server(Articles);
+window.onload(function load(data) {
+	json_updater(Articles, myData);
+	send_json_to_server(Articles);
+});
