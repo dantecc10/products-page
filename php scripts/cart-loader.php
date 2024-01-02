@@ -91,8 +91,6 @@ if (isset($_SESSION['cart']) && sizeof($_SESSION['cart']['Products']) > 0) {
         $outputHTML .= $htmlCapsule2;
     }
 } else {
-    $outputHTML = ('<div class="row col-12 d-flex align-middle">
-                 <span class="col-12 d-flex justify-content-center">Aún no se han cargado artículos a la caja.</span>
-           </div>');
+    $outputHTML = null;
 }
 echo ($outputHTML);

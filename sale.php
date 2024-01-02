@@ -2,8 +2,9 @@
 session_start();
 if (!isset($_SESSION['id'])) {
     header("Location: login.php");
+} else {
+    include "php scripts/functions.php";
 }
-include "php scripts/functions.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -168,37 +169,6 @@ include "php scripts/functions.php";
                                                 </tr>
                                             </thead>
                                             <tbody id="table-products" class="articles-table">
-                                                <tr class="align-middle articles-row">
-                                                    <td class="article-icon"><a href="detalle.html"><img class="mini-image data-img" src="assets/img/test/pm1.jpg"></a></td>
-                                                    <td><a href="detalle.html"><span class="data-name" style="color: rgb(133, 135, 150);">Producto 2 de prueba para tablita</span><br /></a>
-                                                        <div class="col d-flex align-middle justify-content-center">
-                                                            <div class="row" style="margin: 0px !important;">
-                                                                <div class="col">
-                                                                    <div class="row">
-                                                                        <div class="col"><a href="detalle.html"><span class="data-barcode" style="font-size: 100% !important;">4008789701428</span></a></div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col" style="padding: 3px !important;"><a href="detalle.html"><img class="barcode-img" src="assets/img/test-barcode.png"></a></div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col col-3" style="padding: 3px !important;"><a href="detalle.html"><span class="data-id" style="font-size: xx-small !important;">ID: 5</span></a></div>
-                                                                        <div class="col" style="padding: 3px !important;"><a href="detalle.html"><span class="data-category" style="font-size: xx-small !important;line-height: .2;">Categoría: Juguetes</span></a></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><a class="fs-5" href="detalle.html"><span class="data-price" style="color: rgb(133, 135, 150);">$300</span><br /></a></td>
-                                                    <td>
-                                                        <div class="col" style="height: 100% !important;width: 90% !important;">
-                                                            <div class="row">
-                                                                <div class="col col-6 pe-0 d-flex align-items-center justify-content-end"><input type="number" class="quantity-input d-flex justify-content-center data-quantity" style="width: 100% !important;text-align: center !important;" value="1" max="3" onchange="javascript:calculate_totals();"><input type="number" class="d-flex justify-content-center data-stock visually-hidden" style="width: 100% !important;text-align: center !important;" value="3" max="3" min="3" disabled=""></div>
-                                                                <div class="col col-6 p-0"><span class="delete-button p-2 fw-bold m-0" onclick="javascript:remove_product(0);"><i class="fas fa-trash-alt"></i></span></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><span class="fw-bold fs-5 subtotal-container">$900</span></td>
-                                                </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -251,7 +221,7 @@ include "php scripts/functions.php";
                                                                 <option value="">Seleccione una opción</option>
                                                                 <option value="1">Efectivo</option>
                                                                 <option value="2">Transferencia</option>
-                                                                <option value="3">Tarjeta - PayPal (cargos extra)</option>
+                                                                <option value="3">Tarjeta - PayPal (comisión)</option>
                                                             </optgroup>
                                                         </select></div>
                                                 </div>
