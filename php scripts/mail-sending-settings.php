@@ -2,9 +2,7 @@
 
 namespace PHPMailer\PHPMailer;
 
-use PHPMAILER\PHPMailer\PHPMailer;
-use PHPMAILER\PHPMailer\Exception;
-use PHPMAILER\PHPMailer\SMTP;
+use PHPMAILER\PHPMailer\{PHPMailer, Exception, SMTP};
 
 require_once('../vendor/phpmailer/phpmailer/src/PHPMailer.php');
 require_once('../vendor/phpmailer/phpmailer/src/SMTP.php');
