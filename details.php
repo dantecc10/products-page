@@ -1,26 +1,43 @@
 <?php
 session_start();
 
-if (isset($_GET['product'])) {
-    $id = $_GET['product'];
-    include "php scripts/functions.php";
-    include "php scripts/sql-fetcher.php";
-    $tabla = "juguetes";
+if (isset($_GET['product']) or isset($_GET['transaction'])) {
+    include_once "php scripts/functions.php";
+    include_once "php scripts/sql-fetcher.php";
     $campos = array();
-    $campos = [
-        "id_toy",
-        "name_toy",
-        "description_toy",
-        "model_toy",
-        "line_toy",
-        "bars_toy",
-        "brand_toy",
-        "pieces_toy",
-        "quantity_toy",
-        "price_toy",
-        "imgs_toy",
-        "quant_imgs_toy",
-    ];
+
+    if (isset($_GET['product'])) {
+        $id = $_GET['product'];
+        $tabla = "juguetes";
+        $campos = [
+            "id_toy",
+            "name_toy",
+            "description_toy",
+            "model_toy",
+            "line_toy",
+            "bars_toy",
+            "brand_toy",
+            "pieces_toy",
+            "quantity_toy",
+            "price_toy",
+            "imgs_toy",
+            "quant_imgs_toy",
+        ];
+    } else {
+        $id = $_GET['transaction'];
+        $tabla = "transacciones";
+        $campos = [
+            "id_transaction",
+            "sale_channel_transaction",
+            "sold_articles_transaction",
+            "products_category_transaction",
+            "amount_transaction",
+            "type_transaction",
+            "user_transaction",
+            "timestamp_transaction"
+        ];
+    }
+
     $data = fetch_fields($tabla, $campos, "$id", "");
 } else {
     header("Location: articles.php");
@@ -33,7 +50,12 @@ if (isset($_GET['product'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title><?php echo ($data[1] . " "); ?>- Detalle de Producto - CC Comercial</title>
+    <title><?php echo ($data[1] . " "); ?>- Detalle de <?php if (isset($_GET['product'])) {
+                                                            echo ('Producto #');
+                                                        } else {
+                                                            echo ('Transacción #');
+                                                        }
+                                                        echo ($id); ?> - CC Comercial</title>
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="https://comercial.castelancarpinteyro.com/assets/img/branding/logo.jpeg">
     <meta name="author" content="Dante Castelán Carpinteyro">
@@ -83,28 +105,33 @@ if (isset($_GET['product'])) {
                             <li class="nav-item dropdown no-arrow mx-1">
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
                                     <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
-                                        <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
+                                        <h6 class="dropdown-header">alerts center</h6>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
                                             <div class="me-3">
                                                 <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
                                             </div>
-                                            <div><span class="small text-gray-500">December 12, 2019</span>
+                                            <div>
+                                                <span class="small text-gray-500">December 12, 2019</span>
                                                 <p>A new monthly report is ready to download!</p>
                                             </div>
-                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                        </a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
                                             <div class="me-3">
                                                 <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>
                                             </div>
                                             <div><span class="small text-gray-500">December 7, 2019</span>
-                                                <p>$290.29 has been deposited into your account!</p>
+                                                <p>Se vendió Avión Summer Fun por $671 (Mercado Libre)</p>
                                             </div>
-                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                        </a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
                                             <div class="me-3">
                                                 <div class="bg-warning icon-circle"><i class="fas fa-exclamation-triangle text-white"></i></div>
                                             </div>
                                             <div><span class="small text-gray-500">December 2, 2019</span>
                                                 <p>Spending Alert: We've noticed unusually high spending for your account.</p>
                                             </div>
-                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                        </a>
+                                        <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                                     </div>
                                 </div>
                             </li>
