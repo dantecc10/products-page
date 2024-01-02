@@ -30,6 +30,10 @@ $mail->From = $username;
 $mail->FromName = $name;
 $mail->CharSet = "UTF-8";
 $mail->isHTML(true);
+//$mail->DKIM_domain = 'comercial.castelancarpinteyro.com';
+//$mail->DKIM_private = '/'; // Ruta a la nueva clave privada de DKIM
+//$mail->DKIM_selector = 'selector_comercial'; // Selector DKIM para comercial.castelancarpinteyro.com
+//$mail->DKIM_passphrase = 'tu_nueva_passphrase'; // Contraseña de la nueva clave DKIM (si aplica)
 
 /*
 $mail->ClearAllRecipients();

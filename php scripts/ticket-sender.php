@@ -71,6 +71,7 @@ try {
     header("Location: " . $ticket_url);
     // Resto del código...
     echo ("Correo enviado 'con éxito'");
+    
 } catch (Exception $e) {
     echo "Error al enviar el correo electrónico: " . $mail->ErrorInfo;
     echo "Excepción lanzada: " . $e->getMessage();
