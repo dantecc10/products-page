@@ -24,7 +24,7 @@ if (isset($_SESSION['cart']) && sizeof($_SESSION['cart']['Products']) > 0) {
 
         $outputHTML .= ('<td class="article-icon">
                             <a href="details.php?product="' . $product_info[$i][0] . '">
-                                <img class="mini-image data-img" src="../' . split_urls($product_info[$i][10]) . '">
+                                <img class="mini-image data-img" src="' . split_urls($product_info[$i][10]) . '">
                             </a>
                         </td>
                         <td>
