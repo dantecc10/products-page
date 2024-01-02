@@ -115,6 +115,29 @@ if (isset($_GET['product']) or isset($_GET['transaction'])) {
                                                 <p>A new monthly report is ready to download!</p>
                                             </div>
                                         </a>
+                                        <?php
+                                        /*
+                                        $ventas = fetch_fields("ventas", [
+                                            "id_sale",
+                                            "related_transaction_id",
+                                            "article_id_sale",
+                                            "article_category_sale",
+                                            "article_price_sale",
+                                            "article_quantity_sale",
+                                            "subtotal_sale"
+                                        ], null, null);
+                                        $text = '<a class="dropdown-item d-flex align-items-center" href="#">
+                                                    <div class="me-3">
+                                                        <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>
+                                                    </div>
+                                                    <div><span class="small text-gray-500">FLAG</span>
+                                                        <p>Se vendió FLAG por $FLAG (FLAG)</p>
+                                                    </div>
+                                                </a>';
+                                        for ($i = 0; $i < sizeof($transactions); $i++) {
+                                            flag_replacer($text, "FLAG", $transactions, [])
+                                        }*/
+                                        ?>
                                         <a class="dropdown-item d-flex align-items-center" href="#">
                                             <div class="me-3">
                                                 <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>

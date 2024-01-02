@@ -157,7 +157,7 @@
                                     <tbody>
                                         <tr>
                                             <td>33</td>
-                                            <td>Venta</td>
+                                            <td><i class="fas fa-donate text-success"></i>&nbsp;Venta (juguetes)&nbsp;<a href="#"><i class="fas fa-eye text-primary"></i></a>&nbsp;<a href="#"><i class="fas fa-file-invoice-dollar text-warning"></i></a></td>
                                             <td>$162,700</td>
                                             <td><img class="rounded-circle me-2" width="30" height="30" src="../assets/img/dogs/image3.jpeg">Dante</td>
                                             <td>Administrador</td>
