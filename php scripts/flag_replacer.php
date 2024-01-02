@@ -1,7 +1,7 @@
 <?php
 $txt = "Hola, mi nombre es FLAG, y vivo en FLAG. Tengo FLAG años y estudio en FLAG.";
 $datos = ["Dante", "Puebla", 18, "BUAP"];
-$indexes = [0, 1, 2, 3];
+$indexes = [3, 2, 1, 0];
 $flag = "FLAG";
 function flag_replacer($text, $flag, $data_array, $indexes_array)
 {
@@ -14,7 +14,7 @@ function flag_replacer($text, $flag, $data_array, $indexes_array)
             $text = substr_replace($text, $data_array[$indexes_array[$i]], $position, $chars);
         }
         return $text;
-    } else {
+    } else { 
         return null;
     }
 }
