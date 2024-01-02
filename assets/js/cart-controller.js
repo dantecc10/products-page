@@ -163,10 +163,6 @@ function add_article() {
 }
 
 
-document.getElementById("input-barcode").focus();
-calculate_totals();
-
-Articles = create_json_data();
 
 function send_json_to_server(json_data) {
 	// Convertir el objeto JSON a una cadena JSON
@@ -226,7 +222,7 @@ function get_json_from_server(callback) {
 	var url = "../../php scripts/json-cart-receiver.php?send=true";
 	xmlhttp.open("GET", url, true);
 	xmlhttp.setRequestHeader("Content-Type", "application/json");
-
+	
 	xmlhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			server_json_data = JSON.parse(this.responseText);
@@ -300,5 +296,8 @@ function products_dom_builder() {
 
 products_dom_builder();
 calculate_totals();
+Articles = create_json_data();
 json_updater(Articles, myData);
 send_json_to_server(Articles);
+
+document.getElementById("input-barcode").focus();
