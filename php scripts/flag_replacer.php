@@ -14,7 +14,7 @@ function flag_replacer($text, $flag, $data_array, $indexes_array)
             $text = substr_replace($text, $data_array[$indexes_array[$i]], $position, $chars);
         }
         return $text;
-    } else { 
+    } else {
         return null;
     }
 }
