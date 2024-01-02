@@ -10,6 +10,8 @@ $transaction = $_SESSION['ticket']['transaction_id']; // Sustituir por dato de $
 include "barcode-generator.php";
 include "functions.php";
 require_once '../vendor/autoload.php'; // Ruta al archivo autoload.php de Composer
+import_env_configs()->load();
+
 use TCPDF;
 
 // Crear una instancia de TCPDF

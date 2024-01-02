@@ -233,3 +233,11 @@ function get_last_insert_id($connection)
 {
     return $connection->insert_id;
 }
+
+function import_env_configs()
+{
+    require_once '../vendor/autoload.php';
+    $dotenv = Dotenv\Dotenv::createImmutable('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com');
+    return $dotenv;
+    //$dotenv->load();
+}

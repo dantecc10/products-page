@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com');
 $dotenv->load();
 
