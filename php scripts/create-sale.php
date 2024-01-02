@@ -6,6 +6,7 @@ if ($_POST['payment-method'] !== '3') {
     //$_SESSION['sale']['digital-ticket'] = (isset($_POST['digital-ticket-checkbox'])) ? true : false;
     if (isset($_POST['digital-ticket-checkbox'])) {
         $_SESSION['sale']['digital-ticket'] = true;
+        
     }else{
         $_SESSION['sale']['digital-ticket'] = false;
     }
