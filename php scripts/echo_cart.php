@@ -2,7 +2,7 @@
 session_start();
 
 // Obtener los artículos de la sesión
-$Articles = $_SESSION['Articles'];
+$Articles = $_SESSION['cart']['Products'];
 
 // Verificar si existen artículos en la sesión
 if (!empty($Articles)) {
