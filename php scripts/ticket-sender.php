@@ -15,7 +15,6 @@ if (isset($_SESSION['ticket']['receiver'])) {
 } else {
     $mail->AddAddress("dantecc10@gmail.com");
 }
-$mail->IsHTML(true);  // Podemos activar o desactivar HTML en el mensaje
 $mail->Subject = 'Confirmación de compra #' . $_SESSION['ticket']['transaction_id'] . ' - ' . $_ENV['BUSINESS_NAME'];
 $style = '<style>';
 $style .= file_get_contents("../assets/bootstrap/css/bootstrap.min.css");
@@ -48,9 +47,9 @@ $msg .= ('  <div class="container">
                         <h2 class="shadow" fs-3>Compra #45676456</h2>
                     </div>
                     <div class="row fs-4 text-center">
-                        <p>Estimado cliente, le enviamos el archivo PDF del ticket de compra para que lo descargues. También podrás consultarlo en el siguiente link:</p>
+                        <p>Estimado cliente, le enviamos el archivo PDF del ticket de compra para que lo descargue. También podrá consultarlo en el siguiente link:</p>
                         <p class="btn btn-primary main-branding-background-color"><a href="https://comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf">Click aquí para verlo en el navegador.</a></p>
-                        <p class="fs-6">Si este email llegó a tu bandeja de <i>Spam</i>, por favor, informa que no lo es y múevelo a <i>Principal</i> para recibir ahí tus siguientes tickets.</p>
+                        <p class="fs-6">Si este email llegó a su bandeja de <i>Spam</i>, por favor, informe que no lo es y múevalo a <i>Principal</i> para recibir ahí sus siguientes tickets.</p>
                     </div>
                     <div class="row">
                         <div class="col d-flex justify-content-center">

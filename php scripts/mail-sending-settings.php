@@ -29,6 +29,7 @@ $mail->Password = $password;
 $mail->From = $username;
 $mail->FromName = $name;
 $mail->CharSet = "UTF-8";
+$mail->isHTML(true);
 
 /*
 $mail->ClearAllRecipients();
