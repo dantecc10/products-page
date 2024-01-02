@@ -279,6 +279,7 @@ function products_dom_builder() {
 		if (xhr.status === 200) {
 			// Mostrar la respuesta en un elemento HTML con id "respuesta"
 			document.getElementById('table-products').innerHTML = xhr.responseText;
+			calculate_totals();
 		} else {
 			// Manejar errores si la solicitud falla
 			console.error('Error al realizar la solicitud: ' + xhr.status);
@@ -299,5 +300,4 @@ calculate_totals();
 Articles = create_json_data();
 json_updater(Articles, myData);
 send_json_to_server(Articles);
-
 document.getElementById("input-barcode").focus();
