@@ -37,14 +37,14 @@ $msg = ('<!DOCTYPE html>
     '   </head>
         <body class="bg-aqua">');
 
-$data = 'comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf';
+//$data = 'comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf'; #debug line
 $msg .= ('  <div class="container">
                 <div class="col">
                     <div class="row">
                         <h1 class="shadow text-dark text-center my-4 main-branding-text-color fw-bold fs-1">Ticket digital de compra.</h1>
                     </div>
                     <div class="row text-center">
-                        <h2 class="shadow" fs-3>Compra #45676456</h2>
+                        <h2 class="shadow" fs-3>Compra #' . $_SESSION['ticket']['transaction_id'] . '</h2>
                     </div>
                     <div class="row fs-4 text-center">
                         <p>Estimado cliente, le enviamos el archivo PDF del ticket de compra para que lo descargue. También podrá consultarlo en el siguiente link:</p>
