@@ -1,11 +1,11 @@
 <?php
 $cur_dir = explode(PATH_SEPARATOR, getcwd());
-if( $cur_dir[count($cur_dir) - 1] == "php scripts"){
+if ($cur_dir[count($cur_dir) - 1] == "php scripts") {
     include_once('../vendor/autoload.php'); // Carga la biblioteca a través de Composer
-    else{
-        include_once('vendor/autoload.php'); // Carga la biblioteca a través de Composer
-    }
+} else {
+    include_once('vendor/autoload.php'); // Carga la biblioteca a través de Composer
 }
+
 
 
 use Picqer\Barcode\BarcodeGeneratorPNG;
