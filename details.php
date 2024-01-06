@@ -256,7 +256,12 @@ if (isset($_GET['product']) or isset($_GET['transaction'])) {
                             </div>
                             <div class="row">
                                 <div class="col d-flex justify-content-center">
-                                    <img class="py-1" src="<?php echo (barcode_src_generator($generator, $data[5])); ?>" alt="<?php echo ($data[5]); ?>">
+                                    <span>Barras: <?php echo ($data[5]); ?></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <img class="" src="<?php echo (barcode_src_generator($generator, $data[5])); ?>" alt="<?php echo ($data[5]); ?>">
                                 </div>
                             </div>
                             <div class="row">
