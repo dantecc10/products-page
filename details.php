@@ -3,6 +3,7 @@ session_start();
 
 if (isset($_GET['product']) or isset($_GET['transaction'])) {
     include_once "php scripts/functions.php";
+    include_once "php scripts/barcode-generator.php";
     include_once "php scripts/sql-fetcher.php";
     $campos = array();
 
@@ -251,6 +252,11 @@ if (isset($_GET['product']) or isset($_GET['transaction'])) {
                             <div class="row">
                                 <div class="col d-flex justify-content-center py-1">
                                     <div class="input-group" style="width: 85%;"><span class="d-xxl-flex input-group-text fs-6" style="padding-left: 0px;padding-right: 0px;display: inline-block !important;text-align: center;width: 65% !important;" value="1" max="<?php echo ($data[8]); ?>">Cantidad</span><input class="form-control" type="number" value="1" style="text-align: center;width: 35% !important;padding-left: 0px;"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex justify-content-center">
+                                    <img class="py-1" src="<?php echo (barcode_src_generator($generator, $data[5])); ?>" alt="<?php echo ($data[5]); ?>">
                                 </div>
                             </div>
                             <div class="row">
