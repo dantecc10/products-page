@@ -1,5 +1,12 @@
 <?php
-require '../vendor/autoload.php'; // Carga la biblioteca a través de Composer
+$cur_dir = explode(PATH_SEPARATOR, getcwd());
+if( $cur_dir[count($cur_dir) - 1] == "php scripts"){
+    include_once('../vendor/autoload.php'); // Carga la biblioteca a través de Composer
+    else{
+        include_once('vendor/autoload.php'); // Carga la biblioteca a través de Composer
+    }
+}
+
 
 use Picqer\Barcode\BarcodeGeneratorPNG;
 
@@ -33,4 +40,3 @@ if (isset($_GET['bars'])) {
 $number = "7501000278404";
 echo bar_code_img($generator, $number); // Imprime HTML <img>
 */
-?>
