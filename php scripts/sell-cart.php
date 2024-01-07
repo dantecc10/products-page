@@ -86,7 +86,7 @@ if (isset($_SESSION['cart'])) {
                 //echo ("Insertando consulta"); // Inserción exitosa
             }
 
-            // Consulta exitosa
+            // Consulta exitosa 
             // Crear HTML para ticket PDF
             $ticket_articles .= ('<tr>
             <td style="font-size: 3mm; vertical-align: middle" class="width-1 fs-mm super-center">' . $id .
