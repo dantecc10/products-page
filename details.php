@@ -265,7 +265,7 @@ if (isset($_GET['product']) or isset($_GET['transaction'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col d-flex justify-content-center fs-4"><span class="py-2" style="text-align: center;line-height: 1.3;">Unidades disponibles:<?php echo (" " . $data[8]); ?></span></div>
+                                <div class="col d-flex justify-conteznt-center fs-4"><span class="py-2" style="text-align: center;line-height: 1.3;">Unidades disponibles:<?php echo (" " . $data[8]); ?></span></div>
                             </div>
                             <div class="row">
                                 <div class="col">

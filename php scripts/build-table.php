@@ -40,6 +40,7 @@ $data = fetch_fields($tabla, $campos, "", $query);
 function main_build($data)
 {
     include "barcode-generator.php";
+    error_reporting(E_ALL);
     if (is_array($data)) {
         $n = sizeof($data);
 
