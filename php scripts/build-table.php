@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 // Imprimir tabla
 include "sql-fetcher.php";
 include "functions.php";
