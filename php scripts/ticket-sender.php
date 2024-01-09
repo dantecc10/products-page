@@ -37,7 +37,7 @@ $msg = ('<!DOCTYPE html>
     '   </head>
         <body class="bg-aqua">');
 
-//$data = 'comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf'; #debug line
+$data = ('comercial.castelancarpinteyro.com/tickets/digital-ticket-' . $_SESSION['ticket']['transaction_id'] . '.pdf');
 $msg .= ('  <div class="container">
                 <div class="col">
                     <div class="row">
