@@ -34,7 +34,7 @@ $mail->XMailer = "Dante Castelán Carpinteyro (dante@castelancarpinteyro.com)";
 //$mail->DKIM_selector = 'selector_comercial'; // Selector DKIM para comercial.castelancarpinteyro.com
 //$mail->DKIM_passphrase = 'tu_nueva_passphrase'; // Contraseña de la nueva clave DKIM (si aplica)
 
-
+/*
 $mail->ClearAllRecipients();
 $mail->AddAddress("dantecc10@gmail.com");
 $mail->AddCC("dante@castelancarpinteyro.com");
@@ -54,3 +54,4 @@ try {
     echo "Error al enviar el correo electrónico: " . $mail->ErrorInfo;
     echo "Excepción lanzada: " . $e->getMessage();
 }
+*/
