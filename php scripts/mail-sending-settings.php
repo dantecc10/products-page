@@ -36,7 +36,7 @@ $mail->XMailer = "Dante Castelán Carpinteyro (dante@castelancarpinteyro.com)";
 
 
 $mail->ClearAllRecipients();
-//$mail->AddAddress("dantecc10@gmail.com");
+$mail->AddAddress("dantecc10@gmail.com");
 $mail->AddCC("dante@castelancarpinteyro.com");
 $mail->IsHTML(true);  // Podemos activar o desactivar HTML en el mensaje
 $mail->Subject = 'Prueba de envío de correo desde subdominio.';
