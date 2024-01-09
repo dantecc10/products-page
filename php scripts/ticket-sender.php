@@ -48,7 +48,7 @@ $msg .= ('  <div class="container">
                     </div>
                     <div class="row fs-4 text-center">
                         <p>Estimado cliente, le enviamos el archivo PDF del ticket de compra para que lo descargue. También podrá consultarlo en el siguiente link:</p>
-                        <p class="btn btn-primary main-branding-background-color"><a href="https://comercial.castelancarpinteyro.com/tickets/digital-ticket-4.pdf">Click aquí para verlo en el navegador.</a></p>
+                        <p class="btn btn-primary main-branding-background-color"><a href="https://comercial.castelancarpinteyro.com/tickets/digital-ticket-' . $_SESSION['ticket']['transaction_id'] . '.pdf">Click aquí para verlo en el navegador.</a></p>
                         <p class="fs-6">Si este email llegó a su bandeja de <i>Spam</i>, por favor, informe que no lo es y múevalo a <i>Principal</i> para recibir ahí sus siguientes tickets.</p>
                     </div>
                     <div class="row">
