@@ -44,12 +44,6 @@ if (isset($_SESSION['cart'])) {
         unset($transaction_id);
     }
 
-    // Consulta para insertar una transacción a la base de datos.
-    // INSERT INTO `transacciones` VALUES('', 'Physical', 1, 'juguetes', 671.00, 'sale', 1, CURRENT_TIMESTAMP);
-    // INSERT INTO `transacciones` VALUES('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP);
-    //$query = ("INSERT INTO `transacciones` VALUES('', '" . $channel . "', " . $articles_transaction . ", '" . $categories . "', " . $total_transaction . ", '" . $type . "', " . $user . ", CURRENT_TIMESTAMP)");
-    //fetch_fields("juguetes", $campos, "", $query);jujjj
-
     $ticket_capsule_1 = '<table>
                             <tr>
                                 <th style="font-size: 2.8mm;" class="width-1 fs-mm super-center">ID</th>

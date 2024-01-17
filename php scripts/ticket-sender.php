@@ -52,7 +52,7 @@ $msg .= ('  <div class="container">
                     </div>
                     <div class="row fs-4 text-center">
                         <p>Estimado cliente, le enviamos el archivo PDF del ticket de compra para que lo descargue. También podrá consultarlo en el siguiente link:</p>
-                        <p class="btn btn-primary main-branding-background-color"><a href="https://comercial.castelancarpinteyro.com/tickets/digital-ticket-' . $_SESSION['ticket']['transaction_id'] . '.pdf">Click aquí para verlo en el navegador.</a></p>
+                        <p class="btn btn-primary main-branding-background-color"><a href="https://comercial.castelancarpinteyro.com/tickets/digital-demo-ticket-' . $_SESSION['ticket']['transaction_id'] . '.pdf">Click aquí para verlo en el navegador.</a></p>
                         <p class="fs-6">Si este email llegó a su bandeja de <i>Spam</i>, por favor, informe que no lo es y múevalo a <i>Principal</i> para recibir ahí sus siguientes tickets.</p>
                     </div>
                     <div class="row">
@@ -68,7 +68,13 @@ $msg .= ('  <div class="container">
         </html>');
 $mail->Body = $msg;
 $mail->SMTPDebug = null;
-$mail->addAttachment("../tickets/digital-ticket-" . $_SESSION['ticket']['transaction_id'] . ".pdf", "Ticket de Compra #" . $_SESSION['ticket']['transaction_id'] . " - " . $_ENV['BUSINESS_NAME']);
+
+if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+    $mail->addAttachment("../tickets/digital-demo-ticket-" . $_SESSION['ticket']['transaction_id'] . ".pdf", "Ticket de Compra #" . $_SESSION['ticket']['transaction_id'] . " - " . $_ENV['BUSINESS_NAME']);
+}else{
+    $mail->addAttachment("../tickets/digital-ticket-" . $_SESSION['ticket']['transaction_id'] . ".pdf", "Ticket de Compra #" . $_SESSION['ticket']['transaction_id'] . " - " . $_ENV['BUSINESS_NAME']);
+}
+
 
 try {
     $mail->Send();
