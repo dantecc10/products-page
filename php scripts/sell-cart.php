@@ -78,7 +78,7 @@ if (isset($_SESSION['cart'])) {
             $keys = generatePasskey('sql');
             $connection = new mysqli("localhost", $keys[0], $keys[1], $keys[2]);
             if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
-                $connection = new mysqli("localhost", "comercial_demo", $data[1], "comercial_demo");
+                $connection = new mysqli("localhost", "comercial_demo", $keys[1], "comercial_demo");
             }
             if ($connection->connect_error) {
                 die("La conexión a la base de datos falló: " . $connection->connect_error);
