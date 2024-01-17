@@ -186,7 +186,7 @@ function sql_insertion_get_id($data, $table)
 {
     include "connection.php";
     if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
-        $connection = new mysqli("localhost", $data[0], $data[1], "comercial_demo");
+        $connection = new mysqli("localhost", "comercial_demo", $data[1], "comercial_demo");
     }
     // Realizar la inserción en la base de datos
     // INSERT INTO `transacciones` VALUES('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP);
@@ -205,7 +205,7 @@ function sql_transaction_insert($params, $table)
     include_once "credentials.php";
     $data = generatePasskey('sql'); // No es un bug, es una feature, je, je
     if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
-        $connection = new mysqli("localhost", $data[0], $data[1], "comercial_demo");
+        $connection = new mysqli("localhost", "comercial_demo", $data[1], "comercial_demo");
     }else{
         $connection = new mysqli("localhost", $data[0], $data[1], $data[2]);
     }

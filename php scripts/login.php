@@ -5,7 +5,7 @@ session_start();
 include "connection.php";
 
 if ($_POST['email'] == "demo_user@system.com") {
-    $connection = new mysqli("localhost", $data[0], $data[1], "comercial_demo");
+    $connection = new mysqli("localhost", "comercial_demo", $data[1], "comercial_demo");
 }
 
 $username = mysqli_real_escape_string($connection, $_POST['email']);
