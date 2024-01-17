@@ -3,6 +3,10 @@ session_destroy();
 session_start();
 include "connection.php";
 
+if ($_POST['email'] == "demo_user@system.com") {
+    $connection = new mysqli("localhost", $data[0], $data[1], "comercial_demo");
+}
+
 $username = mysqli_real_escape_string($connection, $_POST['email']);
 $password = mysqli_real_escape_string($connection, $_POST['password']); //Recepción de variables que pasan por filtro anti explits SQL
 
@@ -30,10 +34,11 @@ if ($resultado->num_rows > 0) {
     }
 } else {
     // Acceso denegado, mostrar un mensaje de error y redireccionar a la página de inicio de sesión
-    echo "Nombre de usuario o contraseña incorrectos"; # Mensaje de debug
+    //echo "Nombre de usuario o contraseña incorrectos"; # Mensaje de debug
     $connection->close();
-    header("Location: ../login.php");
+    header("Location: ../login.php?error=true");
 }
+$connection->close();
 
 // Cerrar la conexión a la base de datos
 ?>

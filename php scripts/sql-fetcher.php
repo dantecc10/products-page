@@ -9,6 +9,9 @@ $campos = ["id_toy", "name_toy", "description_toy", "model_toy", "line_toy", "ba
 function fetch_fields($table, $fields, $id, $custom_query)
 {
     include "connection.php";
+    if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+        $connection = new mysqli("localhost", $data[0], $data[1], "comercial_demo");
+    }
     if ($custom_query != "" && $custom_query != null) {
         $query = $custom_query;
     } else {

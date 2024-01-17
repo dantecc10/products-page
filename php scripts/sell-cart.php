@@ -77,6 +77,9 @@ if (isset($_SESSION['cart'])) {
             $query = ("INSERT INTO `ventas` VALUES('', " . $transaction_id . ", " . $id . ", '" . $category . "', " . $price . ", " . $quantity . ", " . $subtotal . ")");
             $keys = generatePasskey('sql');
             $connection = new mysqli("localhost", $keys[0], $keys[1], $keys[2]);
+            if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+                $connection = new mysqli("localhost", $data[0], $data[1], "comercial_demo");
+            }
             if ($connection->connect_error) {
                 die("La conexión a la base de datos falló: " . $connection->connect_error);
             } else {
@@ -85,7 +88,7 @@ if (isset($_SESSION['cart'])) {
             if ($connection->query($query) === TRUE) {
                 //echo ("Insertando consulta"); // Inserción exitosa
             }
-
+            $connection->close();
             // Consulta exitosa 
             // Crear HTML para ticket PDF
             $ticket_articles .= ('<tr>

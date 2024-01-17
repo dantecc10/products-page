@@ -113,7 +113,12 @@ $html = ('
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Generar el PDF y guardar en una ruta específica
-$pdf->Output('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com/tickets/digital-ticket-' . $transaction . '.pdf', 'F');
+if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+    $pdf->Output('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com/tickets/digital-demo-ticket-' . $transaction . '.pdf', 'F');
+}else{
+    $pdf->Output('/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com/tickets/digital-ticket-' . $transaction . '.pdf', 'F');
+}
+
 header("Location: ticket-sender.php");
 // Generar el PDF y mostrarlo en el navegador
 //$pdf->Output('ticket.pdf', 'I');

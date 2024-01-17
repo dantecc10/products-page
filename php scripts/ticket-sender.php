@@ -5,7 +5,11 @@ import_env_configs()->load();
 
 use chillerlan\QRCode\QRCode;
 
-$data = ('comercial.castelancarpinteyro.com/tickets/digital-ticket-' . $_SESSION['ticket']['transaction_id'] . '.pdf');
+if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+    $data = ('comercial.castelancarpinteyro.com/tickets/digital-demo-ticket-' . $_SESSION['ticket']['transaction_id'] . '.pdf');
+}else{
+    $data = ('comercial.castelancarpinteyro.com/tickets/digital-ticket-' . $_SESSION['ticket']['transaction_id'] . '.pdf');
+}
 
 include "mail-sending-settings.php";
 $mail->ClearAllRecipients();
@@ -68,7 +72,11 @@ $mail->addAttachment("../tickets/digital-ticket-" . $_SESSION['ticket']['transac
 
 try {
     $mail->Send();
-    $ticket_url = ("../../tickets/digital-ticket-" . $_SESSION['ticket']['transaction_id'] . ".pdf");
+    if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+        $ticket_url = ("../../tickets/digital-demo-ticket-" . $_SESSION['ticket']['transaction_id'] . ".pdf");
+    }else{
+        $ticket_url = ("../../tickets/digital-ticket-" . $_SESSION['ticket']['transaction_id'] . ".pdf");
+    }
     unset($_SESSION['cart']);
     unset($_SESSION['ticket']);
     unset($_SESSION['sale_details']);

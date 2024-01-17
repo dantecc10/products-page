@@ -185,6 +185,9 @@ function fecha()
 function sql_insertion_get_id($data, $table)
 {
     include "connection.php";
+    if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+        $connection = new mysqli("localhost", $data[0], $data[1], "comercial_demo");
+    }
     // Realizar la inserción en la base de datos
     // INSERT INTO `transacciones` VALUES('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP);
     $sql = ("INSERT INTO `" . $table . "` VALUES ('', ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)");
@@ -201,7 +204,11 @@ function sql_transaction_insert($params, $table)
 {
     include_once "credentials.php";
     $data = generatePasskey('sql'); // No es un bug, es una feature, je, je
-    $connection = new mysqli("localhost", $data[0], $data[1], $data[2]);
+    if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+        $connection = new mysqli("localhost", $data[0], $data[1], "comercial_demo");
+    }else{
+        $connection = new mysqli("localhost", $data[0], $data[1], $data[2]);
+    }
     if ($connection->connect_error) {
         die("La conexión a la base de datos falló: " . $connection->connect_error);
     } else {
