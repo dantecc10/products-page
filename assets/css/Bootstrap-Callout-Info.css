@@ -30,3 +30,7 @@
   color: #1b809e;
 }
 
+.modal-dialog {
+  width: 100% !important;
+}
+
