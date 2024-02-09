@@ -17,7 +17,7 @@ function fetch_fields($table, $fields, $id, $custom_query)
     if ($custom_query != "" && $custom_query != null) {
         $query = $custom_query;
     } else {
-        ($id == "" or $id == null) ? $query = "SELECT * FROM `$table`" : $query_field = ($fields[0]); $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
+        ($id == "" or $id == null) ? $query = "SELECT * FROM `$table`" : {$query_field = ($fields[0]); $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";}
 
         //if ($id == "" or $id == null) {
         //    $query = "SELECT * FROM `$table`";
