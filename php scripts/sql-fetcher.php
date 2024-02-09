@@ -9,7 +9,7 @@ $campos = ["id_toy", "name_toy", "description_toy", "model_toy", "line_toy", "ba
 
 function fetch_fields($table, $fields, $id, $custom_query)
 {
-    include "connection.php";
+    include_once "connection.php";
     session_start();
     if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
         $connection = new mysqli("localhost", "comercial_demo", $data[1], "comercial_demo");
@@ -17,12 +17,14 @@ function fetch_fields($table, $fields, $id, $custom_query)
     if ($custom_query != "" && $custom_query != null) {
         $query = $custom_query;
     } else {
-        if ($id == "" or $id == null) {
-            $query = "SELECT * FROM `$table`";
-        } else {
-            $query_field = ($fields[0]);
-            $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
-        }
+        ($id == "" or $id == null) ? $query = "SELECT * FROM `$table`" : $query_field = ($fields[0]); $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
+
+        //if ($id == "" or $id == null) {
+        //    $query = "SELECT * FROM `$table`";
+        //} else {
+        //    $query_field = ($fields[0]);
+        //    $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
+        //}
     }
 
     $result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
