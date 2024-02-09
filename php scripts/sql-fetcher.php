@@ -39,13 +39,14 @@ function fetch_fields($table, $fields, $id, $custom_query)
                 // Procesar cada registro obtenido
                 $n = sizeof($fields);
                 for ($j = 0; $j < $n; $j++) {
-                    if ($id == "" or $id == null) {
-                        // Procesar cada columna de cada registro 
-                        $data[$i][$j] = $row[$fields[$j]];
-                    } else {
-                        // Procesar cada columna de cada registro 
-                        $data[$j] = $row[$fields[$j]];
-                    }
+                    ($id == "" or $id == null) ? $data[$i][$j] = $row[$fields[$j]] : $data[$j] = $row[$fields[$j]];
+                    //if ($id == "" or $id == null) {
+                    //    // Procesar cada columna de cada registro 
+                    //    $data[$i][$j] = $row[$fields[$j]];
+                    //} else {
+                    //    // Procesar cada columna de cada registro 
+                    //    $data[$j] = $row[$fields[$j]];
+                    //}
                 }
                 $i++;
             }
