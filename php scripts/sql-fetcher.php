@@ -11,25 +11,23 @@ function fetch_fields($table, $fields, $id, $custom_query)
 {
     include_once "connection.php";
     session_start();
-    if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
+    if (($_SESSION['email'] == "demo_user@system.com") or ($_SESSION['user'] == "demo_user")) {
         $connection = new mysqli("localhost", "comercial_demo", $data[1], "comercial_demo");
     }
     if ($custom_query != "" && $custom_query != null) {
         $query = $custom_query;
     } else {
-        ($id == "" or $id == null) ? $query = "SELECT * FROM `$table`" : {$query_field = ($fields[0]); $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";}
-
-        //if ($id == "" or $id == null) {
-        //    $query = "SELECT * FROM `$table`";
-        //} else {
-        //    $query_field = ($fields[0]);
-        //    $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
-        //}
+        if ($id == "" or $id == null) {
+            $query = "SELECT * FROM `$table`";
+        } else {
+            $query_field = ($fields[0]);
+            $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
+        }
     }
 
     $result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
     $data = array();
-    
+
     // Comprobar si las filas son mayores que 0
     $result = $connection->query($query);
     // Verificar si se encontró un usuario válido
@@ -65,4 +63,3 @@ function fetch_fields($table, $fields, $id, $custom_query)
 //$campos = array();
 //$campos = ["id_toy", "name_toy", "description_toy", "model_toy", "line_toy", "bars_toy", "brand_toy", "pieces_toy", "quantity_toy", "price_toy", "imgs_toy", "quant_imgs_toy"];
 //echo (fetch_fields($tabla, $campos, null, null))[23][1]; # Línea de prueba (comentar)
-?>
