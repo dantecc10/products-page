@@ -12,7 +12,7 @@ function fetch_fields($table, $fields, $id, $custom_query)
     include_once "connection.php";
     session_start();
     if (($_SESSION['email'] == "demo_user@system.com") or ($_SESSION['user'] == "demo_user")) {
-        $connection = new mysqli("localhost", "comercial_demo", $data[1], "comercial_demo");
+        $connection = new mysqli("localhost", "comercial_demo", $data[1], ($table . "_demo"));
     }
     if ($custom_query != "" && $custom_query != null) {
         $query = $custom_query;
@@ -31,8 +31,8 @@ function fetch_fields($table, $fields, $id, $custom_query)
     // Comprobar si las filas son mayores que 0
     $result = $connection->query($query);
     // Verificar si se encontró un usuario válido
-    if ((stripos($query, "UPDATE") === false) && (stripos($query, "INSERT") === false)) {
-        if ($result->num_rows > 0) {
+    if ($result->num_rows > 0) {
+        if ((stripos($query, "UPDATE") === false) && (stripos($query, "INSERT") === false)) {
             $i = 0;
             // Hacer fetch a los datos
             while ($row = $result->fetch_array()) {
@@ -40,13 +40,6 @@ function fetch_fields($table, $fields, $id, $custom_query)
                 $n = sizeof($fields);
                 for ($j = 0; $j < $n; $j++) {
                     ($id == "" or $id == null) ? $data[$i][$j] = $row[$fields[$j]] : $data[$j] = $row[$fields[$j]];
-                    //if ($id == "" or $id == null) {
-                    //    // Procesar cada columna de cada registro 
-                    //    $data[$i][$j] = $row[$fields[$j]];
-                    //} else {
-                    //    // Procesar cada columna de cada registro 
-                    //    $data[$j] = $row[$fields[$j]];
-                    //}
                 }
                 $i++;
             }

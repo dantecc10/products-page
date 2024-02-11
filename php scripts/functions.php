@@ -17,9 +17,9 @@ function split_urls($urls)
 }
 function splitter($urls, $divisor)
 {
-    $strins_array = array();
-    $strins_array = explode($divisor, $urls);
-    return $strins_array; // Usar como $data = split_urls($cadena_con_urls); (Validar con length)
+    $strings_array = array();
+    $strings_array = explode($divisor, $urls);
+    return $strings_array; // Usar como $data = split_urls($cadena_con_urls); (Validar con length)
 }
 /* Validación de array
 if (is_array(split_urls($urls))) {
@@ -39,7 +39,6 @@ function build_table_dom($table, $data, $fields)
             break;
     }
 }
-
 function build_detail_carousel($imgs)
 {
     $carousel = '';
