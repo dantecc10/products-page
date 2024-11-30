@@ -11,7 +11,7 @@ if ($_POST['email'] == "demo_user@system.com") {
 $username = mysqli_real_escape_string($connection, $_POST['email']);
 $password = mysqli_real_escape_string($connection, $_POST['password']); //Recepción de variables que pasan por filtro anti explits SQL
 
-$sql = "SELECT * FROM `usuarios` WHERE ((`email_user` = '$username') AND (`password_user` = '$password') AND (`status_user` = 1));"; //Consulta SQL para verificar si el usuario existe y está activo
+$sql = "SELECT * FROM `usuarios` WHERE ((`password_user` = '$password') AND (`status_user` = 1));"; //Consulta SQL para verificar si el usuario existe y está activo
 
 echo $sql; # Mensaje de debug
 
