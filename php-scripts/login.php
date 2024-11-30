@@ -13,16 +13,6 @@ $password = mysqli_real_escape_string($connection, $_POST['password']); //Recepc
 
 $sql = "SELECT * FROM `usuarios` WHERE ((`email_user` = '$username') AND (`password_user` = '$password') AND (`status_user` = 1));"; //Consulta SQL para verificar si el usuario existe y está activo
 
-// Stmt para evitar inyección SQL
-$stmt = $connection->prepare($sql);
-$stmt->bind_param("ss", $username, $password);
-$stmt->execute();
-$stmt->store_result();
-$stmt->bind_result($id, $name, $lastNames, $username, $password, $img, $email, $status);
-$stmt->fetch();
-
-echo $sql; # Mensaje de debug
-
 $resultado = $connection->query($sql); //Ejecución de la consulta SQL
 
 // Verificar si se encontró un usuario válido
