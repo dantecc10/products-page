@@ -2,7 +2,7 @@
 //error_reporting(0);
 $cur_dir = explode(PATH_SEPARATOR, getcwd());
 if ($cur_dir[count($cur_dir) - 1] == "php-scripts") {
-    include_once('../vendor/autoload.php'); // Carga la biblioteca a través de Composer
+    include_once('vendor/autoload.php'); // Carga la biblioteca a través de Composer
 } else {
     include_once('../vendor/autoload.php'); // Carga la biblioteca a través de Composer
 }
