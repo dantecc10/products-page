@@ -206,7 +206,7 @@ function sql_transaction_insert($params, $table)
     if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
         $connection = new mysqli("localhost", "comercial_demo", $data[1], "comercial_demo");
     }else{
-        $connection = new mysqli("localhost", $data[0], $data[1], $data[2]);
+        $connection = new mysqli("localhost", $data[0], $data[1], "comercial");
     }
     if ($connection->connect_error) {
         die("La conexión a la base de datos falló: " . $connection->connect_error);
