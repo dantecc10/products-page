@@ -2,9 +2,9 @@
 session_start();
 
 if (isset($_GET['product']) or isset($_GET['transaction'])) {
-    include_once "php scripts/functions.php";
-    include_once "php scripts/barcode-generator.php";
-    include_once "php scripts/sql-fetcher.php";
+    include_once "php-scripts/functions.php";
+    include_once "php-scripts/barcode-generator.php";
+    include_once "php-scripts/sql-fetcher.php";
     $campos = array();
 
     if (isset($_GET['product'])) {
@@ -209,7 +209,7 @@ if (isset($_GET['product']) or isset($_GET['transaction'])) {
                                                                                                                                                                                                                                 } ?></span>
                                         <?php echo (avatar_img("")); ?></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profile.php"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Perfil</a><a class="dropdown-item" href="settings.php"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Ajustes</a><a class="dropdown-item" href="tasks.php"><i class="fas fa-tasks fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Tareas</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="php scripts/logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Cerrar sesión</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="php-scripts/logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Cerrar sesión</a>
                                     </div>
                                 </div>
                             </li>
@@ -355,7 +355,7 @@ if (isset($_GET['product']) or isset($_GET['transaction'])) {
                     }
                 }
             };
-            xhr.open("GET", "php scripts/barcode-generator.php", true);
+            xhr.open("GET", "php-scripts/barcode-generator.php", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.send("bars=" + bars);
         }
@@ -378,7 +378,7 @@ if (isset($_GET['product']) or isset($_GET['transaction'])) {
                 };
 
                 // Hacer la solicitud GET al archivo PHP con el número como parámetro
-                xhr.open("GET", "php scripts/barcode-generator.php?bar=" + number, true);
+                xhr.open("GET", "php-scripts/barcode-generator.php?bar=" + number, true);
                 xhr.send();
             }
             // Aquí ejecutas la función

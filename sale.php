@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['id'])) {
     header("Location: login.php");
 } else {
-    include "php scripts/functions.php";
+    include "php-scripts/functions.php";
 }
 ?>
 <!DOCTYPE html>
@@ -136,7 +136,7 @@ if (!isset($_SESSION['id'])) {
                                                                                                                                                                                                                                 } ?></span>
                                         <?php echo (avatar_img("")); ?></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profile.php"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Perfil</a><a class="dropdown-item" href="settings.php"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Ajustes</a><a class="dropdown-item" href="tasks.php"><i class="fas fa-tasks fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Tareas</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="php scripts/logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Cerrar sesión</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="php-scripts/logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Cerrar sesión</a>
                                     </div>
                                 </div>
                             </li>
@@ -210,7 +210,7 @@ if (!isset($_SESSION['id'])) {
                                             </div>
                                         </div>
                                         <hr>
-                                        <form id="sale-form" method="post" action="php scripts/create-sale.php">
+                                        <form id="sale-form" method="post" action="php-scripts/create-sale.php">
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="row">

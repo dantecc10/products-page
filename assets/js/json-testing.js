@@ -49,7 +49,7 @@ function send_json_to_server(json_data) {
 
   // Hacer la petición AJAX
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "../../php scripts/save_cart.php", true);
+  xhr.open("POST", "../../php-scripts/save_cart.php", true);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {

@@ -17,7 +17,7 @@ function build_table(table) {
       }
     }
   };
-  xhr.open("GET", "../../php scripts/build-table.php", true);
+  xhr.open("GET", "../../php-scripts/build-table.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send("table=" + table);
 }
@@ -38,7 +38,7 @@ function encapsulated_bars_generator(bars, capsule1, capsule2) {
       }
     }
   };
-  xhr.open("GET", "../../php scripts/barcode-generator.php", true);
+  xhr.open("GET", "../../php-scripts/barcode-generator.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send("bars=" + bars);
 }

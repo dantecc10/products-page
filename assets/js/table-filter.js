@@ -17,7 +17,7 @@ function table_filter() {
                 }
             }
         };
-        xhr.open("GET", "php scripts/build-table.php", true);
+        xhr.open("GET", "php-scripts/build-table.php", true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.send("filter=" + search_text);
     }
@@ -43,7 +43,7 @@ function build_table() {
       }
     }
   };
-  xhr.open("GET", "php scripts/build-table.php", true);
+  xhr.open("GET", "php-scripts/build-table.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send("table=" + table);
 }

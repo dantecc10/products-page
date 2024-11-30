@@ -135,7 +135,7 @@ function add_article() {
 			n = document.getElementsByClassName("articles-row").length;
 
 			let xhr = new XMLHttpRequest();
-			let url = ("../../php scripts/build-table.php?filter=" + bar_code_input + "&table=" + category + "&client=sale&articlen=" + n);
+			let url = ("../../php-scripts/build-table.php?filter=" + bar_code_input + "&table=" + category + "&client=sale&articlen=" + n);
 
 			document.getElementById("input-barcode").value = "";
 
@@ -172,7 +172,7 @@ function send_json_to_server(json_data) {
 	var xmlhttp = new XMLHttpRequest();
 
 	// Especificar el método y la URL del archivo PHP receptor
-	xmlhttp.open("POST", "../../php scripts/json-cart-receiver.php", true);
+	xmlhttp.open("POST", "../../php-scripts/json-cart-receiver.php", true);
 
 	// Configurar el encabezado para indicar que se enviará un JSON
 	xmlhttp.setRequestHeader("Content-Type", "application/json");
@@ -196,7 +196,7 @@ function send_json_to_server(json_data) {
 	var xmlhttp = new XMLHttpRequest();
 
 	// Especificar el método y la URL del archivo PHP receptor
-	url = ("../../php scripts/json-cart-receiver.php?send=true");
+	url = ("../../php-scripts/json-cart-receiver.php?send=true");
 	xmlhttp.open("GET", url, true);
 
 	// Configurar el encabezado para indicar que se enviará un JSON
@@ -219,7 +219,7 @@ function get_json_from_server(callback) {
 	var xmlhttp = new XMLHttpRequest();
 	var server_json_data;
 
-	var url = "../../php scripts/json-cart-receiver.php?send=true";
+	var url = "../../php-scripts/json-cart-receiver.php?send=true";
 	xmlhttp.open("GET", url, true);
 	xmlhttp.setRequestHeader("Content-Type", "application/json");
 	
@@ -272,7 +272,7 @@ function products_dom_builder() {
 	var xhr = new XMLHttpRequest(); // Crear objeto XMLHttpRequest
 
 	// Configurar la solicitud
-	xhr.open('GET', '../php scripts/cart-loader.php', true); // Ruta a tu archivo PHP
+	xhr.open('GET', '../php-scripts/cart-loader.php', true); // Ruta a tu archivo PHP
 
 	// Manejar el evento de carga
 	xhr.onload = function () {
