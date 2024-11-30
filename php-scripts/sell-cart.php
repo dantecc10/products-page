@@ -70,7 +70,7 @@ if (isset($_SESSION['cart'])) {
             // INSERT INTO `ventas` VALUES('', ?, ?, ?, ?, ?, ?);
             $query = ("INSERT INTO `ventas` VALUES('', " . $transaction_id . ", " . $id . ", '" . $category . "', " . $price . ", " . $quantity . ", " . $subtotal . ")");
             $keys = generatePasskey('sql');
-            $connection = new mysqli("localhost", $keys[0], $keys[1], $keys[2]);
+            $connection = new mysqli("localhost", $keys[0], $keys[1], "comercial");
             if (($_SESSION['email'] == "demo_user@system.com") OR ($_SESSION['user'] == "demo_user")) {
                 $connection = new mysqli("localhost", "comercial_demo", $keys[1], "comercial_demo");
             }
