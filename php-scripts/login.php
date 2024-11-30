@@ -41,6 +41,3 @@ if ($resultado->num_rows > 0) {
     header("Location: ../login.php?error=true");
 }
 $connection->close();
-
-// Cerrar la conexión a la base de datos
-?>
