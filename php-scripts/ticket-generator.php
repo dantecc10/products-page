@@ -3,7 +3,7 @@ session_start();
 
 $transaction = $_SESSION['ticket']['transaction_id']; // Sustituir por dato de $_SESSION cuando dinamismo avance
 include "barcode-generator.php";
-include "functions.php";
+include_once "functions.php";
 //require_once '../vendor/autoload.php'; // Ruta al archivo autoload.php de Composer
 import_env_configs()->load();
 
